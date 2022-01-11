@@ -1,0 +1,2563 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Asset Managers&#xD;&#xA;- Loads Assets&#xD;&#xA;- Gets Assets&#xD;&#xA;- Delete Assets">
+    <Position X="21.206" Y="7.291" Height="0.951" Width="1.749" />
+  </Comment>
+  <Comment CommentText="Game Engine&#xD;&#xA;- Loads resources&#xD;&#xA;- Runs the game loop (update, draw)&#xD;&#xA;- Unloads Resources">
+    <Position X="31.5" Y="1" Height="0.961" Width="2.325" />
+  </Comment>
+  <Comment CommentText="Game Object Property Managers&#xD;&#xA;- Manages each property and calls relavent functions to each property&#xD;&#xA;- Managers owned by a scene">
+    <Position X="23.06" Y="20.534" Height="1.119" Width="2.279" />
+  </Comment>
+  <Comment CommentText="Registration Broker&#xD;&#xA;- handles commands submitted by Game object Properties&#xD;&#xA;- Owned by and communicates with the scene">
+    <Position X="29" Y="14.5" Height="0.961" Width="2.398" />
+  </Comment>
+  <Comment CommentText="Coomands for which Game Object Properties use to execute relevant functions">
+    <Position X="47.25" Y="16.436" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Game Object Properties&#xD;&#xA;- Each class has own data and functions that Game Object Class inherits">
+    <Position X="68.79" Y="21.078" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Time Manager&#xD;&#xA;- acts the single source and accesss of total time and frame time.&#xD;&#xA;- Uses Freeze Time class for freeze frame ability. Only for debug use only">
+    <Position X="29.5" Y="5.75" Height="1.415" Width="2.052" />
+  </Comment>
+  <Comment CommentText="Visualier:&#xD;&#xA;- Helps in providing visualization of collision models&#xD;&#xA;- Visualizes points, lines, and rays">
+    <Position X="45.755" Y="1.336" Height="0.969" Width="2.295" />
+  </Comment>
+  <Comment CommentText="Commands for scene changing (or no scene change) for scene manager">
+    <Position X="3.357" Y="17.405" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Null Scene which does absolutely nothing, is used as the current scene for scene manager. This allows for avoiding for a nullptr of current scene since there is alway a scene being pointed to.">
+    <Position X="10.263" Y="22.77" Height="1.174" Width="2.339" />
+  </Comment>
+  <Comment CommentText="Sprite Fonts hold a collection of Glyphs (Sprite pointers)">
+    <Position X="82.25" Y="23.5" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Sprite Sring uese Sprite Font for aquiring Glyphs to display the approriate message">
+    <Position X="86.511" Y="18.211" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Screen Log uses SpriteString to display log messages. An visual alternatie to printing to the console">
+    <Position X="53" Y="5.5" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Terrain Stucture:&#xD;&#xA;- Terrain Object holding model, vertices and vertices. As well AABB values&#xD;&#xA;- Terrain Rectangle Area and TRA Iterator used in CollisionTestTerrain">
+    <Position X="78.906" Y="14.301" Height="1.158" Width="2.623" />
+  </Comment>
+  <Class Name="ModelManagerAttorney">
+    <Position X="3" Y="4.5" Width="2" />
+    <Members>
+      <Method Name="~ModelManagerAttorney" Hidden="true" />
+      <Method Name="ModelManagerAttorney" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="ModelManagerAttorney::DeleteAccess">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Asset Managers\ModelManager\ModelManagerAttorney\ModelManagerAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAIAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\ModelManagerAttorney.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ModelManager">
+    <Position X="2.5" Y="6.75" Width="3" />
+    <Members>
+      <Method Name="~ModelManager" Hidden="true" />
+      <Field Name="DEBUG_TITLE_MESSAGE" Hidden="true" />
+      <Method Name="DebugPrint" Hidden="true" />
+      <Method Name="DebugPrintf" Hidden="true" />
+      <Method Name="deleteAllModels" Hidden="true" />
+      <Method Name="GetInstance" Hidden="true" />
+      <Method Name="getModel" Hidden="true" />
+      <Method Name="hasKeyBeenAssigned" Hidden="true" />
+      <Method Name="isFilePathValid" Hidden="true" />
+      <Method Name="ModelManager" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="printFileNameErrorAndTerminate" Hidden="true" />
+      <Method Name="printKeyAssignedErrorAndTerminate" Hidden="true" />
+      <Method Name="printModelLoadedSuccessfully" Hidden="true" />
+      <Method Name="privLoadModelAndAssignKey" Hidden="true" />
+      <Method Name="privSetDefaultPath" Hidden="true" />
+      <Method Name="tryToGetModel" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Enum Name="ModelManager::DefaultModel" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Asset Managers\ModelManager\ModelManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Typedef Name="ModelManager::MapKey" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Asset Managers\ModelManager\ModelManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="ModelManager::ModelMap" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Asset Managers\ModelManager\ModelManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <AssociationLine Name="pModelManagerInstance" Type="ModelManager">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.383" Y="0.386" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ACAAAICAEMCAgRAAABAAACEABAEQOACIAAAiAEABABg=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\AssetManagers\ModelManager.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pModelManagerInstance" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ShaderManagerAttorney">
+    <Position X="6.25" Y="4.5" Width="2" />
+    <Members>
+      <Method Name="~ShaderManagerAttorney" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="ShaderManagerAttorney" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="ShaderManagerAttorney::DeleteAccess">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Asset Managers\ShaderManager\ShaderManagerAttorney\ShaderManagerAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAAEAAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\ShaderManagerAttorney.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShaderManager">
+    <Position X="5.75" Y="6.75" Width="3" />
+    <Members>
+      <Method Name="~ShaderManager" Hidden="true" />
+      <Field Name="DEBUG_TITLE_MESSAGE" Hidden="true" />
+      <Method Name="DebugPrint" Hidden="true" />
+      <Method Name="deleteAllShaders" Hidden="true" />
+      <Method Name="getDefaultShaderKey" Hidden="true" />
+      <Method Name="GetInstance" Hidden="true" />
+      <Method Name="hasKeyBeenAssigned" Hidden="true" />
+      <Method Name="isFilePathValid" Hidden="true" />
+      <Method Name="loadDefaultShaders" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="printFileNameErrorAndTerminate" Hidden="true" />
+      <Method Name="printKeyAssignedErrorAndTerminate" Hidden="true" />
+      <Method Name="printShaderLoadedSuccessfully" Hidden="true" />
+      <Method Name="privGetDefaultShader" Hidden="true" />
+      <Method Name="privGetShader" Hidden="true" />
+      <Method Name="privLoadShaderAndAssignKey" Hidden="true" />
+      <Method Name="privSetDefaultPath" Hidden="true" />
+      <Method Name="ShaderManager" Hidden="true" />
+      <Method Name="tryToGetShader" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Enum Name="ShaderManager::DefaultShader" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Asset Managers\ShaderManager\ShaderManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Typedef Name="ShaderManager::MapKey" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Asset Managers\ShaderManager\ShaderManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="ShaderManager::ShaderMap" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Asset Managers\ShaderManager\ShaderManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <AssociationLine Name="pShaderManagerInstance" Type="ShaderManager">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.376" Y="0.317" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAQIAAAAFEICAFQAAAAAAiAABAEAACCgAABiAAABAFg=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\AssetManagers\ShaderManager.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pShaderManagerInstance" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TextureManagerAttorney">
+    <Position X="9.5" Y="4.5" Width="2" />
+    <Members>
+      <Method Name="~TextureManagerAttorney" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="TextureManagerAttorney" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="TextureManagerAttorney::DeleteAccess">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Asset Managers\TextureManager\TextureManagerAttorney\TextureManagerAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAgAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\TextureManagerAttorney.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TextureManager">
+    <Position X="9" Y="6.75" Width="3" />
+    <Members>
+      <Method Name="~TextureManager" Hidden="true" />
+      <Field Name="DEBUG_TITLE_MESSAGE" Hidden="true" />
+      <Method Name="DebugPrint" Hidden="true" />
+      <Method Name="deleteAllTextures" Hidden="true" />
+      <Method Name="GetInstance" Hidden="true" />
+      <Method Name="hasKeyBeenAssigned" Hidden="true" />
+      <Method Name="isFilePathValid" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="printFileNameErrorAndTerminate" Hidden="true" />
+      <Method Name="printKeyAssignedErrorAndTerminate" Hidden="true" />
+      <Method Name="printTextureLoadedSuccessfully" Hidden="true" />
+      <Method Name="privGetTexture" Hidden="true" />
+      <Method Name="privLoadTextureAndAssignKey" Hidden="true" />
+      <Method Name="privSetDefaultPath" Hidden="true" />
+      <Method Name="TextureManager" Hidden="true" />
+      <Method Name="tryToGetTexture" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="TextureManager::MapKey" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Asset Managers\TextureManager\TextureManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="TextureManager::TextureMap" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Asset Managers\TextureManager\TextureManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="TextureManager::colorValue" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Asset Managers\TextureManager\TextureManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <AssociationLine Name="pTextureManagerInstance" Type="TextureManager">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.383" Y="0.386" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>QEAAAAACEEAIABAABAAAAiAABAEAAIDAAAAiAAABABg=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\AssetManagers\TextureManager.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pTextureManagerInstance" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Wraith">
+    <Position X="28.5" Y="0.5" Width="2.25" />
+    <Members>
+      <Method Name="~Wraith" Hidden="true" />
+      <Method Name="Delete" Hidden="true" />
+      <Method Name="Draw" Hidden="true" />
+      <Method Name="gameEnd" Hidden="true" />
+      <Method Name="gameInitialize" Hidden="true" />
+      <Method Name="GetInstance" Hidden="true" />
+      <Method Name="Initialize" Hidden="true" />
+      <Method Name="LoadContent" Hidden="true" />
+      <Method Name="loadResources" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="PrintTitleMessage" Hidden="true" />
+      <Method Name="Run" Hidden="true" />
+      <Method Name="UnLoadContent" Hidden="true" />
+      <Method Name="Update" Hidden="true" />
+      <Method Name="Wraith" Hidden="true" />
+    </Members>
+    <AssociationLine Name="pGameInstance" Type="Wraith">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.156" Y="0.354" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAQAEIAgAAAAFwAAKqAAAQAABAEgAAAAAAggAAAAIAY=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\Wraith.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pGameInstance" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CameraManager">
+    <Position X="13.75" Y="22.75" Width="2.75" />
+    <Members>
+      <Method Name="~CameraManager" Hidden="true" />
+      <Method Name="CameraManager" Hidden="true" />
+      <Method Name="CreateCamera" Hidden="true" />
+      <Method Name="createDefaultCamera" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>CCBEAQQAAAAAAAgAAAAAAIAAgQIABAIACAQgAAAgAAA=</HashCode>
+      <FileName>Wraith Engine\src\CameraManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneManagerAttorney">
+    <Position X="7.25" Y="12.25" Width="2" />
+    <Members>
+      <Method Name="~SceneManagerAttorney" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="SceneManagerAttorney" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="SceneManagerAttorney::InitalizationAccess">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\SceneManager\SceneManagerAttorney\SceneManagerAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="SceneManagerAttorney::GameLoopAccess">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\SceneManager\SceneManagerAttorney\SceneManagerAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="SceneManagerAttorney::SceneAccess">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\SceneManager\SceneManagerAttorney\SceneManagerAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="SceneManagerAttorney::DeleteAccess">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\SceneManager\SceneManagerAttorney\SceneManagerAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAgAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\SceneManagerAttorney.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneManager">
+    <Position X="7.25" Y="18.5" Width="2" />
+    <Members>
+      <Method Name="~SceneManager" Hidden="true" />
+      <Method Name="GetInstance" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="privDraw" Hidden="true" />
+      <Method Name="privGetCurrentScene" Hidden="true" />
+      <Method Name="privInitializeStartScene" Hidden="true" />
+      <Method Name="privSetStartScene" Hidden="true" />
+      <Method Name="privUpdate" Hidden="true" />
+      <Method Name="SceneManager" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Enum Name="SceneManager::SceneChangeState" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\SceneManager\SceneManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <AssociationLine Name="_pCurrentScene" Type="Scene" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="9.25" Y="20.369" />
+        <Point X="9.999" Y="20.369" />
+        <Point X="9.999" Y="16.439" />
+        <Point X="20.292" Y="16.439" Type="JumpStart" />
+        <Point X="20.458" Y="16.439" Type="JumpEnd" />
+        <Point X="23.25" Y="16.439" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_pSceneChangeNullCommand" Type="SceneChangeNullCommand" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.938" Y="22.238" />
+        <Point X="7.938" Y="22.613" />
+        <Point X="5.625" Y="22.613" />
+        <Point X="5.625" Y="21.81" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.095" Y="0.114" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_pSceneChangeCommand" Type="SceneChangeCommand" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.562" Y="22.238" />
+        <Point X="8.562" Y="22.613" />
+        <Point X="2.75" Y="22.613" />
+        <Point X="2.75" Y="21.684" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.11" Y="0.253" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AoQFAACAQABAAkAgIAAAAAAABEEIAAkAQAogAAAEAgQ=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\Scenes\SceneManager.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_pCurrentScene" />
+      <Field Name="_pSceneChangeNullCommand" />
+      <Field Name="_pSceneChangeCommand" />
+      <Field Name="_pCurrentSceneCommand" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Scene">
+    <Position X="23.25" Y="13.5" Width="3" />
+    <Members>
+      <Method Name="~Scene" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="Scene" Hidden="true" />
+      <Method Name="sceneEnd" Hidden="true" />
+    </Members>
+    <AssociationLine Name="_sceneRegistrationBroker" Type="SceneRegistrationBroker">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.673" Y="0.236" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>SCBABAAAAAAIQA8AoAMAUKAAyAIABADAAAQgAgDEgAI=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\Scenes\Scene.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_cameraManager" />
+      <Field Name="_sceneRegistrationBroker" />
+      <Field Name="_updatableManager" />
+      <Field Name="_drawableManager" />
+      <Field Name="_alarmableManager" />
+      <Field Name="_keyboardEventManager" />
+      <Field Name="_collisionManager" />
+      <Field Name="_terrainManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="UpdatableManager">
+    <Position X="19.5" Y="22.75" Width="1.75" />
+    <Members>
+      <Method Name="~UpdatableManager" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="UpdatableManager" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="UpdatableManager::StorageList" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\UpdatableManager\UpdatableManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="UpdatableManager::StorageListReference" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\UpdatableManager\UpdatableManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAKAAAAAAAAEACAAgAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\UpdatableManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrawableManager">
+    <Position X="22" Y="22.75" Width="1.75" />
+    <Members>
+      <Method Name="~DrawableManager" Hidden="true" />
+      <Method Name="DrawableManager" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="DrawableManager::StorageList" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\DrawableManager\DrawableManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="DrawableManager::StorageListReference" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\DrawableManager\DrawableManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <AssociationLine Name="_drawable2DManager" Type="Drawable2DManager">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.11" Y="0.244" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAKAAkAAAQAAADAAAAAAAAAAAAwAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\DrawableManager.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_drawable2DManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AlarmableManager">
+    <Position X="24.5" Y="22.75" Width="2.25" />
+    <Members>
+      <Method Name="~AlarmableManager" Hidden="true" />
+      <Method Name="AlarmableManager" Hidden="true" />
+      <Method Name="debugPrintTriggerAlarmsBanner" Hidden="true" />
+      <Method Name="deregisterAlarm" Hidden="true" />
+      <Method Name="getTriggerTime" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="AlarmableManager::Time" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\AlarmableManager\AlarmableManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="AlarmableManager::AlarmEvent" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\AlarmableManager\AlarmableManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="AlarmableManager::TimeLine" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\AlarmableManager\AlarmableManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="AlarmableManager::TimeLineReference" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\AlarmableManager\AlarmableManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAQACAAgAAAIAAAEQAACgQAAAABA=</HashCode>
+      <FileName>Wraith Engine\src\AlarmableManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneRegistrationBroker">
+    <Position X="26.75" Y="14.25" Width="2" />
+    <Members>
+      <Method Name="~SceneRegistrationBroker" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="SceneRegistrationBroker" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="SceneRegistrationBroker::StorageContainer" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Entities\Scene\SceneRegistrationBroker\SceneRegistrationBroker.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAQAAAAEAAAAAgAACAAAQ=</HashCode>
+      <FileName>Wraith Engine\src\SceneRegistrationBroker.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UpdateRegistrationCommand">
+    <Position X="42" Y="17.75" Width="2.25" />
+    <Members>
+      <Method Name="~UpdateRegistrationCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="UpdateRegistrationCommand" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAEAAAAAAAAAAAIAAAgAABAAAA=</HashCode>
+      <FileName>Wraith Engine\src\UpdateRegistrationCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UpdateDeregistrationCommand">
+    <Position X="45.25" Y="17.75" Width="2.5" />
+    <Members>
+      <Method Name="~UpdateDeregistrationCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="UpdateDeregistrationCommand" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAgAEAAAAAAAAAAAIAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\UpdateDeregistrationCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrawRegistrationCommand">
+    <Position X="42" Y="22.75" Width="2.25" />
+    <Members>
+      <Method Name="~DrawRegistrationCommand" Hidden="true" />
+      <Method Name="DrawRegistrationCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAQAAAAAAAAEAAAAAAAAAAgAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\DrawRegistrationCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrawDeregistrationCommand">
+    <Position X="45.25" Y="22.75" Width="2.25" />
+    <Members>
+      <Method Name="~DrawDeregistrationCommand" Hidden="true" />
+      <Method Name="DrawDeregistrationCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIQAAAAAAAgEAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\DrawDeregistrationCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlarmRegistrationCommand">
+    <Position X="42" Y="24.75" Width="2.25" />
+    <Members>
+      <Method Name="~AlarmRegistrationCommand" Hidden="true" />
+      <Method Name="AlarmRegistrationCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="setTimeDelay" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAIAAAAgAAAwBgAAAQA=</HashCode>
+      <FileName>Wraith Engine\src\AlarmRegistrationCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlarmDeregistrationCommand">
+    <Position X="45.25" Y="24.75" Width="2.25" />
+    <Members>
+      <Method Name="~AlarmDeregistrationCommand" Hidden="true" />
+      <Method Name="AlarmDeregistrationCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAIAAEAAAAAAIAAAAAAAAwAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\AlarmDeregistrationCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Updatable">
+    <Position X="54.5" Y="22.75" Width="2.5" />
+    <Members>
+      <Method Name="~Updatable" Hidden="true" />
+      <Field Name="DEBUG_TITLE_MESSAGE" Hidden="true" />
+      <Method Name="DebugPrint" Hidden="true" />
+      <Method Name="getDeleteReference" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="setDeleteReference" Hidden="true" />
+      <Method Name="Updatable" Hidden="true" />
+    </Members>
+    <AssociationLine Name="_currentRegistrationState" Type="RegistrationState" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="55.75" Y="22.75" />
+        <Point X="55.75" Y="22.375" />
+        <Point X="74.417" Y="22.375" Type="JumpStart" />
+        <Point X="74.583" Y="22.375" Type="JumpEnd" />
+        <Point X="80" Y="22.375" />
+        <Point X="80" Y="23.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.012" Y="0.707" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>gAEAQAAAgkAIAAAAAAAAAAAACAAIAQAEABAgAEAFAAI=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\GameObject\Updatable.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_currentRegistrationState" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Drawable">
+    <Position X="57.25" Y="22.75" Width="2.5" />
+    <Members>
+      <Method Name="~Drawable" Hidden="true" />
+      <Field Name="DEBUG_TITLE_MESSAGE" Hidden="true" />
+      <Method Name="DebugPrint" Hidden="true" />
+      <Method Name="Drawable" Hidden="true" />
+      <Method Name="getDeleteReference" Hidden="true" />
+      <Method Name="isRegisteredForDraw" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="setDeleteReference" Hidden="true" />
+    </Members>
+    <AssociationLine Name="_currentRegistrationState" Type="RegistrationState" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="58.438" Y="22.75" />
+        <Point X="58.438" Y="22.5" />
+        <Point X="79.562" Y="22.5" />
+        <Point X="79.562" Y="23.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.589" Y="1.063" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAgQEAgMEIgAAAICKEBAIAGgAIAAAAgAAgAEhBAgI=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\GameObject\Drawable.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_currentRegistrationState" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Alarmable">
+    <Position X="60" Y="22.75" Width="2.5" />
+    <Members>
+      <Method Name="~Alarmable" Hidden="true" />
+      <Method Name="Alarmable" Hidden="true" />
+      <Field Name="DEBUG_TITLE_MESSAGE" Hidden="true" />
+      <Method Name="DebugPrint" Hidden="true" />
+      <Method Name="deinitializeRegistrationData" Hidden="true" />
+      <Method Name="getDeleteReference" Hidden="true" />
+      <Method Name="getRegistrationData" Hidden="true" />
+      <Method Name="getRegistrationDataReference" Hidden="true" />
+      <Method Name="incrementAlarmID" Hidden="true" />
+      <Method Name="initializeRegistrationData" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="setDeleteReference" Hidden="true" />
+      <Method Name="triggerAlarm" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Struct Name="Alarmable::RegistrationData">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Entities\GameObject\Properties\Alarmable\Alarmable.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAACEAAAMAUEAQAAIAAACAACCAAAEAQEAAggIABABI=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\GameObject\Alarmable.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UpdatableAttorney">
+    <Position X="54.75" Y="17" Width="2" />
+    <Members>
+      <Method Name="~UpdatableAttorney" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="UpdatableAttorney" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="UpdatableAttorney::UpdateAccess">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Entities\GameObject\Properties\Updatable\UpdatableAttorney\UpdatableAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="UpdatableAttorney::RegistrationAccess">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Entities\GameObject\Properties\Updatable\UpdatableAttorney\UpdatableAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="UpdatableAttorney::FieldAccess">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Entities\GameObject\Properties\Updatable\UpdatableAttorney\UpdatableAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAACAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\UpdatableAttorney.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrawableAttorney">
+    <Position X="57.5" Y="16" Width="2" />
+    <Members>
+      <Method Name="~DrawableAttorney" Hidden="true" />
+      <Method Name="DrawableAttorney" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="DrawableAttorney::DrawAccess">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Entities\GameObject\Properties\Drawable\DrawableAttorney\DrawableAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="DrawableAttorney::RegistrationAccess">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Entities\GameObject\Properties\Drawable\DrawableAttorney\DrawableAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="DrawableAttorney::FieldAccess">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Entities\GameObject\Properties\Drawable\DrawableAttorney\DrawableAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAAEAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\DrawableAttorney.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlarmableAttorney">
+    <Position X="60.25" Y="17" Width="2" />
+    <Members>
+      <Method Name="~AlarmableAttorney" Hidden="true" />
+      <Method Name="AlarmableAttorney" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="AlarmableAttorney::AlarmAccess">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Entities\GameObject\Properties\Alarmable\AlarmableAttorney\AlarmableAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="AlarmableAttorney::RegistrationAccess">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Entities\GameObject\Properties\Alarmable\AlarmableAttorney\AlarmableAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="AlarmableAttorney::FieldAccess">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Entities\GameObject\Properties\Alarmable\AlarmableAttorney\AlarmableAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAQAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\AlarmableAttorney.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameObject">
+    <Position X="60.25" Y="30" Width="2.25" />
+    <Members>
+      <Method Name="~GameObject" Hidden="true" />
+      <Method Name="GameObject" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Updatable" FixedToPoint="true">
+      <Path>
+        <Point X="55.75" Y="25.651" />
+        <Point X="55.75" Y="29.625" />
+        <Point X="61.25" Y="29.625" />
+        <Point X="61.25" Y="30" />
+      </Path>
+    </InheritanceLine>
+    <InheritanceLine Type="Drawable" FixedToPoint="true">
+      <Path>
+        <Point X="58.5" Y="27.767" />
+        <Point X="58.5" Y="29.625" />
+        <Point X="61.25" Y="29.625" />
+        <Point X="61.25" Y="30" />
+      </Path>
+    </InheritanceLine>
+    <InheritanceLine Type="Alarmable" FixedToPoint="true">
+      <Path>
+        <Point X="61.25" Y="26.103" />
+        <Point X="61.25" Y="30" />
+      </Path>
+    </InheritanceLine>
+    <InheritanceLine Type="Inputable" FixedToPoint="true">
+      <Path>
+        <Point X="63.75" Y="25.718" />
+        <Point X="63.75" Y="29.625" />
+        <Point X="61.25" Y="29.625" />
+        <Point X="61.25" Y="30" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="_currentRegistrationState" Type="RegistrationState" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="62.5" Y="33" />
+        <Point X="80.375" Y="33" />
+        <Point X="80.375" Y="24.931" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="15.741" Y="8.431" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>gBAEAAAAgAAAAAAAAAAAAEABBAAAAAAAAACgAAYAAAA=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\GameObject\GameObject.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_currentRegistrationState" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SceneRegistrationCommand">
+    <Position X="43.75" Y="16.25" Width="2.25" />
+    <Members>
+      <Method Name="~SceneRegistrationCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="SceneRegistrationCommand" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAEAAAAAAAAAAAAAAAgCAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\SceneRegistrationCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Inputable">
+    <Position X="62.75" Y="22.75" Width="2" />
+    <Members>
+      <Method Name="~Inputable" Hidden="true" />
+      <Method Name="createRegistrationData" Hidden="true" />
+      <Field Name="DEBUG_TITLE_MESSAGE" Hidden="true" />
+      <Method Name="DebugPrint" Hidden="true" />
+      <Method Name="deinitializeRegistrationData" Hidden="true" />
+      <Method Name="getKeyboardDeleteReference" Hidden="true" />
+      <Method Name="getRegistrationData" Hidden="true" />
+      <Method Name="getRegistrationDataReference" Hidden="true" />
+      <Method Name="getSingleKeyDeleteReference" Hidden="true" />
+      <Method Name="Inputable" Hidden="true" />
+      <Method Name="isIteratorValid" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="setKeyboardDeleteReference" Hidden="true" />
+      <Method Name="setSingleKeyDeleteReference" Hidden="true" />
+      <Method Name="tryToFind" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Struct Name="Inputable::RegistrationData">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Entities\GameObject\Properties\Inputable\Inputable.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+      <Typedef Name="Inputable::KeyEventPair" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Entities\GameObject\Properties\Inputable\Inputable.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="Inputable::InputDataMap" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Entities\GameObject\Properties\Inputable\Inputable.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="Inputable::MapPair" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Entities\GameObject\Properties\Inputable\Inputable.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ECQAABYAAMAAgAAAAAAAEAIAAAAABAAAAFAgkEAFAFQ=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\GameObject\Inputable.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InputableAttorney">
+    <Position X="62.75" Y="16.5" Width="2.5" />
+    <Members>
+      <Method Name="~InputableAttorney" Hidden="true" />
+      <Method Name="InputableAttorney" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="InputableAttorney::InputAccess">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Entities\GameObject\Properties\Inputable\InputableAttorney\InputableAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="InputableAttorney::RegistrationAccess">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Entities\GameObject\Properties\Inputable\InputableAttorney\InputableAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="InputableAttorney::FieldAccess">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Entities\GameObject\Properties\Inputable\InputableAttorney\InputableAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAIAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\InputableAttorney.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimeManager">
+    <Position X="26" Y="8" Width="2.5" />
+    <Members>
+      <Field Name="_currentTimeStamp" Hidden="true" />
+      <Field Name="_elaspedFrameTime" Hidden="true" />
+      <Field Name="_previousTimeStamp" Hidden="true" />
+      <Method Name="~TimeManager" Hidden="true" />
+      <Method Name="Delete" Hidden="true" />
+      <Method Name="GetInstance" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="privGetElaspedFrameTimeInSeconds" Hidden="true" />
+      <Method Name="privGetTimeInSeconds" Hidden="true" />
+      <Method Name="privSetCurrentTimeStamp" Hidden="true" />
+      <Method Name="SetCurrentTimeStamp" Hidden="true" />
+      <Method Name="TimeManager" Hidden="true" />
+    </Members>
+    <AssociationLine Name="pTimeManagerInstance" Type="TimeManager">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.345" Y="0.337" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAABAgAgBEAIAAAAAgCoAARAsAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\Tools\TimeManager.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pTimeManagerInstance" />
+      <Field Name="_freezeTime" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TimeManagerAttorney">
+    <Position X="26.25" Y="4.5" Width="2" />
+    <Members>
+      <Method Name="~TimeManagerAttorney" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="TimeManagerAttorney" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="TimeManagerAttorney::TimeAccess">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\TimeManager\TimeManagerAttorney\TimeManagerAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="TimeManagerAttorney::DeleteAccess">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\TimeManager\TimeManagerAttorney\TimeManagerAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAACAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\TimeManagerAttorney.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FreezeTime">
+    <Position X="29.75" Y="8" Width="1.75" />
+    <Members>
+      <Method Name="~FreezeTime" Hidden="true" />
+      <Field Name="FREEZE_KEY" Hidden="true" />
+      <Field Name="freeze_mode_active" Hidden="true" />
+      <Method Name="FreezeTime" Hidden="true" />
+      <Method Name="HackedKeyRelease" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Field Name="SINGLE_FRAME_KEY" Hidden="true" />
+      <Field Name="totalFrozenTime" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AgAAQAIAAQAAAgACAAIAAAAAAAAAAgAAIQAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\FreezeTime.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KeyboardEventManager">
+    <Position X="27.5" Y="22.75" Width="2.75" />
+    <Members>
+      <Method Name="~KeyboardEventManager" Hidden="true" />
+      <Method Name="deleteAllSingleKeyEventManagers" Hidden="true" />
+      <Method Name="isIteratorValid" Hidden="true" />
+      <Method Name="KeyboardEventManager" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="tryToFind" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="KeyboardEventManager::KeyEventMap" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\KeyboardEventManager\KeyboardEventManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="KeyboardEventManager::KeyEventPair" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\KeyboardEventManager\KeyboardEventManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="KeyboardEventManager::StorageMapReference" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\KeyboardEventManager\KeyboardEventManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAACACAAAAAAAAAIAABIAAACEAAAgAAAAAAQ=</HashCode>
+      <FileName>Wraith Engine\src\KeyboardEventManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SingleKeyEventManager">
+    <Position X="27.75" Y="25.5" Width="2.25" />
+    <Members>
+      <Field Name="_previousKeyState" Hidden="true" />
+      <Method Name="~SingleKeyEventManager" Hidden="true" />
+      <Method Name="getKeyState" Hidden="true" />
+      <Method Name="isKeyPressed" Hidden="true" />
+      <Method Name="isKeyReleased" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="processKeyPressedEntities" Hidden="true" />
+      <Method Name="processKeyReleasedEntities" Hidden="true" />
+      <Method Name="SingleKeyEventManager" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Enum Name="SingleKeyEventManager::KeyState" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\KeyboardEventManager\SingleKeyEventManager\SingleKeyEventManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Typedef Name="SingleKeyEventManager::StorageList" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\KeyboardEventManager\SingleKeyEventManager\SingleKeyEventManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="SingleKeyEventManager::StorageListReference" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\KeyboardEventManager\SingleKeyEventManager\SingleKeyEventManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>CAAAiAAAAAAKEAAAAECAAAAAAAAQIAAIwAAgAAAgAAA=</HashCode>
+      <FileName>Wraith Engine\src\SingleKeyEventManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KeyDeregistrationCommand">
+    <Position X="45.25" Y="27.25" Width="2.25" />
+    <Members>
+      <Method Name="~KeyDeregistrationCommand" Hidden="true" />
+      <Method Name="KeyDeregistrationCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAICAAIAAAAAAAACEAAAAAAAAAAAAABAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\KeyDeregistrationCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KeyRegistrationCommand">
+    <Position X="42.25" Y="27.25" Width="2" />
+    <Members>
+      <Method Name="~KeyRegistrationCommand" Hidden="true" />
+      <Method Name="KeyRegistrationCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAIAAAAAAAACEEAAAAAAAAAQAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\KeyRegistrationCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameObjectExitCommand">
+    <Position X="45.25" Y="29.75" Width="2" />
+    <Members>
+      <Method Name="~GameObjectExitCommand" Hidden="true" />
+      <Method Name="GameObjectExitCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAARAAAIAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\GameObjectExitCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameObjectEntryCommand">
+    <Position X="42" Y="29.75" Width="2.25" />
+    <Members>
+      <Method Name="~GameObjectEntryCommand" Hidden="true" />
+      <Method Name="GameObjectEntryCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAEAAAAAAAAQAAAAAAgAAAAAAQ=</HashCode>
+      <FileName>Wraith Engine\src\GameObjectEntryCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameObjectAttorney">
+    <Position X="63" Y="30.5" Width="2" />
+    <Members>
+      <Method Name="~GameObjectAttorney" Hidden="true" />
+      <Method Name="GameObjectAttorney" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="GameObjectAttorney::RegistrationAccess">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Entities\GameObject\GameObjectAttorney\GameObjectAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAgEAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\GameObjectAttorney.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Collidable">
+    <Position X="65" Y="22.75" Width="2.5" />
+    <Members>
+      <Field Name="_pCollisionDeregisterCommand" Hidden="true" />
+      <Field Name="_pCollisionRegisterCommand" Hidden="true" />
+      <Method Name="~Collidable" Hidden="true" />
+      <Method Name="Collidable" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Collidable::VolumeType">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\include\WraithEngine\GameObject\Collidable.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Collidable::VolumeHierarchyType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\include\WraithEngine\GameObject\Collidable.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <AssociationLine Name="_pCollisionVolume" Type="CollisionVolume">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.359" Y="0.198" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_currentRegistrationState" Type="RegistrationState" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="66.25" Y="22.75" />
+        <Point X="66.25" Y="22.5" />
+        <Point X="79.917" Y="22.5" Type="JumpStart" />
+        <Point X="80.083" Y="22.5" Type="JumpEnd" />
+        <Point X="80.406" Y="22.5" />
+        <Point X="80.406" Y="23.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.416" Y="0.33" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>gAAICAAAgMAIAAgAIQAACCAgAgAIQACAACAgAEQAAIA=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\GameObject\Collidable.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_pCollisionVolume" />
+      <Field Name="_pColliderModel" />
+      <Field Name="_currentRegistrationState" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CollidableAttorney">
+    <Position X="65.5" Y="19.5" Width="2" />
+    <Members>
+      <Method Name="~CollidableAttorney" Hidden="true" />
+      <Method Name="CollidableAttorney" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="CollidableAttorney::RegistrationAccess">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Entities\GameObject\Properties\Collidable\CollidableAttorney\CollidableAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAEAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\CollidableAttorney.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionDeregisterCommand">
+    <Position X="45.25" Y="32" Width="2.25" />
+    <Members>
+      <Method Name="~CollisionDeregisterCommand" Hidden="true" />
+      <Method Name="CollisionDeregisterCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAEAAAAEAAAAAABAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\CollisionDeregisterCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionRegisterCommand">
+    <Position X="42" Y="32" Width="2.25" />
+    <Members>
+      <Method Name="~CollisionRegisterCommand" Hidden="true" />
+      <Method Name="CollisionRegisterCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAEAAAAAAAAAAAAAAAgAABEAAA=</HashCode>
+      <FileName>Wraith Engine\src\CollisionRegisterCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionManager">
+    <Position X="32.75" Y="22.75" Width="3" />
+    <Members>
+      <Method Name="~CollisionManager" Hidden="true" />
+      <Method Name="checkAndAdjustForIndex" Hidden="true" />
+      <Method Name="CollisionManager" Hidden="true" />
+      <Method Name="deinitializeCollisionGroups" Hidden="true" />
+      <Method Name="deinitializeCollisionTestCommands" Hidden="true" />
+      <Method Name="isValidIndex" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="resizeToFit" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="CollisionManager::CollisionTypeID" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\CollisionManager\CollisionManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="CollisionManager::GroupCollection" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\CollisionManager\CollisionManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="CollisionManager::StorageList" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\CollisionManager\CollisionManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AABEBCgAAgAAQAAAAACAKAAAAAAAAgCAAAEwAgCAAAE=</HashCode>
+      <FileName>Wraith Engine\src\CollisionManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollidableGroup">
+    <Position X="33.5" Y="31.25" Width="1.75" />
+    <Members>
+      <Method Name="~CollidableGroup" Hidden="true" />
+      <Method Name="CollidableGroup" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="CollidableGroup::Collection" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\CollisionManager\CollidableGroup\CollidableGroup.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="CollidableGroup::StorageReference" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\CollisionManager\CollidableGroup\CollidableGroup.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>iAIAAAEAAAAIAAIAAAAAQACAAAAAAAAAAAAgAACAQAA=</HashCode>
+      <FileName>Wraith Engine\src\CollidableGroup.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionTestCommand">
+    <Position X="33" Y="26.75" Width="2" />
+    <Members>
+      <Method Name="~CollisionTestCommand" Hidden="true" />
+      <Method Name="CollisionTestCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAEAAAAAAAAAAAAAAAgAAACAAA=</HashCode>
+      <FileName>Wraith Engine\src\CollisionTestCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionTestSelfCommand">
+    <Position X="35.25" Y="28.5" Width="2" />
+    <Members>
+      <Method Name="~CollisionTestSelfCommand" Hidden="true" />
+      <Method Name="CollisionTestSelfCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="testCollidablesBSphere" Hidden="true" />
+      <Method Name="testCollidablesCollisionVolume" Hidden="true" />
+      <Method Name="testCollisionGroup" Hidden="true" />
+    </Members>
+    <AssociationLine Name="_pCollidableGroup" Type="CollidableGroup" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="36.375" Y="29.733" />
+        <Point X="36.375" Y="31.938" />
+        <Point X="35.25" Y="31.938" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.046" Y="0.267" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_pCollisionDispatch" Type="CollisionDispatchBase" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="36.938" Y="29.733" />
+        <Point X="36.938" Y="35.302" />
+        <Point X="35.25" Y="35.302" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAEAAAAEAAEACIAAAAACACAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\CollisionTestSelfCommand.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_pCollidableGroup" />
+      <Field Name="_pCollisionDispatch" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CollisionTestPairCommand">
+    <Position X="30.5" Y="28.5" Width="2" />
+    <Members>
+      <Method Name="~CollisionTestPairCommand" Hidden="true" />
+      <Method Name="CollisionTestPairCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="testCollidableAgainstCollisionGroup" Hidden="true" />
+      <Method Name="testCollidablesBSphere" Hidden="true" />
+      <Method Name="testCollidablesCollisionVolume" Hidden="true" />
+      <Method Name="testCollisionGroups" Hidden="true" />
+    </Members>
+    <AssociationLine Name="_pCollidableGroup_1" Type="CollidableGroup" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="32" Y="29.733" />
+        <Point X="32" Y="31.961" />
+        <Point X="33.5" Y="31.961" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.089" Y="0.209" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_pCollidableGroup_2" Type="CollidableGroup" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="31.5" Y="29.733" />
+        <Point X="31.5" Y="32.734" />
+        <Point X="33.5" Y="32.734" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.276" Y="0.205" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_pCollisionDispatch" Type="CollisionDispatchBase" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="30.75" Y="29.733" />
+        <Point X="30.75" Y="35.302" />
+        <Point X="33.5" Y="35.302" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.134" Y="-0.414" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAQMAAAQAAEAAAAEAAEAAAQAAAAAACAAAAgAEAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\CollisionTestPairCommand.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_pCollidableGroup_1" />
+      <Field Name="_pCollidableGroup_2" />
+      <Field Name="_pCollisionDispatch" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CollisionDispatch&lt;UserClass1, UserClass2&gt;">
+    <Position X="33" Y="36.75" Width="3" />
+    <Members>
+      <Method Name="~CollisionDispatch" Hidden="true" />
+      <Method Name="CollisionDispatch" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="CollisionDispatchBase" FixedToPoint="true">
+      <Path>
+        <Point X="34.375" Y="35.853" />
+        <Point X="34.375" Y="36.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAhAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\CollisionDispatch.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionDispatchBase">
+    <Position X="33.5" Y="34.75" Width="1.75" />
+    <Members>
+      <Method Name="~CollisionDispatchBase" Hidden="true" />
+      <Method Name="CollisionDispatchBase" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAQAAAAAAAAAAAAAACAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\CollisionDispatchBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionVolume">
+    <Position X="72.25" Y="23.75" Width="2.25" />
+    <Members>
+      <Method Name="~CollisionVolume" Hidden="true" />
+      <Method Name="CollisionVolume" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAgEAAAAAAAAAAACAAAAEACAAAAAAAIAAAgEAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\CollisionVolume.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionVolumeBSphere">
+    <Position X="68.75" Y="26.5" Width="2" />
+    <Members>
+      <Method Name="~CollisionVolumeBSphere" Hidden="true" />
+      <Method Name="CollisionVolumeBSphere" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>CBAgEAAAAAAAAAAAAAAAAIACAAAAACAICAAgEAEAAAA=</HashCode>
+      <FileName>Wraith Engine\src\CollisionVolumeBSphere.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model" Collapsed="true">
+    <Position X="69" Y="22.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQgAAbAACIARgEAAgAAAEIEAAAgBICAACAgAAAQUABA=</HashCode>
+      <FileName>C:\Users\Steven\Desktop\Depaul Offline\2020 - 2021\3 - Spring\Wraith Engine\dist\AzulCore\include\Model.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Visualizer">
+    <Position X="38" Y="7.5" Width="2" />
+    <Members>
+      <Method Name="~Visualizer" Hidden="true" />
+      <Method Name="GetInstance" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="privShowAABB" Hidden="true" />
+      <Method Name="privShowBSphere" Hidden="true" />
+      <Method Name="privShowCollisionVolume" Hidden="true" />
+      <Method Name="privShowLineSegment" Hidden="true" />
+      <Method Name="privShowOBB" Hidden="true" />
+      <Method Name="privShowPointAt" Hidden="true" />
+      <Method Name="privShowRay" Hidden="true" />
+      <Method Name="privVisualizeAll" Hidden="true" />
+      <Method Name="renderAABB" Hidden="true" />
+      <Method Name="renderBSphere" Hidden="true" />
+      <Method Name="renderLineSegment" Hidden="true" />
+      <Method Name="renderOBB" Hidden="true" />
+      <Method Name="renderPoint" Hidden="true" />
+      <Method Name="Visualizer" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="Visualizer::CommandList" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Tools\Visualizer\Visualizer.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <AssociationLine Name="pVisualzierInstance" Type="Visualizer">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.386" Y="0.4" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ACAACAwAAIAAAAFAAACAEEigFQECAAIAgUgo0AQAAAA=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\Tools\Visualizer.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pVisualzierInstance" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="VisualizerAttorney">
+    <Position X="38.25" Y="2.25" Width="1.75" />
+    <Members>
+      <Method Name="~VisualizerAttorney" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="VisualizerAttorney" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="VisualizerAttorney::RenderAccess">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Tools\Visualizer\VisualizerAttorney\VisualizerAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="VisualizerAttorney::DeleteAccess">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Tools\Visualizer\VisualizerAttorney\VisualizerAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAACAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\VisualizerAttorney.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RenderBSphereCommandPool">
+    <Position X="44.75" Y="2.75" Width="2.25" />
+    <Members>
+      <Method Name="~RenderBSphereCommandPool" Hidden="true" />
+      <Method Name="deleteCommands" Hidden="true" />
+      <Method Name="GetInstance" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="privGetCommand" Hidden="true" />
+      <Method Name="privReturnCommand" Hidden="true" />
+      <Method Name="RenderBSphereCommandPool" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="RenderBSphereCommandPool::CommandStack" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Tools\Visualizer\Commands\Pools\RenderBSphereCommandPool.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="RenderBSphereCommandPool::CommandList" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Tools\Visualizer\Commands\Pools\RenderBSphereCommandPool.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="RenderBSphereCommandPool::ListReference" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Tools\Visualizer\Commands\Pools\RenderBSphereCommandPool.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAFAEgAABQAAQwAABAAAA=</HashCode>
+      <FileName>Wraith Engine\src\RenderBSphereCommandPool.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ImageManager">
+    <Position X="12.25" Y="6.75" Width="3" />
+    <Members>
+      <Method Name="~ImageManager" Hidden="true" />
+      <Method Name="deleteImages" Hidden="true" />
+      <Method Name="GetInstance" Hidden="true" />
+      <Method Name="hasKeyBeenAssigned" Hidden="true" />
+      <Method Name="ImageManager" Hidden="true" />
+      <Method Name="isFilePathValid" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="printFileNameErrorAndTerminate" Hidden="true" />
+      <Method Name="printImageLoadedSuccessfully" Hidden="true" />
+      <Method Name="printKeyAssignedErrorAndTerminate" Hidden="true" />
+      <Method Name="privGetImage" Hidden="true" />
+      <Method Name="privLoadImageAndAssignKey" Hidden="true" />
+      <Method Name="privSetDefaultPath" Hidden="true" />
+      <Method Name="tryToGetImage" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="ImageManager::MapKey" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Asset Managers\ImageManager\ImageManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="ImageManager::StorageMap" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Asset Managers\ImageManager\ImageManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="ImageManager::colorValue" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Asset Managers\ImageManager\ImageManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <AssociationLine Name="pImageManagerInstance" Type="ImageManager">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.313" Y="0.483" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAEAAAABAIAAAQACAQRAEACACgAAAiAAACRBg=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\AssetManagers\ImageManager.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pImageManagerInstance" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sprite">
+    <Position X="83.5" Y="28.25" Width="2" />
+    <Members>
+      <Method Name="~Sprite" Hidden="true" />
+      <Method Name="getCenterMatrix" Hidden="true" />
+      <Method Name="getPositionMatrix" Hidden="true" />
+      <Method Name="getRotationMatrix" Hidden="true" />
+      <Method Name="getScaleMatrix" Hidden="true" />
+      <Method Name="getScalePixelMatrix" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="render" Hidden="true" />
+      <Method Name="setToNullModifier" Hidden="true" />
+      <Method Name="setToUpdateWorld" Hidden="true" />
+      <Method Name="Sprite" Hidden="true" />
+      <Method Name="updateWorld" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>0AAAIGgABADAAAAAAAIAEzACABACQARQAAMgAoAwAAI=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\Sprites\Sprite.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_pPropertyModifierStrategy" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Drawable2DManager">
+    <Position X="22" Y="26" Width="1.75" />
+    <Members>
+      <Method Name="~Drawable2DManager" Hidden="true" />
+      <Method Name="Drawable2DManager" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="Drawable2DManager::StorageList" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\DrawableManager\Drawable2DManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="Drawable2DManager::StorageListReference" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\DrawableManager\Drawable2DManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAKAAAAAAAAAACIAAAAAAAAAAAgAAAEAAA=</HashCode>
+      <FileName>Wraith Engine\src\Drawable2DManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Draw2DRegistrationCommand">
+    <Position X="42" Y="20" Width="2.25" />
+    <Members>
+      <Method Name="~Draw2DRegistrationCommand" Hidden="true" />
+      <Method Name="Draw2DRegistrationCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAQAAAAAAAAEAAAAAAgAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\Draw2DRegistrationCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Draw2DDeregistrationCommand">
+    <Position X="45.5" Y="20" Width="2.5" />
+    <Members>
+      <Method Name="~Draw2DDeregistrationCommand" Hidden="true" />
+      <Method Name="Draw2DDeregistrationCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAEAAAAAAAAAEABAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\Draw2DDeregistrationCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneManagerCommand">
+    <Position X="3.25" Y="18.5" Width="2" />
+    <Members>
+      <Method Name="~SceneManagerCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="SceneManagerCommand" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAEAAAAAAAAAAAAAAAgAAAABAA=</HashCode>
+      <FileName>Wraith Engine\src\SceneManagerCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneChangeCommand">
+    <Position X="1.75" Y="20" Width="2" />
+    <Members>
+      <Method Name="~SceneChangeCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="SceneChangeCommand" Hidden="true" />
+      <Method Name="setSceneToChangeTo" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAEAAAACAgAAAAAAAAgAAAEAAA=</HashCode>
+      <FileName>Wraith Engine\src\SceneChangeCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneChangeNullCommand">
+    <Position X="4.5" Y="20" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAEAAAEAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\SceneChangeNullCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NullScene">
+    <Position X="7.5" Y="23" Width="1.5" />
+    <Members>
+      <Method Name="~NullScene" Hidden="true" />
+      <Method Name="NullScene" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Scene" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="23.25" Y="17.131" />
+        <Point X="20.458" Y="17.131" Type="JumpStart" />
+        <Point X="20.292" Y="17.131" Type="JumpEnd" />
+        <Point X="9.999" Y="17.131" />
+        <Point X="9.999" Y="23.713" />
+        <Point X="9" Y="23.713" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAEAAAAAAAAgAAAAAAAgAAAAAAI=</HashCode>
+      <FileName>Wraith Engine\src\NullScene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpriteFont">
+    <Position X="84" Y="22.5" Width="2" />
+    <Members>
+      <Method Name="~SpriteFont" Hidden="true" />
+      <Method Name="createSprite" Hidden="true" />
+      <Method Name="getName" Hidden="true" />
+      <Method Name="loadImageIntoImageManager" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="SpriteFont::Key" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Entities\SpriteFont\SpriteFont.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="SpriteFont::Glyph" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Entities\SpriteFont\SpriteFont.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="SpriteFont::FontMap" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Entities\SpriteFont\SpriteFont.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ASAAIAAAAAAQAAAAAAAAgAAAgACAAAABACAkAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\Sprites\SpriteFont.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpriteString">
+    <Position X="84" Y="17.75" Width="2.25" />
+    <Members>
+      <Method Name="~SpriteString" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="SpriteString::GlyphCollection" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Entities\SpriteString\SpriteString.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>QAAAIABAAACAAAAAAAQAAAACABAAQAAAAAcwAAAQAAA=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\Sprites\SpriteString.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScreenLog">
+    <Position X="50.75" Y="8" Width="1.75" />
+    <Members>
+      <Method Name="~ScreenLog" Hidden="true" />
+      <Method Name="GetInstance" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="privRender" Hidden="true" />
+      <Method Name="ScreenLog" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="ScreenLog::MessageCollection" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Tools\ScreenLog\ScreenLog.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAIAACABAAAAUAAAAAAAgAAABIkQAAIAEBAgAAAAABA=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\Tools\ScreenLog.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScreenLogAttorney">
+    <Position X="50.75" Y="4.5" Width="1.75" />
+    <Members>
+      <Method Name="~ScreenLogAttorney" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="ScreenLogAttorney" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="ScreenLogAttorney::RenderAccess">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Tools\ScreenLog\ScreenLogAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="ScreenLogAttorney::DeleteAccess">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Tools\ScreenLog\ScreenLogAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\ScreenLogAttorney.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ImageManagerAttorney">
+    <Position X="12.75" Y="4.5" Width="2" />
+    <Members>
+      <Method Name="~ImageManagerAttorney" Hidden="true" />
+      <Method Name="ImageManagerAttorney" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="ImageManagerAttorney::DeleteAccess">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\src\ImageManagerAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\ImageManagerAttorney.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpriteFontManagerAttorney">
+    <Position X="15.5" Y="4.5" Width="2.25" />
+    <Members>
+      <Method Name="~SpriteFontManagerAttorney" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="SpriteFontManagerAttorney" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="SpriteFontManagerAttorney::DeleteAccess">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\src\SpriteFontManagerAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAQAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\SpriteFontManagerAttorney.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpriteFontManager">
+    <Position X="15.5" Y="6.75" Width="2.25" />
+    <Members>
+      <Method Name="~SpriteFontManager" Hidden="true" />
+      <Method Name="deleteSpriteFonts" Hidden="true" />
+      <Method Name="GetInstance" Hidden="true" />
+      <Method Name="hasKeyBeenAssigned" Hidden="true" />
+      <Method Name="isFilePathValid" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="printFileNameErrorAndTerminate" Hidden="true" />
+      <Method Name="printKeyAssignedErrorAndTerminate" Hidden="true" />
+      <Method Name="printSpriteFontLoadedSuccessfully" Hidden="true" />
+      <Method Name="privGetSpriteFont" Hidden="true" />
+      <Method Name="privLoadSpriteFontAndAssignKey" Hidden="true" />
+      <Method Name="privSetDefaultPath" Hidden="true" />
+      <Method Name="SpriteFontManager" Hidden="true" />
+      <Method Name="tryToGetSpriteFont" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="SpriteFontManager::MapKey" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\include\WraithEngine\AssetManagers\SpriteFontManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="SpriteFontManager::StorageMap" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\include\WraithEngine\AssetManagers\SpriteFontManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <AssociationLine Name="pSpriteFontManagerInstance" Type="SpriteFontManager">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.735" Y="0.483" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEEQEAABAFAAAAACAABAEAAQDAABAiAAAKAJg=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\AssetManagers\SpriteFontManager.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pSpriteFontManagerInstance" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SpriteAttorney">
+    <Position X="83.75" Y="26" Width="1.75" />
+    <Members>
+      <Method Name="~SpriteAttorney" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="SpriteAttorney" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="SpriteAttorney::UpdateAccess">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\src\SpriteAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\SpriteAttorney.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpriteModifierStrategy">
+    <Position X="88" Y="28.5" Width="2" />
+    <Members>
+      <Method Name="~SpriteModifierStrategy" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="SpriteModifierStrategy" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAACAAAAAAAAAAEgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\SpriteModifierStrategy.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpriteNullModifierStrategy">
+    <Position X="86.5" Y="30.25" Width="2.25" />
+    <Members>
+      <Method Name="~SpriteNullModifierStrategy" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="SpriteNullModifierStrategy" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAgAACAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\SpriteNullModifierStrategy.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpriteWorldModifierStrategy">
+    <Position X="89.5" Y="30.25" Width="2.25" />
+    <Members>
+      <Method Name="~SpriteWorldModifierStrategy" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="SpriteWorldModifierStrategy" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAABAAAAAAAAAAAAAAAAAAgAAAABAA=</HashCode>
+      <FileName>Wraith Engine\src\SpriteWorldModifierStrategy.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpriteStrategyCollection">
+    <Position X="88" Y="32.5" Width="2" />
+    <Members>
+      <Method Name="~SpriteStrategyCollection" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="SpriteStrategyCollection" Hidden="true" />
+    </Members>
+    <AssociationLine Name="nullModifier" Type="SpriteNullModifierStrategy">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.26" Y="0.51" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="worldModifier" Type="SpriteWorldModifierStrategy">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.391" Y="0.51" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAQCAAAAIAAAAAAAAAAAAAAAIAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\SpriteStrategyCollection.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="nullModifier" />
+      <Field Name="worldModifier" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TerrainObjectManager">
+    <Position X="18.5" Y="6.75" Width="1.75" />
+    <Members>
+      <Method Name="~TerrainObjectManager" Hidden="true" />
+      <Field Name="DEBUG_TITLE_MESSAGE" Hidden="true" />
+      <Method Name="DebugPrint" Hidden="true" />
+      <Method Name="DebugPrintf" Hidden="true" />
+      <Method Name="deleteAllTerrainObjects" Hidden="true" />
+      <Method Name="GetInstance" Hidden="true" />
+      <Method Name="getTerrainObject" Hidden="true" />
+      <Method Name="hasKeyBeenAssigned" Hidden="true" />
+      <Method Name="isFilePathValid" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="printFileNameErrorAndTerminate" Hidden="true" />
+      <Method Name="printKeyAssignedErrorAndTerminate" Hidden="true" />
+      <Method Name="printTerrainObjectLoadedSuccessfully" Hidden="true" />
+      <Method Name="privLoadAndAssignKey" Hidden="true" />
+      <Method Name="privSetDefaultPath" Hidden="true" />
+      <Method Name="TerrainObjectManager" Hidden="true" />
+      <Method Name="tryToGetTerrainObject" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="TerrainObjectManager::MapKey" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\include\WraithEngine\AssetManagers\TerrainObjectManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="TerrainObjectManager::TerrainObjectMap" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\include\WraithEngine\AssetManagers\TerrainObjectManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <AssociationLine Name="pTerrainObjectManagerInstance" Type="TerrainObjectManager">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.886" Y="0.483" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>QgAABAAAEEAAABABEAAAACAABgECAQCAAAgyAEABABg=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\AssetManagers\TerrainObjectManager.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pTerrainObjectManagerInstance" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TerrainObjectManagerAttorney">
+    <Position X="18.25" Y="4.5" Width="2.5" />
+    <Members>
+      <Method Name="~TerrainObjectManagerAttorney" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="TerrainObjectManagerAttorney" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="TerrainObjectManagerAttorney::DeleteAccess">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\src\TerrainObjectManagerAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAgAACAAAA=</HashCode>
+      <FileName>Wraith Engine\src\TerrainObjectManagerAttorney.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TerrainManager">
+    <Position X="17.25" Y="22.75" Width="1.5" />
+    <Members>
+      <Field Name="_pNullTerrain" Hidden="true" />
+      <Method Name="~TerrainManager" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="TerrainManager" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAQQEAAAAAAAAAAAAABAAAAgACAAAIA=</HashCode>
+      <FileName>Wraith Engine\src\TerrainManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionTestTerrainCommand">
+    <Position X="32.75" Y="28.5" Width="2.25" />
+    <Members>
+      <Method Name="~CollisionTestTerrainCommand" Hidden="true" />
+      <Method Name="CollisionTestTerrainCommand" Hidden="true" />
+      <Method Name="debugTestCollisionGroup" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="processCallback" Hidden="true" />
+      <Method Name="testCollisionGroup" Hidden="true" />
+    </Members>
+    <AssociationLine Name="_pCollidableGroup" Type="CollidableGroup">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.102" Y="0.835" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAQAECAIAAAAACABAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\CollisionTestTerrainCommand.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_pCollidableGroup" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CollisionVolumeAABB">
+    <Position X="71" Y="26.5" Width="2.25" />
+    <Members>
+      <Field Name="_inverseWorldMatrix" Hidden="true" />
+      <Field Name="_maxLocalVertex" Hidden="true" />
+      <Field Name="_minLocalVertex" Hidden="true" />
+      <Field Name="_scalingFactorSqaured" Hidden="true" />
+      <Field Name="_worldCenter" Hidden="true" />
+      <Field Name="_worldMatrix" Hidden="true" />
+      <Method Name="~CollisionVolumeAABB" Hidden="true" />
+      <Method Name="CollisionVolumeAABB" Hidden="true" />
+      <Method Name="getInverseWorldMatrix" Hidden="true" />
+      <Method Name="getLocalHalfDiagonal" Hidden="true" />
+      <Method Name="getMaxLocalVertex" Hidden="true" />
+      <Method Name="getMinLocalVertex" Hidden="true" />
+      <Method Name="getScalingFactorSquared" Hidden="true" />
+      <Method Name="getWorldMatrix" Hidden="true" />
+      <Method Name="intersectAccept" Hidden="true" />
+      <Method Name="intersectVisitor" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="setMinMaxWorldVertex" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AEAgMAAAAhgAkBAAAAAAAABCUAAAACBoAQAhEEAAAIA=</HashCode>
+      <FileName>Wraith Engine\src\CollisionVolumeAABB.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionVolumeOBB">
+    <Position X="73.5" Y="26.5" Width="2.25" />
+    <Members>
+      <Method Name="~CollisionVolumeOBB" Hidden="true" />
+      <Method Name="CollisionVolumeOBB" Hidden="true" />
+      <Method Name="intersectAccept" Hidden="true" />
+      <Method Name="intersectVisitor" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="setMinMaxLocalVertex" Hidden="true" />
+      <Method Name="setWorldMatrix" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAgEAEAAhgAgRAAAAAgAABCUAAAACBoAQAgEAAAAIA=</HashCode>
+      <FileName>Wraith Engine\src\CollisionVolumeOBB.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionVolumeOctree">
+    <Position X="76.25" Y="26.5" Width="2.25" />
+    <Members>
+      <Method Name="~CollisionVolumeOctree" Hidden="true" />
+      <Method Name="addNodes" Hidden="true" />
+      <Method Name="CollisionVolumeOctree" Hidden="true" />
+      <Method Name="drawAt" Hidden="true" />
+      <Method Name="getAllNodes" Hidden="true" />
+      <Method Name="getRoot" Hidden="true" />
+      <Method Name="intersectAccept" Hidden="true" />
+      <Method Name="intersectVisitor" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="CollisionVolumeOctree::OctreeNodeCollection" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\src\CollisionVolumeOctree.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAEgEACAAAAAAAAQAAIAAAACAAAIAEAIAQAgGAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\CollisionVolumeOctree.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RenderAABBCommandPool">
+    <Position X="44.75" Y="5.25" Width="2.25" />
+    <Members>
+      <Method Name="~RenderAABBCommandPool" Hidden="true" />
+      <Method Name="deleteCommands" Hidden="true" />
+      <Method Name="GetInstance" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="privGetCommand" Hidden="true" />
+      <Method Name="privReturnCommand" Hidden="true" />
+      <Method Name="RenderAABBCommandPool" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="RenderAABBCommandPool::CommandStack" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\src\RenderAABBCommandPool.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="RenderAABBCommandPool::CommandList" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\src\RenderAABBCommandPool.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="RenderAABBCommandPool::ListReference" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\src\RenderAABBCommandPool.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAFAEgAAAQAAQwAAhAAAA=</HashCode>
+      <FileName>Wraith Engine\src\RenderAABBCommandPool.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RenderLineSegmentCommandPool">
+    <Position X="44.5" Y="12.75" Width="2.5" />
+    <Members>
+      <Method Name="~RenderLineSegmentCommandPool" Hidden="true" />
+      <Method Name="deleteCommands" Hidden="true" />
+      <Method Name="GetInstance" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="privGetCommand" Hidden="true" />
+      <Method Name="privReturnCommand" Hidden="true" />
+      <Method Name="RenderLineSegmentCommandPool" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="RenderLineSegmentCommandPool::CommandStack" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\src\RenderLineSegmentCommandPool.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="RenderLineSegmentCommandPool::CommandList" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\src\RenderLineSegmentCommandPool.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="RenderLineSegmentCommandPool::ListReference" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\src\RenderLineSegmentCommandPool.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAgAAAAAAAAAAAFAEgAAAQAAQwAABAAAA=</HashCode>
+      <FileName>Wraith Engine\src\RenderLineSegmentCommandPool.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RenderOBBCommandPool">
+    <Position X="45" Y="7.75" Width="2" />
+    <Members>
+      <Method Name="~RenderOBBCommandPool" Hidden="true" />
+      <Method Name="deleteCommands" Hidden="true" />
+      <Method Name="GetInstance" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="privGetCommand" Hidden="true" />
+      <Method Name="privReturnCommand" Hidden="true" />
+      <Method Name="RenderOBBCommandPool" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="RenderOBBCommandPool::CommandStack" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\src\RenderOBBCommandPool.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="RenderOBBCommandPool::CommandList" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\src\RenderOBBCommandPool.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="RenderOBBCommandPool::ListReference" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\src\RenderOBBCommandPool.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAFAEgAAAQAAQwAARAAAA=</HashCode>
+      <FileName>Wraith Engine\src\RenderOBBCommandPool.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RenderPointCommandPool">
+    <Position X="44.75" Y="10.25" Width="2.25" />
+    <Members>
+      <Method Name="~RenderPointCommandPool" Hidden="true" />
+      <Method Name="deleteCommands" Hidden="true" />
+      <Method Name="GetInstance" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="privGetCommand" Hidden="true" />
+      <Method Name="privReturnCommand" Hidden="true" />
+      <Method Name="RenderPointCommandPool" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="RenderPointCommandPool::CommandStack" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\src\RenderPointCommandPool.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="RenderPointCommandPool::CommandList" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\src\RenderPointCommandPool.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="RenderPointCommandPool::ListReference" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\src\RenderPointCommandPool.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAFAGgAAAUAAQwAABAAAA=</HashCode>
+      <FileName>Wraith Engine\src\RenderPointCommandPool.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TerrainObject">
+    <Position X="73.25" Y="15.5" Width="2.5" />
+    <Members>
+      <Field Name="_cellLength" Hidden="true" />
+      <Field Name="_pTerrainObjectGraphicsObject" Hidden="true" />
+      <Field Name="_pTerrainObjectGraphicsObjectWire" Hidden="true" />
+      <Field Name="_pTerrainObjectModel" Hidden="true" />
+      <Field Name="_sideLength" Hidden="true" />
+      <Method Name="~TerrainObject" Hidden="true" />
+      <Method Name="computeAABBCells" Hidden="true" />
+      <Method Name="computeCellTriangleAt" Hidden="true" />
+      <Method Name="computeFaceNormal" Hidden="true" />
+      <Method Name="computeTexelIndex" Hidden="true" />
+      <Method Name="computeTriangleIndex" Hidden="true" />
+      <Method Name="computeTriangleIndices" Hidden="true" />
+      <Method Name="computeVertexIndex" Hidden="true" />
+      <Method Name="computeVertexNormals" Hidden="true" />
+      <Method Name="computeVertices" Hidden="true" />
+      <Method Name="convert" Hidden="true" />
+      <Method Name="interpolate" Hidden="true" />
+      <Method Name="intersect" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="outputBetaGamma" Hidden="true" />
+      <Method Name="submitTerrainDrawDeregistration" Hidden="true" />
+      <Method Name="submitTerrainDrawRegistration" Hidden="true" />
+      <Method Name="TerrainObject" Hidden="true" />
+      <Method Name="visualizeCellAt" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Struct Name="TerrainObject::CellTriangle" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\src\TerrainObject.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>UAAAAQAAgAAAgQQAIAIAgRgwRAQHAAgAAwAgAQMAAAI=</HashCode>
+      <FileName>Wraith Engine\src\TerrainObject.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TerrainRectangleArea">
+    <Position X="76.5" Y="15.5" Width="1.75" />
+    <Members>
+      <Method Name="~TerrainRectangleArea" Hidden="true" />
+      <Method Name="getMaxIndex" Hidden="true" />
+      <Method Name="getMinIndex" Hidden="true" />
+      <Method Name="getTerrain" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="TerrainRectangleArea" Hidden="true" />
+    </Members>
+    <AssociationLine Name="_pTerrain" Type="Terrain">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.043" Y="0.201" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_minIndex" Type="AABBCellIndex">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.124" Y="0.526" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_maxIndex" Type="AABBCellIndex">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.449" Y="0.635" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_beginIt" Type="TRAIterator">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.363" Y="0.089" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_endIt" Type="TRAIterator">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.382" Y="0.118" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAQCAAAABAAAEAgAAAAQAABABABAQAAgAAEAABA=</HashCode>
+      <FileName>Wraith Engine\src\TerrainRectangleArea.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_pTerrain" />
+      <Field Name="_minIndex" />
+      <Field Name="_maxIndex" />
+      <Field Name="_beginIt" />
+      <Field Name="_endIt" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TRAIterator">
+    <Position X="79.75" Y="16" Width="2" />
+    <Members>
+      <Method Name="~TRAIterator" Hidden="true" />
+      <Method Name="operator!=" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="operator==" Hidden="true" />
+      <Method Name="operator-&gt;" Hidden="true" />
+      <Method Name="TRAIterator" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAABAAAAAgQAAAAxAAAAAAAAAAAAAgAAAABAA=</HashCode>
+      <FileName>Wraith Engine\src\TRAIterator.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Terrain" Collapsed="true">
+    <Position X="73.75" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAABAwBAABAACAAkAgAAAAAAA=</HashCode>
+      <FileName>User Code\Engine Demo\Entities\Terrain.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RenderCommand">
+    <Position X="42" Y="0.5" Width="1.5" />
+    <Members>
+      <Method Name="~RenderCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="RenderCommand" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAggAAAAQA=</HashCode>
+      <FileName>Wraith Engine\src\RenderCollisionVolumeCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RenderAABBCommand">
+    <Position X="40.5" Y="5.25" Width="2" />
+    <Members>
+      <Field Name="_activeReference" Hidden="true" />
+      <Method Name="~RenderAABBCommand" Hidden="true" />
+      <Method Name="getActiveReference" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="RenderAABBCommand" Hidden="true" />
+      <Method Name="setActiveReference" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAIAQAAgAAEAAAAAAAABAAQAAAwAAAIAEA=</HashCode>
+      <FileName>Wraith Engine\src\RenderAABBCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RenderBSphereCommand">
+    <Position X="40.5" Y="2.75" Width="2" />
+    <Members>
+      <Field Name="_activeReference" Hidden="true" />
+      <Method Name="~RenderBSphereCommand" Hidden="true" />
+      <Method Name="getActiveReference" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="RenderBSphereCommand" Hidden="true" />
+      <Method Name="setActiveReference" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAABYAQAAAAAEAAAAAAAAAAAQAAAwAAAIAEA=</HashCode>
+      <FileName>Wraith Engine\src\RenderBSphereCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RenderLineSegmentCommand">
+    <Position X="40.5" Y="12.75" Width="2.25" />
+    <Members>
+      <Field Name="_activeReference" Hidden="true" />
+      <Method Name="~RenderLineSegmentCommand" Hidden="true" />
+      <Method Name="getActiveReference" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="RenderLineSegmentCommand" Hidden="true" />
+      <Method Name="setActiveReference" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAQAACAAAAIAQAAAAAEAAAAAAAAAAAQAAQwAAAIAEA=</HashCode>
+      <FileName>Wraith Engine\src\RenderLineSegmentCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RenderOBBCommand">
+    <Position X="40.5" Y="7.75" Width="1.75" />
+    <Members>
+      <Field Name="_activeReference" Hidden="true" />
+      <Method Name="~RenderOBBCommand" Hidden="true" />
+      <Method Name="getActiveReference" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="RenderOBBCommand" Hidden="true" />
+      <Method Name="setActiveReference" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAQAAiAAAAIAQAAAAAEAAAAAAAAAAAQAAAwAAAIAEA=</HashCode>
+      <FileName>Wraith Engine\src\RenderOBBCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RenderPointCommand">
+    <Position X="40.5" Y="10.25" Width="1.75" />
+    <Members>
+      <Field Name="_activeReference" Hidden="true" />
+      <Method Name="~RenderPointCommand" Hidden="true" />
+      <Method Name="getActiveReference" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="RenderPointCommand" Hidden="true" />
+      <Method Name="setActiveReference" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>ACAAAACAAAAIAQAAAAAUAAAAAAAAAAAQAAAwAAAIAEA=</HashCode>
+      <FileName>Wraith Engine\src\RenderPointCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="AABBCell">
+    <Position X="71.25" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAEAAgAAAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\AABBCell.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="AABBCellIndex">
+    <Position X="76.5" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\AABBCellIndex.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="RegistrationState">
+    <Position X="79.25" Y="23.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAABAAAAAQAAAAIAAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\RegistrationStates.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AlarmID">
+    <Position X="58.5" Y="30.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\GameObject\AlarmIDs.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="InputEvent">
+    <Position X="56.5" Y="30.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\GameObject\InputTypes.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

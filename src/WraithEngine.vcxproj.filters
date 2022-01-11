@@ -1,0 +1,1870 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="_Libs">
+      <UniqueIdentifier>{1392bc0c-ded2-42a7-9ec1-333be4dadedd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application">
+      <UniqueIdentifier>{aef3393e-06a5-4f08-bf4a-3b6be12d1e04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\GLFW">
+      <UniqueIdentifier>{d22a518f-dd11-48ea-8247-bd82c5928233}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\GLFW\include">
+      <UniqueIdentifier>{f1613e77-99f1-482b-bccf-12b6784f3aa0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\GLFW\lib">
+      <UniqueIdentifier>{c350b52d-8efa-4eca-a258-d57d45c43245}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\SB6">
+      <UniqueIdentifier>{189a2178-2765-49df-b052-8eca24a60d61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\SB6\lib">
+      <UniqueIdentifier>{841af908-0674-4949-8aa0-292e3e84a88b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\SB6\include">
+      <UniqueIdentifier>{d2f5d78b-d9cf-4bd9-bd4e-df7522de593c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\File">
+      <UniqueIdentifier>{fb44cdb2-f236-4b3b-833e-e9e2c3af59cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\File\lib">
+      <UniqueIdentifier>{23abe339-ce80-4523-b0f0-23747e3f512f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\File\include">
+      <UniqueIdentifier>{323b20aa-e08c-4260-84b1-1e85121a9e17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\Math">
+      <UniqueIdentifier>{9fcc2c9b-3e4f-4ab2-a0c5-3099cdf90300}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\Math\lib">
+      <UniqueIdentifier>{ea7cbe8f-1aeb-4ad2-bd4e-fa300408bd5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\Math\include">
+      <UniqueIdentifier>{5d126765-1977-4213-89fb-e004f6468da5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\AzulCore">
+      <UniqueIdentifier>{d3f91089-c7e6-474d-8376-afd372d35a8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\AzulCore\lib">
+      <UniqueIdentifier>{8a854cfc-9294-4797-b476-0b2feacdd62f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\AzulCore\include">
+      <UniqueIdentifier>{60eabb98-a714-4df4-8fa1-3fb92ea55bd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Resources">
+      <UniqueIdentifier>{6aa6834d-2024-498e-bd2e-494921c55103}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine">
+      <UniqueIdentifier>{c77cff89-cbee-4213-9ec4-0038a675d0ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Class Diagram">
+      <UniqueIdentifier>{b19df819-8c83-454e-9e7d-a52377ae5ed4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Memory Tracker">
+      <UniqueIdentifier>{43aace7e-7ec0-4b69-8bde-de100a20613c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities">
+      <UniqueIdentifier>{4e02a037-f6df-4052-aaa3-5924f65ea471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Tools">
+      <UniqueIdentifier>{c163e236-5f03-4709-9cf7-ecaf75895c9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Game Object">
+      <UniqueIdentifier>{369ca810-a688-422e-ae1a-0ae4afdb593e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Scene">
+      <UniqueIdentifier>{ee4f1a2f-b0d6-49d4-aa62-f3cfc56aa6a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Sprites">
+      <UniqueIdentifier>{cfc4efdc-aed9-4c91-a417-f138c6f1658b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Sprites\Sprite">
+      <UniqueIdentifier>{41d8e293-c491-4697-a2e2-c52379e28e20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Sprites\Sprite Font">
+      <UniqueIdentifier>{5528e998-4492-4a46-adf0-39bad771fb14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Sprites\Sprite String">
+      <UniqueIdentifier>{72f63cf6-397a-4de2-bfa6-e3062ded361b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Tools\Math Tools">
+      <UniqueIdentifier>{cd94730d-3c9a-4dc4-bf6e-7b372a3a948b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Tools\Colors">
+      <UniqueIdentifier>{998f3572-26c5-4327-9d54-69c289442571}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Tools\Screen Log">
+      <UniqueIdentifier>{045d3efd-1f0f-4993-af8c-22115c1141dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Tools\Visualizer">
+      <UniqueIdentifier>{4dc2f1d6-311d-49d9-aab3-bb80727a780d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Game Object\Properties">
+      <UniqueIdentifier>{0845869a-4fa0-4026-94e9-85b9c00cf028}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Tools\Time Manager">
+      <UniqueIdentifier>{61521b22-28d3-4597-86a5-53bb0e38677d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Wraith">
+      <UniqueIdentifier>{ec218083-7abd-41c7-9ca1-13f50b02930b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Tools\Time Manager\Freeze Time">
+      <UniqueIdentifier>{ac7c0fae-26e1-4042-ad78-056bcffdd797}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers">
+      <UniqueIdentifier>{397e6f74-e003-4150-99e7-fd776266c2e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Assets">
+      <UniqueIdentifier>{69b0e285-cb4f-447a-bf0d-b1d8b6b09ad0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Game Object">
+      <UniqueIdentifier>{580ed7fb-46aa-4e44-b8e0-a4f456fa219b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Game Object\Input">
+      <UniqueIdentifier>{768ab567-fa6d-4247-9013-08eb34c40eac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Game">
+      <UniqueIdentifier>{fe3a7cd4-7827-4afb-9bda-1df1fb549308}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Assets\Image Manager">
+      <UniqueIdentifier>{e26fcc8a-7b03-4d96-a3d8-34bc47bc9b94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Assets\Model Manager">
+      <UniqueIdentifier>{4d368a36-49a3-49a5-a3a8-346e7369b4e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Game\Scene Manager">
+      <UniqueIdentifier>{2276fdc5-6a7b-46bf-b05b-e9ea4c4dbb88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Game\Camera Manager">
+      <UniqueIdentifier>{1bc24d2c-21c4-4f68-a016-7ecfa80fb498}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Tools\Visualizer\Commands">
+      <UniqueIdentifier>{c5c857fa-4804-426e-a5d9-cea5a4759f40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Assets\Shader Manager">
+      <UniqueIdentifier>{71b455f9-540e-46d7-bdd5-f4c2636c6d9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Assets\Sprite Font Manager">
+      <UniqueIdentifier>{076b1b22-34c4-42aa-9f5f-b7d1840b926a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Assets\Texture Manager">
+      <UniqueIdentifier>{d2d8c7db-f172-4b03-8a35-dafa30c9ff62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Game Object\Update">
+      <UniqueIdentifier>{d06fb1a9-a774-45f5-afc3-1fc46be98bde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Game Object\Properties\Drawable">
+      <UniqueIdentifier>{bed181a6-12c8-4c2a-87e7-640f109f1c9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Game Object\Properties\Alarmable">
+      <UniqueIdentifier>{d28756fc-9953-493d-9f64-bdc448bc397b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Game Object\Properties\Inputable">
+      <UniqueIdentifier>{5e3754f4-2fc6-4686-b0f2-a149277a3ac2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Game Object\Properties\Collidable">
+      <UniqueIdentifier>{ca56a6cf-141c-4a5b-8a65-e40459c6eac3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Game Object\Properties\Updatable">
+      <UniqueIdentifier>{3aa7f196-e671-4e28-8338-fd11c2adf1e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Game Object\Draw">
+      <UniqueIdentifier>{55f1467c-e923-48d1-928a-5dc8995d11fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Game Object\Alarm">
+      <UniqueIdentifier>{53efcc06-4bf6-4aec-8b26-f6da4adc36c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Game Object\Collision">
+      <UniqueIdentifier>{b8f248fc-5094-41b1-9347-1320819bd064}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Game Object\Commands">
+      <UniqueIdentifier>{f076a509-987c-46d3-a0f2-3b5d27a69f63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Game Object\Attorney">
+      <UniqueIdentifier>{4fbedf47-dd53-444a-a916-3b7e1d0daf25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Game Object\Properties\Updatable\Attorney">
+      <UniqueIdentifier>{82d1bbd0-6d35-4ac4-9729-b73ce1cc0cd4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Game Object\Properties\Updatable\Commands">
+      <UniqueIdentifier>{a51afd57-4b9b-4aa9-ac73-64829ff4e0c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Game Object\Properties\Drawable\Attorney">
+      <UniqueIdentifier>{6f3abd43-76be-4963-84a8-ae6b4ca5c548}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Game Object\Properties\Drawable\Commands">
+      <UniqueIdentifier>{004342d7-4b4c-459d-91db-159275f570b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Game Object\Properties\Alarmable\Attorney">
+      <UniqueIdentifier>{d5810760-59e5-41b5-a392-b7365fc1d57a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Game Object\Properties\Alarmable\Commands">
+      <UniqueIdentifier>{ab1b1de1-1ba7-4a93-8483-527dd4a72f9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Game Object\Properties\Inputable\Attorney">
+      <UniqueIdentifier>{20b30a01-6aaa-49a3-aee3-3c58e0398f16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Game Object\Properties\Inputable\Commands">
+      <UniqueIdentifier>{5496ee63-777f-4764-9e1a-b3c613247d6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Game Object\Properties\Collidable\Attorney">
+      <UniqueIdentifier>{9cffcb2a-9d6d-4fcd-ac70-c4e64ecf2361}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Game Object\Properties\Collidable\Commands">
+      <UniqueIdentifier>{75c662e9-972b-4653-8ae3-083517017720}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Game Object\Properties\Collidable\Collision Volumes">
+      <UniqueIdentifier>{a3659777-bf63-42c6-9d01-29df99ab7fe7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Game Object\Properties\Collidable\Collision Volumes\Base">
+      <UniqueIdentifier>{6eddab36-60bc-48ae-a51b-f657cf5b860b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Scene\Attorney">
+      <UniqueIdentifier>{76d9d7c7-e6d9-43d5-8ebd-37ef4a2ce14c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Scene\Broker">
+      <UniqueIdentifier>{c3fc66d4-6c53-42dd-a83a-08be0c4b4a8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Scene\Commands">
+      <UniqueIdentifier>{23be13a3-ea5c-4047-90a1-d6f50354d12e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Scene\Commands\Base">
+      <UniqueIdentifier>{4d846e3c-d972-4d6c-ae85-fef8e2c16628}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Assets\Image Manager\Attorney">
+      <UniqueIdentifier>{a2e2eb9c-687f-41a9-9448-d7aa463e1240}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Assets\Model Manager\Attorney">
+      <UniqueIdentifier>{c16afaa1-9d64-47bf-972a-d416f68ecaa9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Assets\Shader Manager\Attorney">
+      <UniqueIdentifier>{f947fcef-0b67-442f-85fa-28e770d3f700}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Assets\Sprite Font Manager\Attorney">
+      <UniqueIdentifier>{24812369-6692-4a29-8c92-f1cba208f33a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Assets\Texture Manager\Attorney">
+      <UniqueIdentifier>{b1751fb8-3eaa-4fa0-82f7-0c5bc85892fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Game Object\Input\Keyboard">
+      <UniqueIdentifier>{b47cbf61-a24f-4e55-8763-cae0358477c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Game Object\Input\Keyboard\Single Key">
+      <UniqueIdentifier>{5eae5c77-5c1d-42de-b37a-ae9a0f0de9d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Game\Camera Manager\Attorney">
+      <UniqueIdentifier>{e68fe158-1476-4b97-85e9-97138c1e42bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Game\Scene Manager\Attorney">
+      <UniqueIdentifier>{17c18433-5ef0-4ce5-9735-353bc00d7fcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Game\Scene Manager\Commands">
+      <UniqueIdentifier>{61a2716f-3b9a-47ec-b9b5-c4d2ad872861}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Game\Scene Manager\Commands\Base">
+      <UniqueIdentifier>{b509489a-4ee7-435d-a814-bc65e89ef0f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Game\Scene Manager\Null Scene">
+      <UniqueIdentifier>{b8101291-3da9-486a-8423-6b83bd320fd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Tools\Time Manager\Attorney">
+      <UniqueIdentifier>{165a6722-0587-4507-a924-8c506236e59b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Tools\Visualizer\Attorney">
+      <UniqueIdentifier>{df2a7c29-5baf-442b-9a8e-7bc0ca0b2b0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Tools\Visualizer\Commands\Base">
+      <UniqueIdentifier>{506bbf42-d572-462a-893e-f5cb2790486c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Tools\Visualizer\Commands\Pools">
+      <UniqueIdentifier>{0956abb9-4bfe-4399-88b1-dccbcfe88d81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Tools\Screen Log\Attorney">
+      <UniqueIdentifier>{18a4d705-cbe3-43b3-9e2a-5bd1c0b4b79e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Wraith\Attorney">
+      <UniqueIdentifier>{eb6091ab-6d05-470d-9bec-87852d07f709}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Sprites\Sprite\Strategies">
+      <UniqueIdentifier>{d6fc5d57-36fc-4274-8728-aef854c14308}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Sprites\Sprite\Strategies\Base">
+      <UniqueIdentifier>{53ff6215-77d1-4a45-9519-aa29de3ab287}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Sprites\Sprite\Attorney">
+      <UniqueIdentifier>{b82b37d7-f058-4167-8ce6-d1d11367c7c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Sprites\Sprite\Strategies\Collection">
+      <UniqueIdentifier>{4e7c198a-d190-4e45-88a7-77dae119542a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Game Object\Collision\Commands">
+      <UniqueIdentifier>{e5a3dcb0-0400-48e4-8e7d-90340a7d2c00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Game Object\Properties\Collidable\Collision Volumes\Base\Attorney">
+      <UniqueIdentifier>{0fd7f3a0-cd51-49f5-87cc-a10f9d9d375b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Tools\Triangle">
+      <UniqueIdentifier>{e29e4f02-6534-4cae-a707-4fa8b3077c3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Game Object\Properties\Collidable\Collision Volumes\Collision Volume Octree">
+      <UniqueIdentifier>{28659b8c-962a-45b5-a265-72a10f8ef04c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Terrain Object">
+      <UniqueIdentifier>{43edfbf5-d77d-4ff1-a491-8fd39acedeff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Assets\Terrain Object Manager">
+      <UniqueIdentifier>{b83ef783-770e-4f5c-a7ff-88ab8103d6fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Assets\Terrain Object Manager\Attorney">
+      <UniqueIdentifier>{8c74b2fe-f39b-43c3-b269-2ba7d0d42173}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Terrain Manager">
+      <UniqueIdentifier>{b733738a-5f84-4182-9008-76531371ebf2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Terrain Object\Base">
+      <UniqueIdentifier>{eccbd9b5-95b3-4a87-a87d-917d439989db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Terrain Manager\Null Terrain">
+      <UniqueIdentifier>{dc5fde49-9a4f-400d-8fa5-2cfb68a194fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Terrain Object\Terrain Rectangle Area">
+      <UniqueIdentifier>{e290ee80-9dd3-43c5-8b6d-f8af9df25032}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Entities\Terrain Object\Structs">
+      <UniqueIdentifier>{d987ef53-5129-40d4-b084-982aa233852c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code">
+      <UniqueIdentifier>{4ac1d2fd-dc5b-41d6-ab2b-9bea44b171d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Tank Game">
+      <UniqueIdentifier>{7c293b01-2f73-48d7-8265-cdd1a2d0c638}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Tank Game\Controllers">
+      <UniqueIdentifier>{f015bff9-a1ba-4c5c-9960-e823876a0773}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Tank Game\Controllers\Game Controller">
+      <UniqueIdentifier>{882af977-a60c-46ab-9fbf-09589c87cd6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Tank Game\Controllers\Game Controller\Strategies">
+      <UniqueIdentifier>{cb17d975-8543-4920-b539-2ae0e08e71b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Tank Game\Entities">
+      <UniqueIdentifier>{8a465417-f7ac-4319-8f13-6845ff3d7bfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Tank Game\Entities\Bomber">
+      <UniqueIdentifier>{c3e929d9-21c1-4549-b1e9-b588225f97fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Tank Game\Entities\Bullet">
+      <UniqueIdentifier>{5954fa04-8bd5-44b0-838a-8b68b2c6e081}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Tank Game\Entities\Environment">
+      <UniqueIdentifier>{407b144f-6e0d-45cb-9c83-adde9bf2b342}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Tank Game\Entities\Tank Spawner">
+      <UniqueIdentifier>{b818a6af-c931-4cc0-9ba5-58cc62ed9287}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Tank Game\Entities\Turret">
+      <UniqueIdentifier>{22e5e353-97d4-4048-9cd5-bfb095731b2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Tank Game\Interfaces">
+      <UniqueIdentifier>{8e591dd7-aadd-42cd-a3fe-f4a092ec38a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Tank Game\Factories">
+      <UniqueIdentifier>{0e580a7f-f73e-4134-83b9-b8cc5f0bedd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Tank Game\Factories\Bullets">
+      <UniqueIdentifier>{f4245e90-03a2-4775-844b-62ff7b855374}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Tank Game\Factories\Tank Controllers">
+      <UniqueIdentifier>{390a581b-b6f3-4883-9ed4-843ded378cac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Tank Game\Factories\Tank Controllers\AI">
+      <UniqueIdentifier>{1353bbe7-3a74-4f7d-9bdd-7b070654012a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Tank Game\Factories\Tank Controllers\Player">
+      <UniqueIdentifier>{5c463cf6-ce7c-4e96-8251-c06d465632d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Tank Game\Factories\Tank Controllers\Null">
+      <UniqueIdentifier>{83ad03fb-05fa-4c2c-baa0-7b9fb3f75f98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Tank Game\Factories\Tanks">
+      <UniqueIdentifier>{3a047c85-cff6-4df8-94b6-77e809fd7486}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Tank Game\UI">
+      <UniqueIdentifier>{ce37afd1-844d-440c-a9af-fb3b6d9b4729}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Tank Game\Tools">
+      <UniqueIdentifier>{0478b144-3557-4a73-8eb4-8f518d80b34a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Tank Game\Scenes">
+      <UniqueIdentifier>{21413e77-85a1-46f8-8eda-08504970e65c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Tank Game\Scenes\Test Scenes">
+      <UniqueIdentifier>{38f076b8-b7b9-470c-8c81-d0d88d47a229}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Tank Game\Scenes\Game Scenes">
+      <UniqueIdentifier>{817080bc-17c5-4af4-8311-41d23df64dd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Tank Game\Other">
+      <UniqueIdentifier>{78f3828b-796e-4423-9fd2-471b4ae6ca04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Tank Game\Other\Objectives">
+      <UniqueIdentifier>{e6daf28a-9ca5-407e-89a9-04517932951b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Tank Game\Other\Objectives\Strategies">
+      <UniqueIdentifier>{bba16734-fc71-4cc7-a9f7-a3779c52db7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Tank Game\Collections">
+      <UniqueIdentifier>{f1ea9ce3-a25d-4144-998e-122b4d13a83e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Engine Demo">
+      <UniqueIdentifier>{f37a53cb-d875-47c7-8d06-29e3022dfdd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Engine Demo\Entities">
+      <UniqueIdentifier>{c6e945d8-cbf7-4443-84f7-1caaca4b308b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Engine Demo\Scenes">
+      <UniqueIdentifier>{6cd1ecf0-18a1-4f9d-aa14-79346f6e11b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Tank Game\Entities\Tank">
+      <UniqueIdentifier>{e3b19319-6c70-4471-9402-1e4c25ba7fe3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Tank Game\Entities\Tank\Parts">
+      <UniqueIdentifier>{7e46c189-b9df-46b7-b842-f3d3ba131b72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Tank Game\Entities\Tank\Controllers">
+      <UniqueIdentifier>{506aa634-5710-4c2a-9d95-5995d66166ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\User Code\Tank Game\Entities\Tank\Controllers\Base">
+      <UniqueIdentifier>{4ce4fff5-4615-4a3b-8710-e6113647e7af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Tools\Math Tools\Octree Tools">
+      <UniqueIdentifier>{ed6c2382-2fb6-41d8-944d-0c5133c2a67e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Octree Model Manager">
+      <UniqueIdentifier>{bcb590d4-020d-4488-8495-24716e6c6878}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Octree Model Manager\Octree Builder">
+      <UniqueIdentifier>{8eb31b4f-88d1-414d-9161-7634c509efec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Wraith Engine\Managers\Octree Model Manager\Attorney">
+      <UniqueIdentifier>{5a9ad581-a6fc-4b91-ba30-9887f60ce553}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\dist\GLFW\include\GL\glfw.h">
+      <Filter>_Libs\GLFW\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\arcball.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\object.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\sb6.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\sb6ext.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\sb6ktx.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\sb6mfile.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\shader.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\vmath.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\GL\gl3w.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\GL\glcorearb.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\GL\glext.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\GL\glxext.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\GL\wglext.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\File\include\File.h">
+      <Filter>_Libs\File\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Math\include\Align16.h">
+      <Filter>_Libs\Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Math\include\Constants.h">
+      <Filter>_Libs\Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Math\include\Enum.h">
+      <Filter>_Libs\Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Math\include\MathEngine.h">
+      <Filter>_Libs\Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Math\include\Matrix.h">
+      <Filter>_Libs\Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Math\include\Util.h">
+      <Filter>_Libs\Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Math\include\Vect.h">
+      <Filter>_Libs\Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\AzulCore.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\AzulFileHdr.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\AzulHelper.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\Camera.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\DebugOut.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\Engine.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GpuVertTypes.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_ColorByPosition.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_ColorNoTexture.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_ColorNoTextureLight.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_Sprite.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_SpriteBox.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_TextureFlat.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_TextureLight.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_WireframeAutoColor.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_WireframeConstantColor.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\Image.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\Keyboard.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\LibrarySetup.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\Model.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\Mouse.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\Rect.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\ShaderObject.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\Texture.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\TextureTGA.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Math\include\MathApp.h">
+      <Filter>_Libs\Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Math\include\Quat.h">
+      <Filter>_Libs\Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Math\include\QuatApp.h">
+      <Filter>_Libs\Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Math\include\VectApp.h">
+      <Filter>_Libs\Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\MemTracker\Framework.h">
+      <Filter>Application\Memory Tracker</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\MemTracker\ProjectSettings.h">
+      <Filter>Application\Memory Tracker</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\DoxygenData.h">
+      <Filter>Application\Wraith Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\include\WraithEngine\Tools\Colors.h">
+      <Filter>Application\Wraith Engine\Tools\Colors</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\include\WraithEngine\Tools\MathTools.h">
+      <Filter>Application\Wraith Engine\Tools\Math Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\include\WraithEngine\Tools\ScreenLog.h">
+      <Filter>Application\Wraith Engine\Tools\Screen Log</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\include\WraithEngine\Tools\TimeManager.h">
+      <Filter>Application\Wraith Engine\Tools\Time Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\include\WraithEngine\Tools\Visualizer.h">
+      <Filter>Application\Wraith Engine\Tools\Visualizer</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\include\WraithEngine\Sprites\Sprite.h">
+      <Filter>Application\Wraith Engine\Entities\Sprites\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\include\WraithEngine\Sprites\SpriteFont.h">
+      <Filter>Application\Wraith Engine\Entities\Sprites\Sprite Font</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\include\WraithEngine\Sprites\SpriteString.h">
+      <Filter>Application\Wraith Engine\Entities\Sprites\Sprite String</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\include\WraithEngine\Scenes\Scene.h">
+      <Filter>Application\Wraith Engine\Entities\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\include\WraithEngine\GameObject\GameObject.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\include\WraithEngine\GameObject\Alarmable.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Alarmable</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\include\WraithEngine\GameObject\Collidable.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Collidable</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\include\WraithEngine\GameObject\Drawable.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Drawable</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\include\WraithEngine\GameObject\Inputable.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Inputable</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\include\WraithEngine\GameObject\Updatable.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Updatable</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\include\WraithEngine\GameObject\InputTypes.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Inputable</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\include\WraithEngine\Wraith.h">
+      <Filter>Application\Wraith Engine\Wraith</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\CameraManager.h">
+      <Filter>Application\Wraith Engine\Managers\Game\Camera Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\include\WraithEngine\Scenes\SceneManager.h">
+      <Filter>Application\Wraith Engine\Managers\Game\Scene Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\FreezeTime.h">
+      <Filter>Application\Wraith Engine\Tools\Time Manager\Freeze Time</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\include\WraithEngine\AssetManagers\ImageManager.h">
+      <Filter>Application\Wraith Engine\Managers\Assets\Image Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\include\WraithEngine\AssetManagers\ModelManager.h">
+      <Filter>Application\Wraith Engine\Managers\Assets\Model Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\RegistrationStates.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\RenderBSphereCommand.h">
+      <Filter>Application\Wraith Engine\Tools\Visualizer\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\include\WraithEngine\AssetManagers\ShaderManager.h">
+      <Filter>Application\Wraith Engine\Managers\Assets\Shader Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\include\WraithEngine\AssetManagers\SpriteFontManager.h">
+      <Filter>Application\Wraith Engine\Managers\Assets\Sprite Font Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\UpdatableManager.h">
+      <Filter>Application\Wraith Engine\Managers\Game Object\Update</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\Drawable2DManager.h">
+      <Filter>Application\Wraith Engine\Managers\Game Object\Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\DrawableManager.h">
+      <Filter>Application\Wraith Engine\Managers\Game Object\Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\AlarmableManager.h">
+      <Filter>Application\Wraith Engine\Managers\Game Object\Alarm</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\CollisionManager.h">
+      <Filter>Application\Wraith Engine\Managers\Game Object\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\CollisionDispatch.h">
+      <Filter>Application\Wraith Engine\Managers\Game Object\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\CollidableGroup.h">
+      <Filter>Application\Wraith Engine\Managers\Game Object\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\CollisionDispatchBase.h">
+      <Filter>Application\Wraith Engine\Managers\Game Object\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\GameObjectExitCommand.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\GameObjectEntryCommand.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\GameObjectAttorney.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Attorney</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\Draw2DDeregistrationCommand.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Drawable\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\Draw2DRegistrationCommand.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Drawable\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\DrawDeregistrationCommand.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Drawable\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\DrawRegistrationCommand.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Drawable\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\DrawableAttorney.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Drawable\Attorney</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\UpdateDeregistrationCommand.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Updatable\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\UpdateRegistrationCommand.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Updatable\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\UpdatableAttorney.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Updatable\Attorney</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\AlarmDeregistrationCommand.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Alarmable\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\AlarmRegistrationCommand.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Alarmable\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\AlarmableAttorney.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Alarmable\Attorney</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\InputableAttorney.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Inputable\Attorney</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\KeyRegistrationCommand.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Inputable\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\KeyDeregistrationCommand.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Inputable\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\CollidableAttorney.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Collidable\Attorney</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\CollisionDeregisterCommand.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Collidable\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\CollisionRegisterCommand.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Collidable\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\CollisionVolumeBSphere.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Collidable\Collision Volumes</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\CollisionVolume.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Collidable\Collision Volumes\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\SceneAttorney.h">
+      <Filter>Application\Wraith Engine\Entities\Scene\Attorney</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\SceneRegistrationBroker.h">
+      <Filter>Application\Wraith Engine\Entities\Scene\Broker</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\SceneRegistrationCommand.h">
+      <Filter>Application\Wraith Engine\Entities\Scene\Commands\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\ImageManagerAttorney.h">
+      <Filter>Application\Wraith Engine\Managers\Assets\Image Manager\Attorney</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\ModelManagerAttorney.h">
+      <Filter>Application\Wraith Engine\Managers\Assets\Model Manager\Attorney</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\ShaderManagerAttorney.h">
+      <Filter>Application\Wraith Engine\Managers\Assets\Shader Manager\Attorney</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\SpriteFontManagerAttorney.h">
+      <Filter>Application\Wraith Engine\Managers\Assets\Sprite Font Manager\Attorney</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\include\WraithEngine\AssetManagers\TextureManager.h">
+      <Filter>Application\Wraith Engine\Managers\Assets\Texture Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\TextureManagerAttorney.h">
+      <Filter>Application\Wraith Engine\Managers\Assets\Texture Manager\Attorney</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\SingleKeyEventManager.h">
+      <Filter>Application\Wraith Engine\Managers\Game Object\Input\Keyboard\Single Key</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\KeyboardEventManager.h">
+      <Filter>Application\Wraith Engine\Managers\Game Object\Input\Keyboard</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\CameraManagerAttorney.h">
+      <Filter>Application\Wraith Engine\Managers\Game\Camera Manager\Attorney</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\SceneManagerAttorney.h">
+      <Filter>Application\Wraith Engine\Managers\Game\Scene Manager\Attorney</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\SceneChangeNullCommand.h">
+      <Filter>Application\Wraith Engine\Managers\Game\Scene Manager\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\SceneChangeCommand.h">
+      <Filter>Application\Wraith Engine\Managers\Game\Scene Manager\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\SceneManagerCommand.h">
+      <Filter>Application\Wraith Engine\Managers\Game\Scene Manager\Commands\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\NullScene.h">
+      <Filter>Application\Wraith Engine\Managers\Game\Scene Manager\Null Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\TimeManagerAttorney.h">
+      <Filter>Application\Wraith Engine\Tools\Time Manager\Attorney</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\VisualizerAttorney.h">
+      <Filter>Application\Wraith Engine\Tools\Visualizer\Attorney</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\RenderCollisionVolumeCommand.h">
+      <Filter>Application\Wraith Engine\Tools\Visualizer\Commands\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\RenderBSphereCommandPool.h">
+      <Filter>Application\Wraith Engine\Tools\Visualizer\Commands\Pools</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\ScreenLogAttorney.h">
+      <Filter>Application\Wraith Engine\Tools\Screen Log\Attorney</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\WraithAttorney.h">
+      <Filter>Application\Wraith Engine\Wraith\Attorney</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Controllers\AlarmController.h">
+      <Filter>Application\User Code\Tank Game\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Controllers\MainMenuController.h">
+      <Filter>Application\User Code\Tank Game\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Interfaces\Damagable.h">
+      <Filter>Application\User Code\Tank Game\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\UI\AmmoBar.h">
+      <Filter>Application\User Code\Tank Game\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\UI\HealthBar.h">
+      <Filter>Application\User Code\Tank Game\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Tools\CameraController.h">
+      <Filter>Application\User Code\Tank Game\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Tools\CameraSwitcher.h">
+      <Filter>Application\User Code\Tank Game\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Tools\SceneChanger.h">
+      <Filter>Application\User Code\Tank Game\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Tools\SceneryBuilder.h">
+      <Filter>Application\User Code\Tank Game\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Tools\SceneSwitcher.h">
+      <Filter>Application\User Code\Tank Game\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Tools\TesterObject.h">
+      <Filter>Application\User Code\Tank Game\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Engine Demo\Entities\AlarmCar.h">
+      <Filter>Application\User Code\Engine Demo\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Engine Demo\Entities\BasicCar.h">
+      <Filter>Application\User Code\Engine Demo\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Engine Demo\Entities\CollisionCar.h">
+      <Filter>Application\User Code\Engine Demo\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Engine Demo\Entities\DebugRegistrationCube.h">
+      <Filter>Application\User Code\Engine Demo\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Engine Demo\Entities\InputCar.h">
+      <Filter>Application\User Code\Engine Demo\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Engine Demo\Entities\OtherCollisionCar.h">
+      <Filter>Application\User Code\Engine Demo\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Engine Demo\Entities\SpaceFrigate.h">
+      <Filter>Application\User Code\Engine Demo\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Engine Demo\Entities\WorldAxes.h">
+      <Filter>Application\User Code\Engine Demo\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Engine Demo\Entities\WorldPlane.h">
+      <Filter>Application\User Code\Engine Demo\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Engine Demo\Scenes\AlarmDemoScene.h">
+      <Filter>Application\User Code\Engine Demo\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Engine Demo\Scenes\BasicDemoScene.h">
+      <Filter>Application\User Code\Engine Demo\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Engine Demo\Scenes\CollisionDemoScene.h">
+      <Filter>Application\User Code\Engine Demo\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Engine Demo\Scenes\InputDemoScene.h">
+      <Filter>Application\User Code\Engine Demo\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\SpriteWorldModifierStrategy.h">
+      <Filter>Application\Wraith Engine\Entities\Sprites\Sprite\Strategies</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\SpriteAttorney.h">
+      <Filter>Application\Wraith Engine\Entities\Sprites\Sprite\Attorney</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\SpriteNullModifierStrategy.h">
+      <Filter>Application\Wraith Engine\Entities\Sprites\Sprite\Strategies</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\SpriteModifierStrategy.h">
+      <Filter>Application\Wraith Engine\Entities\Sprites\Sprite\Strategies\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\SpriteStrategyCollection.h">
+      <Filter>Application\Wraith Engine\Entities\Sprites\Sprite\Strategies\Collection</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Scenes\TestScene.h">
+      <Filter>Application\User Code\Tank Game\Scenes\Test Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Scenes\TestScene2.h">
+      <Filter>Application\User Code\Tank Game\Scenes\Test Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Scenes\TestScene3.h">
+      <Filter>Application\User Code\Tank Game\Scenes\Test Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Scenes\Level1.h">
+      <Filter>Application\User Code\Tank Game\Scenes\Game Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Scenes\Level2.h">
+      <Filter>Application\User Code\Tank Game\Scenes\Game Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Scenes\MainMenu.h">
+      <Filter>Application\User Code\Tank Game\Scenes\Game Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Scenes\TestScene4Sprites.h">
+      <Filter>Application\User Code\Tank Game\Scenes\Test Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\include\WraithEngine\GameObject\AlarmIDs.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Alarmable</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Entities\Bomber.h">
+      <Filter>Application\User Code\Tank Game\Entities\Bomber</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Entities\Bullet.h">
+      <Filter>Application\User Code\Tank Game\Entities\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Entities\Tank.h">
+      <Filter>Application\User Code\Tank Game\Entities\Tank</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Entities\TankTurret.h">
+      <Filter>Application\User Code\Tank Game\Entities\Tank\Parts</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Entities\TankBarrel.h">
+      <Filter>Application\User Code\Tank Game\Entities\Tank\Parts</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Entities\TankHull.h">
+      <Filter>Application\User Code\Tank Game\Entities\Tank\Parts</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Entities\Campfire.h">
+      <Filter>Application\User Code\Tank Game\Entities\Environment</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Entities\Cottage.h">
+      <Filter>Application\User Code\Tank Game\Entities\Environment</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Entities\GroundPlane.h">
+      <Filter>Application\User Code\Tank Game\Entities\Environment</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Entities\LeaflessTree.h">
+      <Filter>Application\User Code\Tank Game\Entities\Environment</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Entities\Warehouse.h">
+      <Filter>Application\User Code\Tank Game\Entities\Environment</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Entities\WindMill.h">
+      <Filter>Application\User Code\Tank Game\Entities\Environment</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Entities\TankController.h">
+      <Filter>Application\User Code\Tank Game\Entities\Tank\Controllers\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Entities\TankControllerPlayer.h">
+      <Filter>Application\User Code\Tank Game\Entities\Tank\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Factories\BulletPool.h">
+      <Filter>Application\User Code\Tank Game\Factories\Bullets</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Factories\BulletFactory.h">
+      <Filter>Application\User Code\Tank Game\Factories\Bullets</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Factories\TankPool.h">
+      <Filter>Application\User Code\Tank Game\Factories\Tanks</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Factories\TankFactory.h">
+      <Filter>Application\User Code\Tank Game\Factories\Tanks</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Entities\TankControllerAI.h">
+      <Filter>Application\User Code\Tank Game\Entities\Tank\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Entities\TankControllerNull.h">
+      <Filter>Application\User Code\Tank Game\Entities\Tank\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Entities\TankSpawner.h">
+      <Filter>Application\User Code\Tank Game\Entities\Tank Spawner</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Other\TankControlTypes.h">
+      <Filter>Application\User Code\Tank Game\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Factories\TankControllerAIPool.h">
+      <Filter>Application\User Code\Tank Game\Factories\Tank Controllers\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Factories\TankControllerPlayerPool.h">
+      <Filter>Application\User Code\Tank Game\Factories\Tank Controllers\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Factories\TankControllerNullPool.h">
+      <Filter>Application\User Code\Tank Game\Factories\Tank Controllers\Null</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Factories\TankControllerPlayerFactory.h">
+      <Filter>Application\User Code\Tank Game\Factories\Tank Controllers\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Factories\TankControllerAIFactory.h">
+      <Filter>Application\User Code\Tank Game\Factories\Tank Controllers\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Factories\TankControllerNullFactory.h">
+      <Filter>Application\User Code\Tank Game\Factories\Tank Controllers\Null</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Interfaces\RecycleTankStrategy.h">
+      <Filter>Application\User Code\Tank Game\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Other\RecycleTankToFactoryStrategy.h">
+      <Filter>Application\User Code\Tank Game\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Collections\RecycleTankStrategyCollection.h">
+      <Filter>Application\User Code\Tank Game\Collections</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Controllers\GameController.h">
+      <Filter>Application\User Code\Tank Game\Controllers\Game Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Other\RecycleTankToGameControllerStrategy.h">
+      <Filter>Application\User Code\Tank Game\Controllers\Game Controller\Strategies</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Interfaces\Transformable.h">
+      <Filter>Application\User Code\Tank Game\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\CollisionTestCommand.h">
+      <Filter>Application\Wraith Engine\Managers\Game Object\Collision\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\CollisionTestPairCommand.h">
+      <Filter>Application\Wraith Engine\Managers\Game Object\Collision\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\CollisionTestSelfCommand.h">
+      <Filter>Application\Wraith Engine\Managers\Game Object\Collision\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\CollisionVolumeAttorney.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Collidable\Collision Volumes\Base\Attorney</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\CollisionVolumeAABB.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Collidable\Collision Volumes</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\RenderAABBCommandPool.h">
+      <Filter>Application\Wraith Engine\Tools\Visualizer\Commands\Pools</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\RenderAABBCommand.h">
+      <Filter>Application\Wraith Engine\Tools\Visualizer\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\RenderPointCommand.h">
+      <Filter>Application\Wraith Engine\Tools\Visualizer\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\RenderPointCommandPool.h">
+      <Filter>Application\Wraith Engine\Tools\Visualizer\Commands\Pools</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Engine Demo\Entities\Octree.h">
+      <Filter>Application\User Code\Engine Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\CollisionVolumeOBB.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Collidable\Collision Volumes</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\RenderOBBCommand.h">
+      <Filter>Application\Wraith Engine\Tools\Visualizer\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\RenderOBBCommandPool.h">
+      <Filter>Application\Wraith Engine\Tools\Visualizer\Commands\Pools</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\RenderLineSegmentCommand.h">
+      <Filter>Application\Wraith Engine\Tools\Visualizer\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\RenderLineSegmentCommandPool.h">
+      <Filter>Application\Wraith Engine\Tools\Visualizer\Commands\Pools</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\CollisionVolumeBoundingBox.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Collidable\Collision Volumes\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Scenes\MissionFailed.h">
+      <Filter>Application\User Code\Tank Game\Scenes\Game Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Controllers\MissionFailedController.h">
+      <Filter>Application\User Code\Tank Game\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Other\ObjectiveMonitor.h">
+      <Filter>Application\User Code\Tank Game\Other\Objectives</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Other\TankKillMonitor.h">
+      <Filter>Application\User Code\Tank Game\Other\Objectives</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Other\RecycleTankToTankKillMonitorStrategy.h">
+      <Filter>Application\User Code\Tank Game\Other\Objectives\Strategies</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Entities\Turret.h">
+      <Filter>Application\User Code\Tank Game\Entities\Turret</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Entities\TurretHead.h">
+      <Filter>Application\User Code\Tank Game\Entities\Turret</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Entities\TurretBase.h">
+      <Filter>Application\User Code\Tank Game\Entities\Turret</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Engine Demo\Entities\CollisionTestObject.h">
+      <Filter>Application\User Code\Engine Demo\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\include\WraithEngine\Tools\Triangle.h">
+      <Filter>Application\Wraith Engine\Tools\Triangle</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Other\DestinationMonitor.h">
+      <Filter>Application\User Code\Tank Game\Other\Objectives</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Entities\Marker.h">
+      <Filter>Application\User Code\Tank Game\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\OctreeModelManager.h">
+      <Filter>Application\Wraith Engine\Managers\Octree Model Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\CollisionVolumeOctree.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Collidable\Collision Volumes\Collision Volume Octree</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\OctreeNode.h">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Collidable\Collision Volumes\Collision Volume Octree</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Other\DestroyMonitor.h">
+      <Filter>Application\User Code\Tank Game\Other\Objectives</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\TerrainObject.h">
+      <Filter>Application\Wraith Engine\Entities\Terrain Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\include\WraithEngine\AssetManagers\TerrainObjectManager.h">
+      <Filter>Application\Wraith Engine\Managers\Assets\Terrain Object Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\TerrainObjectManagerAttorney.h">
+      <Filter>Application\Wraith Engine\Managers\Assets\Terrain Object Manager\Attorney</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\TerrainManager.h">
+      <Filter>Application\Wraith Engine\Managers\Terrain Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Engine Demo\Entities\Terrain.h">
+      <Filter>Application\Wraith Engine\Entities\Terrain Object\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\NullTerrain.h">
+      <Filter>Application\Wraith Engine\Managers\Terrain Manager\Null Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\CollisionTestTerrainCommand.h">
+      <Filter>Application\Wraith Engine\Managers\Game Object\Collision\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\TerrainRectangleArea.h">
+      <Filter>Application\Wraith Engine\Entities\Terrain Object\Terrain Rectangle Area</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\TRAIterator.h">
+      <Filter>Application\Wraith Engine\Entities\Terrain Object\Terrain Rectangle Area</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\AABBCell.h">
+      <Filter>Application\Wraith Engine\Entities\Terrain Object\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\AABBCellIndex.h">
+      <Filter>Application\Wraith Engine\Entities\Terrain Object\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Entities\Wall.h">
+      <Filter>Application\User Code\Tank Game\Entities\Environment</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Tools\GameObjectStorage.h">
+      <Filter>Application\User Code\Tank Game\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Tools\WallBuilder.h">
+      <Filter>Application\User Code\Tank Game\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\UI\Reticle.h">
+      <Filter>Application\User Code\Tank Game\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Entities\TankControllerAISniper.h">
+      <Filter>Application\User Code\Tank Game\Entities\Tank\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Entities\TankControllerAICharger.h">
+      <Filter>Application\User Code\Tank Game\Entities\Tank\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Factories\TankControllerAISniperPool.h">
+      <Filter>Application\User Code\Tank Game\Factories\Tank Controllers\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Factories\TankControllerAISniperFactory.h">
+      <Filter>Application\User Code\Tank Game\Factories\Tank Controllers\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Factories\TankControllerAIChargerFactory.h">
+      <Filter>Application\User Code\Tank Game\Factories\Tank Controllers\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Factories\TankControllerAIChargerPool.h">
+      <Filter>Application\User Code\Tank Game\Factories\Tank Controllers\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Scenes\Level3.h">
+      <Filter>Application\User Code\Tank Game\Scenes\Game Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Tools\DrawCollisionVolumes.h">
+      <Filter>Application\User Code\Tank Game\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\OctreeBuilder.h">
+      <Filter>Application\Wraith Engine\Managers\Octree Model Manager\Octree Builder</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\OctreeTools.h">
+      <Filter>Application\Wraith Engine\Tools\Math Tools\Octree Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Entities\RoundArch.h">
+      <Filter>Application\User Code\Tank Game\Entities\Environment</Filter>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Entities\FlatArch.h">
+      <Filter>Application\User Code\Tank Game\Entities\Environment</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith Engine\src\OctreeModelManagerAttorney.h">
+      <Filter>Application\Wraith Engine\Managers\Octree Model Manager\Attorney</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\dist\GLFW\lib\GLFW_Debug.lib">
+      <Filter>_Libs\GLFW\lib</Filter>
+    </Library>
+    <Library Include="..\dist\SB6\lib\sb6_Debug.lib">
+      <Filter>_Libs\SB6\lib</Filter>
+    </Library>
+    <Library Include="..\dist\File\lib\File_Debug.lib">
+      <Filter>_Libs\File\lib</Filter>
+    </Library>
+    <Library Include="..\dist\Math\lib\MathEngine_Debug.lib">
+      <Filter>_Libs\Math\lib</Filter>
+    </Library>
+    <Library Include="..\dist\AzulCore\lib\AzulCore_Debug.lib">
+      <Filter>_Libs\AzulCore\lib</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Wraith Resources\LoadResources.cpp">
+      <Filter>Application\Wraith Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Resources\GameEnd.cpp">
+      <Filter>Application\Wraith Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Resources\GameInitialize.cpp">
+      <Filter>Application\Wraith Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\main.cpp">
+      <Filter>Application\Wraith Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\Alarmable.cpp">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Alarmable</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\CameraManager.cpp">
+      <Filter>Application\Wraith Engine\Managers\Game\Camera Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\Collidable.cpp">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Collidable</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\Colors.cpp">
+      <Filter>Application\Wraith Engine\Tools\Colors</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\Drawable.cpp">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Drawable</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\FreezeTime.cpp">
+      <Filter>Application\Wraith Engine\Tools\Time Manager\Freeze Time</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\GameObject.cpp">
+      <Filter>Application\Wraith Engine\Entities\Game Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\ImageManager.cpp">
+      <Filter>Application\Wraith Engine\Managers\Assets\Image Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\Inputable.cpp">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Inputable</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\MathTools.cpp">
+      <Filter>Application\Wraith Engine\Tools\Math Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\ModelManager.cpp">
+      <Filter>Application\Wraith Engine\Managers\Assets\Model Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\RenderBSphereCommand.cpp">
+      <Filter>Application\Wraith Engine\Tools\Visualizer\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\Scene.cpp">
+      <Filter>Application\Wraith Engine\Entities\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\SceneManager.cpp">
+      <Filter>Application\Wraith Engine\Managers\Game\Scene Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\ScreenLog.cpp">
+      <Filter>Application\Wraith Engine\Tools\Screen Log</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\ShaderManager.cpp">
+      <Filter>Application\Wraith Engine\Managers\Assets\Shader Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\Sprite.cpp">
+      <Filter>Application\Wraith Engine\Entities\Sprites\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\SpriteFont.cpp">
+      <Filter>Application\Wraith Engine\Entities\Sprites\Sprite Font</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\SpriteFontManager.cpp">
+      <Filter>Application\Wraith Engine\Managers\Assets\Sprite Font Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\SpriteString.cpp">
+      <Filter>Application\Wraith Engine\Entities\Sprites\Sprite String</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\TextureManager.cpp">
+      <Filter>Application\Wraith Engine\Managers\Assets\Texture Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\TimeManager.cpp">
+      <Filter>Application\Wraith Engine\Tools\Time Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\Updatable.cpp">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Updatable</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\UpdatableManager.cpp">
+      <Filter>Application\Wraith Engine\Managers\Game Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\Visualizer.cpp">
+      <Filter>Application\Wraith Engine\Tools\Visualizer</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\Wraith.cpp">
+      <Filter>Application\Wraith Engine\Wraith</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\Drawable2DManager.cpp">
+      <Filter>Application\Wraith Engine\Managers\Game Object\Draw</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\DrawableManager.cpp">
+      <Filter>Application\Wraith Engine\Managers\Game Object\Draw</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\AlarmableManager.cpp">
+      <Filter>Application\Wraith Engine\Managers\Game Object\Alarm</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\CollisionManager.cpp">
+      <Filter>Application\Wraith Engine\Managers\Game Object\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\CollisionDispatch.cpp">
+      <Filter>Application\Wraith Engine\Managers\Game Object\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\CollidableGroup.cpp">
+      <Filter>Application\Wraith Engine\Managers\Game Object\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\CollisionDispatchBase.cpp">
+      <Filter>Application\Wraith Engine\Managers\Game Object\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\GameObjectEntryCommand.cpp">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\GameObjectExitCommand.cpp">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\Draw2DDeregistrationCommand.cpp">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Drawable\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\Draw2DRegistrationCommand.cpp">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Drawable\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\DrawDeregistrationCommand.cpp">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Drawable\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\DrawRegistrationCommand.cpp">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Drawable\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\UpdateDeregistrationCommand.cpp">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Updatable\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\UpdateRegistrationCommand.cpp">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Updatable\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\AlarmDeregistrationCommand.cpp">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Alarmable\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\AlarmRegistrationCommand.cpp">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Alarmable\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\KeyDeregistrationCommand.cpp">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Inputable\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\KeyRegistrationCommand.cpp">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Inputable\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\CollidableAttorney.cpp">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Collidable\Attorney</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\CollisionDeregisterCommand.cpp">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Collidable\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\CollisionRegisterCommand.cpp">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Collidable\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\CollisionVolumeBSphere.cpp">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Collidable\Collision Volumes</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\CollisionVolume.cpp">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Collidable\Collision Volumes\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\SceneRegistrationBroker.cpp">
+      <Filter>Application\Wraith Engine\Entities\Scene\Broker</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\SceneRegistrationCommand.cpp">
+      <Filter>Application\Wraith Engine\Entities\Scene\Commands\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\ImageManagerAttorney.cpp">
+      <Filter>Application\Wraith Engine\Managers\Assets\Image Manager\Attorney</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\SpriteFontManagerAttorney.cpp">
+      <Filter>Application\Wraith Engine\Managers\Assets\Sprite Font Manager\Attorney</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\SingleKeyEventManager.cpp">
+      <Filter>Application\Wraith Engine\Managers\Game Object\Input\Keyboard\Single Key</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\KeyboardEventManager.cpp">
+      <Filter>Application\Wraith Engine\Managers\Game Object\Input\Keyboard</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\SceneChangeNullCommand.cpp">
+      <Filter>Application\Wraith Engine\Managers\Game\Scene Manager\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\SceneChangeCommand.cpp">
+      <Filter>Application\Wraith Engine\Managers\Game\Scene Manager\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\SceneManagerCommand.cpp">
+      <Filter>Application\Wraith Engine\Managers\Game\Scene Manager\Commands\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\NullScene.cpp">
+      <Filter>Application\Wraith Engine\Managers\Game\Scene Manager\Null Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\VisualizerAttorney.cpp">
+      <Filter>Application\Wraith Engine\Tools\Visualizer\Attorney</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\RenderCollisionVolumeCommand.cpp">
+      <Filter>Application\Wraith Engine\Tools\Visualizer\Commands\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\RenderBSphereCommandPool.cpp">
+      <Filter>Application\Wraith Engine\Tools\Visualizer\Commands\Pools</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\ScreenLogAttorney.cpp">
+      <Filter>Application\Wraith Engine\Tools\Screen Log\Attorney</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Controllers\AlarmController.cpp">
+      <Filter>Application\User Code\Tank Game\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Controllers\MainMenuController.cpp">
+      <Filter>Application\User Code\Tank Game\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Interfaces\Damagable.cpp">
+      <Filter>Application\User Code\Tank Game\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\UI\AmmoBar.cpp">
+      <Filter>Application\User Code\Tank Game\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\UI\HealthBar.cpp">
+      <Filter>Application\User Code\Tank Game\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Tools\CameraController.cpp">
+      <Filter>Application\User Code\Tank Game\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Tools\CameraSwitcher.cpp">
+      <Filter>Application\User Code\Tank Game\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Tools\SceneChanger.cpp">
+      <Filter>Application\User Code\Tank Game\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Tools\SceneryBuilder.cpp">
+      <Filter>Application\User Code\Tank Game\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Tools\SceneSwitcher.cpp">
+      <Filter>Application\User Code\Tank Game\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Tools\TesterObject.cpp">
+      <Filter>Application\User Code\Tank Game\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Engine Demo\Entities\AlarmCar.cpp">
+      <Filter>Application\User Code\Engine Demo\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Engine Demo\Entities\BasicCar.cpp">
+      <Filter>Application\User Code\Engine Demo\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Engine Demo\Entities\CollisionCar.cpp">
+      <Filter>Application\User Code\Engine Demo\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Engine Demo\Entities\DebugRegistrationCube.cpp">
+      <Filter>Application\User Code\Engine Demo\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Engine Demo\Entities\InputCar.cpp">
+      <Filter>Application\User Code\Engine Demo\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Engine Demo\Entities\OtherCollisionCar.cpp">
+      <Filter>Application\User Code\Engine Demo\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Engine Demo\Entities\SpaceFrigate.cpp">
+      <Filter>Application\User Code\Engine Demo\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Engine Demo\Entities\WorldAxes.cpp">
+      <Filter>Application\User Code\Engine Demo\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Engine Demo\Entities\WorldPlane.cpp">
+      <Filter>Application\User Code\Engine Demo\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Engine Demo\Scenes\AlarmDemoScene.cpp">
+      <Filter>Application\User Code\Engine Demo\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Engine Demo\Scenes\BasicDemoScene.cpp">
+      <Filter>Application\User Code\Engine Demo\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Engine Demo\Scenes\CollisionDemoScene.cpp">
+      <Filter>Application\User Code\Engine Demo\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Engine Demo\Scenes\InputDemoScene.cpp">
+      <Filter>Application\User Code\Engine Demo\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\SpriteWorldModifierStrategy.cpp">
+      <Filter>Application\Wraith Engine\Entities\Sprites\Sprite\Strategies</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\SpriteAttorney.cpp">
+      <Filter>Application\Wraith Engine\Entities\Sprites\Sprite\Attorney</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\SpriteNullModifierStrategy.cpp">
+      <Filter>Application\Wraith Engine\Entities\Sprites\Sprite\Strategies</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\SpriteModifierStrategy.cpp">
+      <Filter>Application\Wraith Engine\Entities\Sprites\Sprite\Strategies\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\SpriteStrategyCollection.cpp">
+      <Filter>Application\Wraith Engine\Entities\Sprites\Sprite\Strategies\Collection</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Scenes\TestScene.cpp">
+      <Filter>Application\User Code\Tank Game\Scenes\Test Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Scenes\TestScene2.cpp">
+      <Filter>Application\User Code\Tank Game\Scenes\Test Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Scenes\TestScene3.cpp">
+      <Filter>Application\User Code\Tank Game\Scenes\Test Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Scenes\Level1.cpp">
+      <Filter>Application\User Code\Tank Game\Scenes\Game Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Scenes\Level2.cpp">
+      <Filter>Application\User Code\Tank Game\Scenes\Game Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Scenes\MainMenu.cpp">
+      <Filter>Application\User Code\Tank Game\Scenes\Game Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Scenes\TestScene4Sprites.cpp">
+      <Filter>Application\User Code\Tank Game\Scenes\Test Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Entities\Bomber.cpp">
+      <Filter>Application\User Code\Tank Game\Entities\Bomber</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Entities\Bullet.cpp">
+      <Filter>Application\User Code\Tank Game\Entities\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Entities\Tank.cpp">
+      <Filter>Application\User Code\Tank Game\Entities\Tank</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Entities\TankTurret.cpp">
+      <Filter>Application\User Code\Tank Game\Entities\Tank\Parts</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Entities\TankBarrel.cpp">
+      <Filter>Application\User Code\Tank Game\Entities\Tank\Parts</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Entities\TankHull.cpp">
+      <Filter>Application\User Code\Tank Game\Entities\Tank\Parts</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Entities\Campfire.cpp">
+      <Filter>Application\User Code\Tank Game\Entities\Environment</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Entities\Cottage.cpp">
+      <Filter>Application\User Code\Tank Game\Entities\Environment</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Entities\GroundPlane.cpp">
+      <Filter>Application\User Code\Tank Game\Entities\Environment</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Entities\LeaflessTree.cpp">
+      <Filter>Application\User Code\Tank Game\Entities\Environment</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Entities\Warehouse.cpp">
+      <Filter>Application\User Code\Tank Game\Entities\Environment</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Entities\WindMill.cpp">
+      <Filter>Application\User Code\Tank Game\Entities\Environment</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Entities\TankController.cpp">
+      <Filter>Application\User Code\Tank Game\Entities\Tank\Controllers\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Entities\TankControllerPlayer.cpp">
+      <Filter>Application\User Code\Tank Game\Entities\Tank\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Factories\BulletFactory.cpp">
+      <Filter>Application\User Code\Tank Game\Factories\Bullets</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Factories\BulletPool.cpp">
+      <Filter>Application\User Code\Tank Game\Factories\Bullets</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Factories\TankFactory.cpp">
+      <Filter>Application\User Code\Tank Game\Factories\Tanks</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Factories\TankPool.cpp">
+      <Filter>Application\User Code\Tank Game\Factories\Tanks</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Entities\TankControllerNull.cpp">
+      <Filter>Application\User Code\Tank Game\Entities\Tank\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Entities\TankControllerAI.cpp">
+      <Filter>Application\User Code\Tank Game\Entities\Tank\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Entities\TankSpawner.cpp">
+      <Filter>Application\User Code\Tank Game\Entities\Tank Spawner</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Factories\TankControllerAIPool.cpp">
+      <Filter>Application\User Code\Tank Game\Factories\Tank Controllers\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Factories\TankControllerPlayerPool.cpp">
+      <Filter>Application\User Code\Tank Game\Factories\Tank Controllers\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Factories\TankControllerNullPool.cpp">
+      <Filter>Application\User Code\Tank Game\Factories\Tank Controllers\Null</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Factories\TankControllerPlayerFactory.cpp">
+      <Filter>Application\User Code\Tank Game\Factories\Tank Controllers\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Factories\TankControllerAIFactory.cpp">
+      <Filter>Application\User Code\Tank Game\Factories\Tank Controllers\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Factories\TankControllerNullFactory.cpp">
+      <Filter>Application\User Code\Tank Game\Factories\Tank Controllers\Null</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Interfaces\RecycleTankStrategy.cpp">
+      <Filter>Application\User Code\Tank Game\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Other\RecycleTankToFactoryStrategy.cpp">
+      <Filter>Application\User Code\Tank Game\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Collections\RecycleTankStrategyCollection.cpp">
+      <Filter>Application\User Code\Tank Game\Collections</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Controllers\GameController.cpp">
+      <Filter>Application\User Code\Tank Game\Controllers\Game Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Other\RecycleTankToGameControllerStrategy.cpp">
+      <Filter>Application\User Code\Tank Game\Controllers\Game Controller\Strategies</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\CollisionTestCommand.cpp">
+      <Filter>Application\Wraith Engine\Managers\Game Object\Collision\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\CollisionTestPairCommand.cpp">
+      <Filter>Application\Wraith Engine\Managers\Game Object\Collision\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\CollisionTestSelfCommand.cpp">
+      <Filter>Application\Wraith Engine\Managers\Game Object\Collision\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\CollisionVolumeAttorney.cpp">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Collidable\Collision Volumes\Base\Attorney</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\CollisionVolumeAABB.cpp">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Collidable\Collision Volumes</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\RenderAABBCommandPool.cpp">
+      <Filter>Application\Wraith Engine\Tools\Visualizer\Commands\Pools</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\RenderAABBCommand.cpp">
+      <Filter>Application\Wraith Engine\Tools\Visualizer\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\RenderPointCommand.cpp">
+      <Filter>Application\Wraith Engine\Tools\Visualizer\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\RenderPointCommandPool.cpp">
+      <Filter>Application\Wraith Engine\Tools\Visualizer\Commands\Pools</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Engine Demo\Entities\Octree.cpp">
+      <Filter>Application\User Code\Engine Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\CollisionVolumeOBB.cpp">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Collidable\Collision Volumes</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\RenderOBBCommand.cpp">
+      <Filter>Application\Wraith Engine\Tools\Visualizer\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\RenderOBBCommandPool.cpp">
+      <Filter>Application\Wraith Engine\Tools\Visualizer\Commands\Pools</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\RenderLineSegmentCommand.cpp">
+      <Filter>Application\Wraith Engine\Tools\Visualizer\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\RenderLineSegmentCommandPool.cpp">
+      <Filter>Application\Wraith Engine\Tools\Visualizer\Commands\Pools</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\CollisionVolumeBoundingBox.cpp">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Collidable\Collision Volumes\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Scenes\MissionFailed.cpp">
+      <Filter>Application\User Code\Tank Game\Scenes\Game Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Controllers\MissionFailedController.cpp">
+      <Filter>Application\User Code\Tank Game\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Other\ObjectiveMonitor.cpp">
+      <Filter>Application\User Code\Tank Game\Other\Objectives</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Other\TankKillMonitor.cpp">
+      <Filter>Application\User Code\Tank Game\Other\Objectives</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Other\RecycleTankToTankKillMonitorStrategy.cpp">
+      <Filter>Application\User Code\Tank Game\Other\Objectives\Strategies</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Entities\Turret.cpp">
+      <Filter>Application\User Code\Tank Game\Entities\Turret</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Entities\TurretBase.cpp">
+      <Filter>Application\User Code\Tank Game\Entities\Turret</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Entities\TurretHead.cpp">
+      <Filter>Application\User Code\Tank Game\Entities\Turret</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Engine Demo\Entities\CollisionTestObject.cpp">
+      <Filter>Application\User Code\Engine Demo\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\Triangle.cpp">
+      <Filter>Application\Wraith Engine\Tools\Triangle</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Other\DestinationMonitor.cpp">
+      <Filter>Application\User Code\Tank Game\Other\Objectives</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Entities\Marker.cpp">
+      <Filter>Application\User Code\Tank Game\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\OctreeModelManager.cpp">
+      <Filter>Application\Wraith Engine\Managers\Octree Model Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\CollisionVolumeOctree.cpp">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Collidable\Collision Volumes\Collision Volume Octree</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\OctreeNode.cpp">
+      <Filter>Application\Wraith Engine\Entities\Game Object\Properties\Collidable\Collision Volumes\Collision Volume Octree</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Other\DestroyMonitor.cpp">
+      <Filter>Application\User Code\Tank Game\Other\Objectives</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\TerrainObject.cpp">
+      <Filter>Application\Wraith Engine\Entities\Terrain Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\TerrainObjectManager.cpp">
+      <Filter>Application\Wraith Engine\Managers\Assets\Terrain Object Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\TerrainManager.cpp">
+      <Filter>Application\Wraith Engine\Managers\Terrain Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Engine Demo\Entities\Terrain.cpp">
+      <Filter>Application\Wraith Engine\Entities\Terrain Object\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\NullTerrain.cpp">
+      <Filter>Application\Wraith Engine\Managers\Terrain Manager\Null Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\CollisionTestTerrainCommand.cpp">
+      <Filter>Application\Wraith Engine\Managers\Game Object\Collision\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\TerrainRectangleArea.cpp">
+      <Filter>Application\Wraith Engine\Entities\Terrain Object\Terrain Rectangle Area</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\TRAIterator.cpp">
+      <Filter>Application\Wraith Engine\Entities\Terrain Object\Terrain Rectangle Area</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\AABBCell.cpp">
+      <Filter>Application\Wraith Engine\Entities\Terrain Object\Structs</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\AABBCellIndex.cpp">
+      <Filter>Application\Wraith Engine\Entities\Terrain Object\Structs</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Entities\Wall.cpp">
+      <Filter>Application\User Code\Tank Game\Entities\Environment</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Tools\GameObjectStorage.cpp">
+      <Filter>Application\User Code\Tank Game\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Tools\WallBuilder.cpp">
+      <Filter>Application\User Code\Tank Game\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\UI\Reticle.cpp">
+      <Filter>Application\User Code\Tank Game\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Entities\TankControllerAISniper.cpp">
+      <Filter>Application\User Code\Tank Game\Entities\Tank\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Entities\TankControllerAICharger.cpp">
+      <Filter>Application\User Code\Tank Game\Entities\Tank\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Factories\TankControllerAISniperPool.cpp">
+      <Filter>Application\User Code\Tank Game\Factories\Tank Controllers\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Factories\TankControllerAISniperFactory.cpp">
+      <Filter>Application\User Code\Tank Game\Factories\Tank Controllers\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Factories\TankControllerAIChargerFactory.cpp">
+      <Filter>Application\User Code\Tank Game\Factories\Tank Controllers\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Factories\TankControllerAIChargerPool.cpp">
+      <Filter>Application\User Code\Tank Game\Factories\Tank Controllers\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Scenes\Level3.cpp">
+      <Filter>Application\User Code\Tank Game\Scenes\Game Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Tools\DrawCollisionVolumes.cpp">
+      <Filter>Application\User Code\Tank Game\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\OctreeBuilder.cpp">
+      <Filter>Application\Wraith Engine\Managers\Octree Model Manager\Octree Builder</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith Engine\src\OctreeTools.cpp">
+      <Filter>Application\Wraith Engine\Tools\Math Tools\Octree Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Entities\RoundArch.cpp">
+      <Filter>Application\User Code\Tank Game\Entities\Environment</Filter>
+    </ClCompile>
+    <ClCompile Include="User Code\Tank Game\Entities\FlatArch.cpp">
+      <Filter>Application\User Code\Tank Game\Entities\Environment</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Diagrams\Layout.cd">
+      <Filter>Application\Class Diagram</Filter>
+    </None>
+    <None Include="Diagrams\OctreeSystem.cd">
+      <Filter>Application\Class Diagram</Filter>
+    </None>
+    <None Include="GameObject.cd">
+      <Filter>Application\Class Diagram</Filter>
+    </None>
+    <None Include="Scenes.cd">
+      <Filter>Application\Class Diagram</Filter>
+    </None>
+    <None Include="AssetManagers.cd">
+      <Filter>Application\Class Diagram</Filter>
+    </None>
+  </ItemGroup>
+</Project>

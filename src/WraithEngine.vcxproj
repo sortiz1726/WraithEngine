@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3167A812-5D2C-4EE9-ACFD-F0E959384755}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>spinnycube</RootNamespace>
+    <ProjectName>WraithEngine</ProjectName>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)include;$(SolutionDir)extern\glfw-2.7.6\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)lib;$(LibraryPath)</LibraryPath>
+    <TargetName>$(ProjectName)_Debug</TargetName>
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <GenerateManifest>false</GenerateManifest>
+    <EnableManagedIncrementalBuild>true</EnableManagedIncrementalBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)include;$(SolutionDir)extern\glfw-2.7.6\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)lib;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)bin\</OutDir>
+    <IntDir>$(ProjectName)_$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;WINDOWS_TARGET_PLATFORM="$(TargetPlatformVersion)";MEMORY_LOGS_DIR=R"($(SolutionDir))";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)src\User Code\Engine Demo\Scenes;$(SolutionDir)src\User Code\Engine Demo\Entities;$(SolutionDir)src\User Code\Tank Game\Collections;$(SolutionDir)src\User Code\Tank Game\Other;$(SolutionDir)src\User Code\Tank Game\Factories;$(SolutionDir)src\User Code\Tank Game\UI;$(SolutionDir)src\User Code\Tank Game\Interfaces;$(SolutionDir)src\User Code\Tank Game\Tools;$(SolutionDir)src\User Code\Tank Game\Controllers;$(SolutionDir)src\User Code\Tank Game\Scenes;$(SolutionDir)src\User Code\Tank Game\Entities;$(SolutionDir)src\Wraith Engine\include\WraithEngine\Tools;$(SolutionDir)src\Wraith Engine\include\WraithEngine\Sprites;$(SolutionDir)src\Wraith Engine\include\WraithEngine\Scenes;$(SolutionDir)src\Wraith Engine\include\WraithEngine\GameObject;$(SolutionDir)src\Wraith Engine\include\WraithEngine\AssetManagers;$(SolutionDir)src\Wraith Engine\include\WraithEngine;$(SolutionDir)src\Wraith Engine\src;$(SolutionDir)src\Wraith Engine\MemTracker;$(SolutionDir)dist\Math\include;$(SolutionDir)dist\SB6\include;$(SolutionDir)dist\GLFW\include;$(SolutionDir)dist\File\include;$(SolutionDir)dist\AzulCore\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <StringPooling>false</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <SDLCheck>
+      </SDLCheck>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <EnableParallelCodeGeneration>false</EnableParallelCodeGeneration>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <OpenMPSupport>false</OpenMPSupport>
+      <UseUnicodeForAssemblerListing>false</UseUnicodeForAssemblerListing>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+      <ForcedIncludeFiles>Framework.h</ForcedIncludeFiles>
+      <ShowIncludes>false</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>MSVCRTD.lib</IgnoreSpecificDefaultLibraries>
+      <ShowProgress>NotSet</ShowProgress>
+      <LinkStatus>
+      </LinkStatus>
+      <TreatLinkerWarningAsErrors>true</TreatLinkerWarningAsErrors>
+      <AdditionalDependencies>xmllite.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)src\User Code\Demos\Demo Scenes\TimeAndInputDemoScene;$(SolutionDir)src\User Code\Demos\Demo Scenes\FlyingDemoScene;$(SolutionDir)src\User Code\Demos\Demo Scenes\MatricesAndMovementDemoScene;$(SolutionDir)src\User Code\Demos\Demo Entities\TesterObject;$(SolutionDir)src\User Code\Demos\Demo Entities\CameraController;$(SolutionDir)src\User Code\Demos\Demo Entities\WorldAxes;$(SolutionDir)src\User Code\Demos\Demo Entities\WorldPlane;$(SolutionDir)src\User Code\Demos\Demo Entities\DebugRegistrationCube;$(SolutionDir)src\User Code\Demos\Demo Entities\SpaceFrigate;$(SolutionDir)src\User Code\Tank Game\Scenes\TestScene;$(SolutionDir)src\User Code\Tank Game\Entities\Tank;$(SolutionDir)src\Wraith Engine\Entities\Command;$(SolutionDir)src\Wraith Engine\Entities\GameObject\Properties\Inputable\KeyDeregistrationCommand;$(SolutionDir)src\Wraith Engine\Entities\GameObject\Properties\Inputable\KeyRegistrationCommand;$(SolutionDir)src\Wraith Engine\Entities\GameObject\Properties\Inputable\InputableAttorney;$(SolutionDir)src\Wraith Engine\Entities\GameObject\Properties\Inputable\EventTypes;$(SolutionDir)src\Wraith Engine\Entities\GameObject\Properties\Inputable;$(SolutionDir)src\Wraith Engine\Entities\GameObject\Properties\Alarmable\AlarmDeregistrationCommand;$(SolutionDir)src\Wraith Engine\Entities\GameObject\Properties\Alarmable\AlarmRegistrationCommand;$(SolutionDir)src\Wraith Engine\Entities\GameObject\Properties\Alarmable\AlarmableAttorney;$(SolutionDir)src\Wraith Engine\Entities\GameObject\Properties\Alarmable;$(SolutionDir)src\Wraith Engine\Entities\GameObject\Properties\Drawable\DrawDeregistrationCommand;$(SolutionDir)src\Wraith Engine\Entities\GameObject\Properties\Drawable\DrawRegistrationCommand;$(SolutionDir)src\Wraith Engine\Entities\GameObject\Properties\Drawable\DrawableAttorney;$(SolutionDir)src\Wraith Engine\Entities\GameObject\Properties\Drawable;$(SolutionDir)src\Wraith Engine\Entities\GameObject\Properties\Updatable\UpdateDeregistrationCommand;$(SolutionDir)src\Wraith Engine\Entities\GameObject\Properties\Updatable\UpdateRegistrationCommand;$(SolutionDir)src\Wraith Engine\Entities\GameObject\Properties\Updatable\UpdatableAttorney;$(SolutionDir)src\Wraith Engine\Entities\GameObject\Properties\Updatable;$(SolutionDir)src\Wraith Engine\Entities\GameObject\Properties\RegistrationStates;$(SolutionDir)src\Wraith Engine\Entities\GameObject\GameObjectExitCommand;$(SolutionDir)src\Wraith Engine\Entities\GameObject\GameObjectEntryCommand;$(SolutionDir)src\Wraith Engine\Entities\GameObject\GameObjectAttorney;$(SolutionDir)src\Wraith Engine\Entities\GameObject;$(SolutionDir)src\Wraith Engine\Entities\Scene\SceneRegistrationBroker;$(SolutionDir)src\Wraith Engine\Entities\Scene\SceneAttorney;$(SolutionDir)src\Wraith Engine\Entities\Scene;$(SolutionDir)src\Wraith Engine\Managers\Gameplay Managers\KeyboardEventManager\SingleKeyEventManager;$(SolutionDir)src\Wraith Engine\Managers\Gameplay Managers\KeyboardEventManager;$(SolutionDir)src\Wraith Engine\Managers\Gameplay Managers\AlarmableManager;$(SolutionDir)src\Wraith Engine\Managers\Gameplay Managers\DrawableManager;$(SolutionDir)src\Wraith Engine\Managers\Gameplay Managers\UpdatableManager;$(SolutionDir)src\Wraith Engine\Managers\Gameplay Managers\CameraManager\CameraManagerAttorney;$(SolutionDir)src\Wraith Engine\Managers\Gameplay Managers\CameraManager;$(SolutionDir)src\Wraith Engine\Managers\Gameplay Managers\SceneManager\SceneManagerAttorney;$(SolutionDir)src\Wraith Engine\Managers\Gameplay Managers\SceneManager;$(SolutionDir)src\Wraith Engine\Managers\Asset Managers\TextureManager\TextureManagerAttorney;$(SolutionDir)src\Wraith Engine\Managers\Asset Managers\TextureManager;$(SolutionDir)src\Wraith Engine\Managers\Asset Managers\ModelManager\ModelManagerAttorney;$(SolutionDir)src\Wraith Engine\Managers\Asset Managers\ModelManager;$(SolutionDir)src\Wraith Engine\Managers\Asset Managers\ShaderManager\ShaderManagerAttorney;$(SolutionDir)src\Wraith Engine\Managers\Asset Managers\ShaderManager;$(SolutionDir)src\Wraith Engine\Wraith;$(SolutionDir)src\Wraith Engine\MemTracker;$(SolutionDir)dist\Math\include;$(SolutionDir)dist\SB6\include;$(SolutionDir)dist\GLFW\include;$(SolutionDir)dist\File\include;$(SolutionDir)dist\AzulCore\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\dist\AzulCore\include\AzulCore.h" />
+    <ClInclude Include="..\dist\AzulCore\include\AzulFileHdr.h" />
+    <ClInclude Include="..\dist\AzulCore\include\AzulHelper.h" />
+    <ClInclude Include="..\dist\AzulCore\include\Camera.h" />
+    <ClInclude Include="..\dist\AzulCore\include\DebugOut.h" />
+    <ClInclude Include="..\dist\AzulCore\include\Engine.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GpuVertTypes.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_ColorByPosition.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_ColorNoTexture.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_ColorNoTextureLight.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_Sprite.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_SpriteBox.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_TextureFlat.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_TextureLight.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_WireframeAutoColor.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_WireframeConstantColor.h" />
+    <ClInclude Include="..\dist\AzulCore\include\Image.h" />
+    <ClInclude Include="..\dist\AzulCore\include\Keyboard.h" />
+    <ClInclude Include="..\dist\AzulCore\include\LibrarySetup.h" />
+    <ClInclude Include="..\dist\AzulCore\include\Model.h" />
+    <ClInclude Include="..\dist\AzulCore\include\Mouse.h" />
+    <ClInclude Include="..\dist\AzulCore\include\Rect.h" />
+    <ClInclude Include="..\dist\AzulCore\include\ShaderObject.h" />
+    <ClInclude Include="..\dist\AzulCore\include\Texture.h" />
+    <ClInclude Include="..\dist\AzulCore\include\TextureTGA.h" />
+    <ClInclude Include="..\dist\File\include\File.h" />
+    <ClInclude Include="..\dist\GLFW\include\GL\glfw.h" />
+    <ClInclude Include="..\dist\Math\include\Align16.h" />
+    <ClInclude Include="..\dist\Math\include\Constants.h" />
+    <ClInclude Include="..\dist\Math\include\Enum.h" />
+    <ClInclude Include="..\dist\Math\include\MathApp.h" />
+    <ClInclude Include="..\dist\Math\include\MathEngine.h" />
+    <ClInclude Include="..\dist\Math\include\Matrix.h" />
+    <ClInclude Include="..\dist\Math\include\Quat.h" />
+    <ClInclude Include="..\dist\Math\include\QuatApp.h" />
+    <ClInclude Include="..\dist\Math\include\Util.h" />
+    <ClInclude Include="..\dist\Math\include\Vect.h" />
+    <ClInclude Include="..\dist\Math\include\VectApp.h" />
+    <ClInclude Include="..\dist\SB6\include\arcball.h" />
+    <ClInclude Include="..\dist\SB6\include\GL\gl3w.h" />
+    <ClInclude Include="..\dist\SB6\include\GL\glcorearb.h" />
+    <ClInclude Include="..\dist\SB6\include\GL\glext.h" />
+    <ClInclude Include="..\dist\SB6\include\GL\glxext.h" />
+    <ClInclude Include="..\dist\SB6\include\GL\wglext.h" />
+    <ClInclude Include="..\dist\SB6\include\object.h" />
+    <ClInclude Include="..\dist\SB6\include\sb6.h" />
+    <ClInclude Include="..\dist\SB6\include\sb6ext.h" />
+    <ClInclude Include="..\dist\SB6\include\sb6ktx.h" />
+    <ClInclude Include="..\dist\SB6\include\sb6mfile.h" />
+    <ClInclude Include="..\dist\SB6\include\shader.h" />
+    <ClInclude Include="..\dist\SB6\include\vmath.h" />
+    <ClInclude Include="User Code\Engine Demo\Entities\AlarmCar.h" />
+    <ClInclude Include="User Code\Engine Demo\Entities\BasicCar.h" />
+    <ClInclude Include="User Code\Engine Demo\Entities\CollisionCar.h" />
+    <ClInclude Include="User Code\Engine Demo\Entities\CollisionTestObject.h" />
+    <ClInclude Include="User Code\Engine Demo\Entities\DebugRegistrationCube.h" />
+    <ClInclude Include="User Code\Engine Demo\Entities\InputCar.h" />
+    <ClInclude Include="User Code\Engine Demo\Entities\Octree.h" />
+    <ClInclude Include="User Code\Engine Demo\Entities\OtherCollisionCar.h" />
+    <ClInclude Include="User Code\Engine Demo\Entities\SpaceFrigate.h" />
+    <ClInclude Include="User Code\Engine Demo\Entities\Terrain.h" />
+    <ClInclude Include="User Code\Engine Demo\Entities\WorldAxes.h" />
+    <ClInclude Include="User Code\Engine Demo\Entities\WorldPlane.h" />
+    <ClInclude Include="User Code\Engine Demo\Scenes\AlarmDemoScene.h" />
+    <ClInclude Include="User Code\Engine Demo\Scenes\BasicDemoScene.h" />
+    <ClInclude Include="User Code\Engine Demo\Scenes\CollisionDemoScene.h" />
+    <ClInclude Include="User Code\Engine Demo\Scenes\InputDemoScene.h" />
+    <ClInclude Include="User Code\Tank Game\Collections\RecycleTankStrategyCollection.h" />
+    <ClInclude Include="User Code\Tank Game\Controllers\AlarmController.h" />
+    <ClInclude Include="User Code\Tank Game\Controllers\GameController.h" />
+    <ClInclude Include="User Code\Tank Game\Controllers\MainMenuController.h" />
+    <ClInclude Include="User Code\Tank Game\Controllers\MissionFailedController.h" />
+    <ClInclude Include="User Code\Tank Game\Entities\Bomber.h" />
+    <ClInclude Include="User Code\Tank Game\Entities\Bullet.h" />
+    <ClInclude Include="User Code\Tank Game\Entities\Campfire.h" />
+    <ClInclude Include="User Code\Tank Game\Entities\Cottage.h" />
+    <ClInclude Include="User Code\Tank Game\Entities\FlatArch.h" />
+    <ClInclude Include="User Code\Tank Game\Entities\GroundPlane.h" />
+    <ClInclude Include="User Code\Tank Game\Entities\LeaflessTree.h" />
+    <ClInclude Include="User Code\Tank Game\Entities\Marker.h" />
+    <ClInclude Include="User Code\Tank Game\Entities\RoundArch.h" />
+    <ClInclude Include="User Code\Tank Game\Entities\Tank.h" />
+    <ClInclude Include="User Code\Tank Game\Entities\TankBarrel.h" />
+    <ClInclude Include="User Code\Tank Game\Entities\TankController.h" />
+    <ClInclude Include="User Code\Tank Game\Entities\TankControllerAI.h" />
+    <ClInclude Include="User Code\Tank Game\Entities\TankControllerAICharger.h" />
+    <ClInclude Include="User Code\Tank Game\Entities\TankControllerAISniper.h" />
+    <ClInclude Include="User Code\Tank Game\Entities\TankControllerNull.h" />
+    <ClInclude Include="User Code\Tank Game\Entities\TankControllerPlayer.h" />
+    <ClInclude Include="User Code\Tank Game\Entities\TankHull.h" />
+    <ClInclude Include="User Code\Tank Game\Entities\TankSpawner.h" />
+    <ClInclude Include="User Code\Tank Game\Entities\TankTurret.h" />
+    <ClInclude Include="User Code\Tank Game\Entities\Turret.h" />
+    <ClInclude Include="User Code\Tank Game\Entities\TurretBase.h" />
+    <ClInclude Include="User Code\Tank Game\Entities\TurretHead.h" />
+    <ClInclude Include="User Code\Tank Game\Entities\Wall.h" />
+    <ClInclude Include="User Code\Tank Game\Entities\Warehouse.h" />
+    <ClInclude Include="User Code\Tank Game\Entities\WindMill.h" />
+    <ClInclude Include="User Code\Tank Game\Factories\BulletFactory.h" />
+    <ClInclude Include="User Code\Tank Game\Factories\BulletPool.h" />
+    <ClInclude Include="User Code\Tank Game\Factories\TankControllerAIChargerFactory.h" />
+    <ClInclude Include="User Code\Tank Game\Factories\TankControllerAIChargerPool.h" />
+    <ClInclude Include="User Code\Tank Game\Factories\TankControllerAIFactory.h" />
+    <ClInclude Include="User Code\Tank Game\Factories\TankControllerAIPool.h" />
+    <ClInclude Include="User Code\Tank Game\Factories\TankControllerAISniperFactory.h" />
+    <ClInclude Include="User Code\Tank Game\Factories\TankControllerAISniperPool.h" />
+    <ClInclude Include="User Code\Tank Game\Factories\TankControllerNullFactory.h" />
+    <ClInclude Include="User Code\Tank Game\Factories\TankControllerNullPool.h" />
+    <ClInclude Include="User Code\Tank Game\Factories\TankControllerPlayerFactory.h" />
+    <ClInclude Include="User Code\Tank Game\Factories\TankControllerPlayerPool.h" />
+    <ClInclude Include="User Code\Tank Game\Factories\TankFactory.h" />
+    <ClInclude Include="User Code\Tank Game\Factories\TankPool.h" />
+    <ClInclude Include="User Code\Tank Game\Interfaces\Transformable.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="User Code\Tank Game\Interfaces\Damagable.h" />
+    <ClInclude Include="User Code\Tank Game\Interfaces\RecycleTankStrategy.h" />
+    <ClInclude Include="User Code\Tank Game\Other\DestinationMonitor.h" />
+    <ClInclude Include="User Code\Tank Game\Other\DestroyMonitor.h" />
+    <ClInclude Include="User Code\Tank Game\Other\ObjectiveMonitor.h" />
+    <ClInclude Include="User Code\Tank Game\Other\RecycleTankToTankKillMonitorStrategy.h" />
+    <ClInclude Include="User Code\Tank Game\Other\TankControlTypes.h" />
+    <ClInclude Include="User Code\Tank Game\Other\RecycleTankToFactoryStrategy.h" />
+    <ClInclude Include="User Code\Tank Game\Other\RecycleTankToGameControllerStrategy.h" />
+    <ClInclude Include="User Code\Tank Game\Other\TankKillMonitor.h" />
+    <ClInclude Include="User Code\Tank Game\Scenes\Level1.h" />
+    <ClInclude Include="User Code\Tank Game\Scenes\Level2.h" />
+    <ClInclude Include="User Code\Tank Game\Scenes\Level3.h" />
+    <ClInclude Include="User Code\Tank Game\Scenes\MainMenu.h" />
+    <ClInclude Include="User Code\Tank Game\Scenes\MissionFailed.h" />
+    <ClInclude Include="User Code\Tank Game\Scenes\TestScene.h" />
+    <ClInclude Include="User Code\Tank Game\Scenes\TestScene2.h" />
+    <ClInclude Include="User Code\Tank Game\Scenes\TestScene3.h" />
+    <ClInclude Include="User Code\Tank Game\Scenes\TestScene4Sprites.h" />
+    <ClInclude Include="User Code\Tank Game\Tools\CameraController.h" />
+    <ClInclude Include="User Code\Tank Game\Tools\CameraSwitcher.h" />
+    <ClInclude Include="User Code\Tank Game\Tools\DrawCollisionVolumes.h" />
+    <ClInclude Include="User Code\Tank Game\Tools\GameObjectStorage.h" />
+    <ClInclude Include="User Code\Tank Game\Tools\SceneChanger.h" />
+    <ClInclude Include="User Code\Tank Game\Tools\SceneryBuilder.h" />
+    <ClInclude Include="User Code\Tank Game\Tools\SceneSwitcher.h" />
+    <ClInclude Include="User Code\Tank Game\Tools\TesterObject.h" />
+    <ClInclude Include="User Code\Tank Game\Tools\WallBuilder.h" />
+    <ClInclude Include="User Code\Tank Game\UI\AmmoBar.h" />
+    <ClInclude Include="User Code\Tank Game\UI\HealthBar.h" />
+    <ClInclude Include="User Code\Tank Game\UI\Reticle.h" />
+    <ClInclude Include="Wraith Engine\DoxygenData.h" />
+    <ClInclude Include="Wraith Engine\include\WraithEngine\AssetManagers\ImageManager.h" />
+    <ClInclude Include="Wraith Engine\include\WraithEngine\AssetManagers\ModelManager.h" />
+    <ClInclude Include="Wraith Engine\include\WraithEngine\AssetManagers\ShaderManager.h" />
+    <ClInclude Include="Wraith Engine\include\WraithEngine\AssetManagers\SpriteFontManager.h" />
+    <ClInclude Include="Wraith Engine\include\WraithEngine\AssetManagers\TerrainObjectManager.h" />
+    <ClInclude Include="Wraith Engine\include\WraithEngine\AssetManagers\TextureManager.h" />
+    <ClInclude Include="Wraith Engine\include\WraithEngine\GameObject\Alarmable.h" />
+    <ClInclude Include="Wraith Engine\include\WraithEngine\GameObject\AlarmIDs.h" />
+    <ClInclude Include="Wraith Engine\include\WraithEngine\GameObject\Collidable.h" />
+    <ClInclude Include="Wraith Engine\include\WraithEngine\GameObject\Drawable.h" />
+    <ClInclude Include="Wraith Engine\include\WraithEngine\GameObject\InputTypes.h" />
+    <ClInclude Include="Wraith Engine\include\WraithEngine\GameObject\GameObject.h" />
+    <ClInclude Include="Wraith Engine\include\WraithEngine\GameObject\Inputable.h" />
+    <ClInclude Include="Wraith Engine\include\WraithEngine\GameObject\Updatable.h" />
+    <ClInclude Include="Wraith Engine\include\WraithEngine\Scenes\Scene.h" />
+    <ClInclude Include="Wraith Engine\include\WraithEngine\Scenes\SceneManager.h" />
+    <ClInclude Include="Wraith Engine\include\WraithEngine\Sprites\Sprite.h" />
+    <ClInclude Include="Wraith Engine\include\WraithEngine\Sprites\SpriteFont.h" />
+    <ClInclude Include="Wraith Engine\include\WraithEngine\Sprites\SpriteString.h" />
+    <ClInclude Include="Wraith Engine\include\WraithEngine\Tools\Colors.h" />
+    <ClInclude Include="Wraith Engine\include\WraithEngine\Tools\MathTools.h" />
+    <ClInclude Include="Wraith Engine\include\WraithEngine\Tools\ScreenLog.h" />
+    <ClInclude Include="Wraith Engine\include\WraithEngine\Tools\TimeManager.h" />
+    <ClInclude Include="Wraith Engine\include\WraithEngine\Tools\Triangle.h" />
+    <ClInclude Include="Wraith Engine\include\WraithEngine\Tools\Visualizer.h" />
+    <ClInclude Include="Wraith Engine\include\WraithEngine\Wraith.h" />
+    <ClInclude Include="Wraith Engine\MemTracker\Framework.h" />
+    <ClInclude Include="Wraith Engine\MemTracker\ProjectSettings.h" />
+    <ClInclude Include="Wraith Engine\src\AABBCell.h" />
+    <ClInclude Include="Wraith Engine\src\AABBCellIndex.h" />
+    <ClInclude Include="Wraith Engine\src\AlarmableAttorney.h" />
+    <ClInclude Include="Wraith Engine\src\AlarmableManager.h" />
+    <ClInclude Include="Wraith Engine\src\AlarmDeregistrationCommand.h" />
+    <ClInclude Include="Wraith Engine\src\AlarmRegistrationCommand.h" />
+    <ClInclude Include="Wraith Engine\src\CameraManager.h" />
+    <ClInclude Include="Wraith Engine\src\CameraManagerAttorney.h" />
+    <ClInclude Include="Wraith Engine\src\CollidableAttorney.h" />
+    <ClInclude Include="Wraith Engine\src\CollidableGroup.h" />
+    <ClInclude Include="Wraith Engine\src\CollisionDeregisterCommand.h" />
+    <ClInclude Include="Wraith Engine\src\CollisionDispatch.h" />
+    <ClInclude Include="Wraith Engine\src\CollisionDispatchBase.h" />
+    <ClInclude Include="Wraith Engine\src\CollisionManager.h" />
+    <ClInclude Include="Wraith Engine\src\CollisionRegisterCommand.h" />
+    <ClInclude Include="Wraith Engine\src\CollisionTestCommand.h" />
+    <ClInclude Include="Wraith Engine\src\CollisionTestPairCommand.h" />
+    <ClInclude Include="Wraith Engine\src\CollisionTestSelfCommand.h" />
+    <ClInclude Include="Wraith Engine\src\CollisionTestTerrainCommand.h" />
+    <ClInclude Include="Wraith Engine\src\CollisionVolume.h" />
+    <ClInclude Include="Wraith Engine\src\CollisionVolumeAABB.h" />
+    <ClInclude Include="Wraith Engine\src\CollisionVolumeAttorney.h" />
+    <ClInclude Include="Wraith Engine\src\CollisionVolumeBoundingBox.h" />
+    <ClInclude Include="Wraith Engine\src\CollisionVolumeBSphere.h" />
+    <ClInclude Include="Wraith Engine\src\CollisionVolumeOBB.h" />
+    <ClInclude Include="Wraith Engine\src\CollisionVolumeOctree.h" />
+    <ClInclude Include="Wraith Engine\src\Draw2DDeregistrationCommand.h" />
+    <ClInclude Include="Wraith Engine\src\Draw2DRegistrationCommand.h" />
+    <ClInclude Include="Wraith Engine\src\Drawable2DManager.h" />
+    <ClInclude Include="Wraith Engine\src\DrawableAttorney.h" />
+    <ClInclude Include="Wraith Engine\src\DrawableManager.h" />
+    <ClInclude Include="Wraith Engine\src\DrawDeregistrationCommand.h" />
+    <ClInclude Include="Wraith Engine\src\DrawRegistrationCommand.h" />
+    <ClInclude Include="Wraith Engine\src\FreezeTime.h" />
+    <ClInclude Include="Wraith Engine\src\GameObjectAttorney.h" />
+    <ClInclude Include="Wraith Engine\src\GameObjectEntryCommand.h" />
+    <ClInclude Include="Wraith Engine\src\GameObjectExitCommand.h" />
+    <ClInclude Include="Wraith Engine\src\ImageManagerAttorney.h" />
+    <ClInclude Include="Wraith Engine\src\InputableAttorney.h" />
+    <ClInclude Include="Wraith Engine\src\KeyboardEventManager.h" />
+    <ClInclude Include="Wraith Engine\src\KeyDeregistrationCommand.h" />
+    <ClInclude Include="Wraith Engine\src\KeyRegistrationCommand.h" />
+    <ClInclude Include="Wraith Engine\src\ModelManagerAttorney.h" />
+    <ClInclude Include="Wraith Engine\src\NullScene.h" />
+    <ClInclude Include="Wraith Engine\src\NullTerrain.h" />
+    <ClInclude Include="Wraith Engine\src\OctreeBuilder.h" />
+    <ClInclude Include="Wraith Engine\src\OctreeModelManager.h" />
+    <ClInclude Include="Wraith Engine\src\OctreeModelManagerAttorney.h" />
+    <ClInclude Include="Wraith Engine\src\OctreeNode.h" />
+    <ClInclude Include="Wraith Engine\src\OctreeTools.h" />
+    <ClInclude Include="Wraith Engine\src\RegistrationStates.h" />
+    <ClInclude Include="Wraith Engine\src\RenderAABBCommand.h" />
+    <ClInclude Include="Wraith Engine\src\RenderAABBCommandPool.h" />
+    <ClInclude Include="Wraith Engine\src\RenderBSphereCommand.h" />
+    <ClInclude Include="Wraith Engine\src\RenderBSphereCommandPool.h" />
+    <ClInclude Include="Wraith Engine\src\RenderCollisionVolumeCommand.h" />
+    <ClInclude Include="Wraith Engine\src\RenderLineSegmentCommand.h" />
+    <ClInclude Include="Wraith Engine\src\RenderLineSegmentCommandPool.h" />
+    <ClInclude Include="Wraith Engine\src\RenderOBBCommand.h" />
+    <ClInclude Include="Wraith Engine\src\RenderOBBCommandPool.h" />
+    <ClInclude Include="Wraith Engine\src\RenderPointCommand.h" />
+    <ClInclude Include="Wraith Engine\src\RenderPointCommandPool.h" />
+    <ClInclude Include="Wraith Engine\src\SceneAttorney.h" />
+    <ClInclude Include="Wraith Engine\src\SceneChangeCommand.h" />
+    <ClInclude Include="Wraith Engine\src\SceneChangeNullCommand.h" />
+    <ClInclude Include="Wraith Engine\src\SceneManagerAttorney.h" />
+    <ClInclude Include="Wraith Engine\src\SceneManagerCommand.h" />
+    <ClInclude Include="Wraith Engine\src\SceneRegistrationBroker.h" />
+    <ClInclude Include="Wraith Engine\src\SceneRegistrationCommand.h" />
+    <ClInclude Include="Wraith Engine\src\ScreenLogAttorney.h" />
+    <ClInclude Include="Wraith Engine\src\ShaderManagerAttorney.h" />
+    <ClInclude Include="Wraith Engine\src\SingleKeyEventManager.h" />
+    <ClInclude Include="Wraith Engine\src\SpriteAttorney.h" />
+    <ClInclude Include="Wraith Engine\src\SpriteFontManagerAttorney.h" />
+    <ClInclude Include="Wraith Engine\src\SpriteModifierStrategy.h" />
+    <ClInclude Include="Wraith Engine\src\SpriteNullModifierStrategy.h" />
+    <ClInclude Include="Wraith Engine\src\SpriteStrategyCollection.h" />
+    <ClInclude Include="Wraith Engine\src\SpriteWorldModifierStrategy.h" />
+    <ClInclude Include="Wraith Engine\src\TerrainManager.h" />
+    <ClInclude Include="Wraith Engine\src\TerrainObject.h" />
+    <ClInclude Include="Wraith Engine\src\TerrainObjectManagerAttorney.h" />
+    <ClInclude Include="Wraith Engine\src\TerrainRectangleArea.h" />
+    <ClInclude Include="Wraith Engine\src\TRAIterator.h" />
+    <ClInclude Include="Wraith Engine\src\TextureManagerAttorney.h" />
+    <ClInclude Include="Wraith Engine\src\TimeManagerAttorney.h" />
+    <ClInclude Include="Wraith Engine\src\UpdatableAttorney.h" />
+    <ClInclude Include="Wraith Engine\src\UpdatableManager.h" />
+    <ClInclude Include="Wraith Engine\src\UpdateDeregistrationCommand.h" />
+    <ClInclude Include="Wraith Engine\src\UpdateRegistrationCommand.h" />
+    <ClInclude Include="Wraith Engine\src\VisualizerAttorney.h" />
+    <ClInclude Include="Wraith Engine\src\WraithAttorney.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\dist\AzulCore\lib\AzulCore_Debug.lib" />
+    <Library Include="..\dist\File\lib\File_Debug.lib" />
+    <Library Include="..\dist\GLFW\lib\GLFW_Debug.lib" />
+    <Library Include="..\dist\Math\lib\MathEngine_Debug.lib" />
+    <Library Include="..\dist\SB6\lib\sb6_Debug.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="User Code\Engine Demo\Entities\AlarmCar.cpp" />
+    <ClCompile Include="User Code\Engine Demo\Entities\BasicCar.cpp" />
+    <ClCompile Include="User Code\Engine Demo\Entities\CollisionCar.cpp" />
+    <ClCompile Include="User Code\Engine Demo\Entities\CollisionTestObject.cpp" />
+    <ClCompile Include="User Code\Engine Demo\Entities\DebugRegistrationCube.cpp" />
+    <ClCompile Include="User Code\Engine Demo\Entities\InputCar.cpp" />
+    <ClCompile Include="User Code\Engine Demo\Entities\Octree.cpp" />
+    <ClCompile Include="User Code\Engine Demo\Entities\OtherCollisionCar.cpp" />
+    <ClCompile Include="User Code\Engine Demo\Entities\SpaceFrigate.cpp" />
+    <ClCompile Include="User Code\Engine Demo\Entities\Terrain.cpp" />
+    <ClCompile Include="User Code\Engine Demo\Entities\WorldAxes.cpp" />
+    <ClCompile Include="User Code\Engine Demo\Entities\WorldPlane.cpp" />
+    <ClCompile Include="User Code\Engine Demo\Scenes\AlarmDemoScene.cpp" />
+    <ClCompile Include="User Code\Engine Demo\Scenes\BasicDemoScene.cpp" />
+    <ClCompile Include="User Code\Engine Demo\Scenes\CollisionDemoScene.cpp" />
+    <ClCompile Include="User Code\Engine Demo\Scenes\InputDemoScene.cpp" />
+    <ClCompile Include="User Code\Tank Game\Collections\RecycleTankStrategyCollection.cpp" />
+    <ClCompile Include="User Code\Tank Game\Controllers\AlarmController.cpp" />
+    <ClCompile Include="User Code\Tank Game\Controllers\GameController.cpp" />
+    <ClCompile Include="User Code\Tank Game\Controllers\MainMenuController.cpp" />
+    <ClCompile Include="User Code\Tank Game\Controllers\MissionFailedController.cpp" />
+    <ClCompile Include="User Code\Tank Game\Entities\Bomber.cpp" />
+    <ClCompile Include="User Code\Tank Game\Entities\Bullet.cpp" />
+    <ClCompile Include="User Code\Tank Game\Entities\Campfire.cpp" />
+    <ClCompile Include="User Code\Tank Game\Entities\Cottage.cpp" />
+    <ClCompile Include="User Code\Tank Game\Entities\FlatArch.cpp" />
+    <ClCompile Include="User Code\Tank Game\Entities\GroundPlane.cpp" />
+    <ClCompile Include="User Code\Tank Game\Entities\LeaflessTree.cpp" />
+    <ClCompile Include="User Code\Tank Game\Entities\Marker.cpp" />
+    <ClCompile Include="User Code\Tank Game\Entities\RoundArch.cpp" />
+    <ClCompile Include="User Code\Tank Game\Entities\Tank.cpp" />
+    <ClCompile Include="User Code\Tank Game\Entities\TankBarrel.cpp" />
+    <ClCompile Include="User Code\Tank Game\Entities\TankController.cpp" />
+    <ClCompile Include="User Code\Tank Game\Entities\TankControllerAI.cpp" />
+    <ClCompile Include="User Code\Tank Game\Entities\TankControllerAICharger.cpp" />
+    <ClCompile Include="User Code\Tank Game\Entities\TankControllerAISniper.cpp" />
+    <ClCompile Include="User Code\Tank Game\Entities\TankControllerNull.cpp" />
+    <ClCompile Include="User Code\Tank Game\Entities\TankControllerPlayer.cpp" />
+    <ClCompile Include="User Code\Tank Game\Entities\TankHull.cpp" />
+    <ClCompile Include="User Code\Tank Game\Entities\TankSpawner.cpp" />
+    <ClCompile Include="User Code\Tank Game\Entities\TankTurret.cpp" />
+    <ClCompile Include="User Code\Tank Game\Entities\Turret.cpp" />
+    <ClCompile Include="User Code\Tank Game\Entities\TurretBase.cpp" />
+    <ClCompile Include="User Code\Tank Game\Entities\TurretHead.cpp" />
+    <ClCompile Include="User Code\Tank Game\Entities\Wall.cpp" />
+    <ClCompile Include="User Code\Tank Game\Entities\Warehouse.cpp" />
+    <ClCompile Include="User Code\Tank Game\Entities\WindMill.cpp" />
+    <ClCompile Include="User Code\Tank Game\Factories\BulletFactory.cpp" />
+    <ClCompile Include="User Code\Tank Game\Factories\BulletPool.cpp" />
+    <ClCompile Include="User Code\Tank Game\Factories\TankControllerAIChargerFactory.cpp" />
+    <ClCompile Include="User Code\Tank Game\Factories\TankControllerAIChargerPool.cpp" />
+    <ClCompile Include="User Code\Tank Game\Factories\TankControllerAIFactory.cpp" />
+    <ClCompile Include="User Code\Tank Game\Factories\TankControllerAIPool.cpp" />
+    <ClCompile Include="User Code\Tank Game\Factories\TankControllerAISniperFactory.cpp" />
+    <ClCompile Include="User Code\Tank Game\Factories\TankControllerAISniperPool.cpp" />
+    <ClCompile Include="User Code\Tank Game\Factories\TankControllerNullFactory.cpp" />
+    <ClCompile Include="User Code\Tank Game\Factories\TankControllerNullPool.cpp" />
+    <ClCompile Include="User Code\Tank Game\Factories\TankControllerPlayerFactory.cpp" />
+    <ClCompile Include="User Code\Tank Game\Factories\TankControllerPlayerPool.cpp" />
+    <ClCompile Include="User Code\Tank Game\Factories\TankFactory.cpp" />
+    <ClCompile Include="User Code\Tank Game\Factories\TankPool.cpp" />
+    <ClCompile Include="User Code\Tank Game\Interfaces\Damagable.cpp" />
+    <ClCompile Include="User Code\Tank Game\Interfaces\RecycleTankStrategy.cpp" />
+    <ClCompile Include="User Code\Tank Game\Other\DestinationMonitor.cpp" />
+    <ClCompile Include="User Code\Tank Game\Other\DestroyMonitor.cpp" />
+    <ClCompile Include="User Code\Tank Game\Other\ObjectiveMonitor.cpp" />
+    <ClCompile Include="User Code\Tank Game\Other\RecycleTankToFactoryStrategy.cpp" />
+    <ClCompile Include="User Code\Tank Game\Other\RecycleTankToGameControllerStrategy.cpp" />
+    <ClCompile Include="User Code\Tank Game\Other\RecycleTankToTankKillMonitorStrategy.cpp" />
+    <ClCompile Include="User Code\Tank Game\Other\TankKillMonitor.cpp" />
+    <ClCompile Include="User Code\Tank Game\Scenes\Level1.cpp" />
+    <ClCompile Include="User Code\Tank Game\Scenes\Level2.cpp" />
+    <ClCompile Include="User Code\Tank Game\Scenes\Level3.cpp" />
+    <ClCompile Include="User Code\Tank Game\Scenes\MainMenu.cpp" />
+    <ClCompile Include="User Code\Tank Game\Scenes\MissionFailed.cpp" />
+    <ClCompile Include="User Code\Tank Game\Scenes\TestScene.cpp" />
+    <ClCompile Include="User Code\Tank Game\Scenes\TestScene2.cpp" />
+    <ClCompile Include="User Code\Tank Game\Scenes\TestScene3.cpp" />
+    <ClCompile Include="User Code\Tank Game\Scenes\TestScene4Sprites.cpp" />
+    <ClCompile Include="User Code\Tank Game\Tools\CameraController.cpp" />
+    <ClCompile Include="User Code\Tank Game\Tools\CameraSwitcher.cpp" />
+    <ClCompile Include="User Code\Tank Game\Tools\DrawCollisionVolumes.cpp" />
+    <ClCompile Include="User Code\Tank Game\Tools\GameObjectStorage.cpp" />
+    <ClCompile Include="User Code\Tank Game\Tools\SceneChanger.cpp" />
+    <ClCompile Include="User Code\Tank Game\Tools\SceneryBuilder.cpp" />
+    <ClCompile Include="User Code\Tank Game\Tools\SceneSwitcher.cpp" />
+    <ClCompile Include="User Code\Tank Game\Tools\TesterObject.cpp" />
+    <ClCompile Include="User Code\Tank Game\Tools\WallBuilder.cpp" />
+    <ClCompile Include="User Code\Tank Game\UI\AmmoBar.cpp" />
+    <ClCompile Include="User Code\Tank Game\UI\HealthBar.cpp" />
+    <ClCompile Include="User Code\Tank Game\UI\Reticle.cpp" />
+    <ClCompile Include="Wraith Engine\src\AABBCell.cpp" />
+    <ClCompile Include="Wraith Engine\src\AABBCellIndex.cpp" />
+    <ClCompile Include="Wraith Engine\src\Alarmable.cpp" />
+    <ClCompile Include="Wraith Engine\src\AlarmableManager.cpp" />
+    <ClCompile Include="Wraith Engine\src\AlarmDeregistrationCommand.cpp" />
+    <ClCompile Include="Wraith Engine\src\AlarmRegistrationCommand.cpp" />
+    <ClCompile Include="Wraith Engine\src\CameraManager.cpp" />
+    <ClCompile Include="Wraith Engine\src\Collidable.cpp" />
+    <ClCompile Include="Wraith Engine\src\CollidableAttorney.cpp" />
+    <ClCompile Include="Wraith Engine\src\CollidableGroup.cpp" />
+    <ClCompile Include="Wraith Engine\src\CollisionDeregisterCommand.cpp" />
+    <ClCompile Include="Wraith Engine\src\CollisionDispatch.cpp" />
+    <ClCompile Include="Wraith Engine\src\CollisionDispatchBase.cpp" />
+    <ClCompile Include="Wraith Engine\src\CollisionManager.cpp" />
+    <ClCompile Include="Wraith Engine\src\CollisionRegisterCommand.cpp" />
+    <ClCompile Include="Wraith Engine\src\CollisionTestCommand.cpp" />
+    <ClCompile Include="Wraith Engine\src\CollisionTestPairCommand.cpp" />
+    <ClCompile Include="Wraith Engine\src\CollisionTestSelfCommand.cpp" />
+    <ClCompile Include="Wraith Engine\src\CollisionTestTerrainCommand.cpp" />
+    <ClCompile Include="Wraith Engine\src\CollisionVolume.cpp" />
+    <ClCompile Include="Wraith Engine\src\CollisionVolumeAABB.cpp" />
+    <ClCompile Include="Wraith Engine\src\CollisionVolumeAttorney.cpp" />
+    <ClCompile Include="Wraith Engine\src\CollisionVolumeBoundingBox.cpp" />
+    <ClCompile Include="Wraith Engine\src\CollisionVolumeBSphere.cpp" />
+    <ClCompile Include="Wraith Engine\src\CollisionVolumeOBB.cpp" />
+    <ClCompile Include="Wraith Engine\src\CollisionVolumeOctree.cpp" />
+    <ClCompile Include="Wraith Engine\src\Colors.cpp" />
+    <ClCompile Include="Wraith Engine\src\Draw2DDeregistrationCommand.cpp" />
+    <ClCompile Include="Wraith Engine\src\Draw2DRegistrationCommand.cpp" />
+    <ClCompile Include="Wraith Engine\src\Drawable.cpp" />
+    <ClCompile Include="Wraith Engine\src\Drawable2DManager.cpp" />
+    <ClCompile Include="Wraith Engine\src\DrawableManager.cpp" />
+    <ClCompile Include="Wraith Engine\src\DrawDeregistrationCommand.cpp" />
+    <ClCompile Include="Wraith Engine\src\DrawRegistrationCommand.cpp" />
+    <ClCompile Include="Wraith Engine\src\FreezeTime.cpp" />
+    <ClCompile Include="Wraith Engine\src\GameObject.cpp" />
+    <ClCompile Include="Wraith Engine\src\GameObjectEntryCommand.cpp" />
+    <ClCompile Include="Wraith Engine\src\GameObjectExitCommand.cpp" />
+    <ClCompile Include="Wraith Engine\src\ImageManager.cpp" />
+    <ClCompile Include="Wraith Engine\src\ImageManagerAttorney.cpp" />
+    <ClCompile Include="Wraith Engine\src\Inputable.cpp" />
+    <ClCompile Include="Wraith Engine\src\KeyboardEventManager.cpp" />
+    <ClCompile Include="Wraith Engine\src\KeyDeregistrationCommand.cpp" />
+    <ClCompile Include="Wraith Engine\src\KeyRegistrationCommand.cpp" />
+    <ClCompile Include="Wraith Engine\src\main.cpp" />
+    <ClCompile Include="Wraith Engine\src\MathTools.cpp" />
+    <ClCompile Include="Wraith Engine\src\ModelManager.cpp" />
+    <ClCompile Include="Wraith Engine\src\NullScene.cpp" />
+    <ClCompile Include="Wraith Engine\src\NullTerrain.cpp" />
+    <ClCompile Include="Wraith Engine\src\OctreeBuilder.cpp" />
+    <ClCompile Include="Wraith Engine\src\OctreeModelManager.cpp" />
+    <ClCompile Include="Wraith Engine\src\OctreeNode.cpp" />
+    <ClCompile Include="Wraith Engine\src\OctreeTools.cpp" />
+    <ClCompile Include="Wraith Engine\src\RenderAABBCommand.cpp" />
+    <ClCompile Include="Wraith Engine\src\RenderAABBCommandPool.cpp" />
+    <ClCompile Include="Wraith Engine\src\RenderBSphereCommand.cpp" />
+    <ClCompile Include="Wraith Engine\src\RenderBSphereCommandPool.cpp" />
+    <ClCompile Include="Wraith Engine\src\RenderCollisionVolumeCommand.cpp" />
+    <ClCompile Include="Wraith Engine\src\RenderLineSegmentCommand.cpp" />
+    <ClCompile Include="Wraith Engine\src\RenderLineSegmentCommandPool.cpp" />
+    <ClCompile Include="Wraith Engine\src\RenderOBBCommand.cpp" />
+    <ClCompile Include="Wraith Engine\src\RenderOBBCommandPool.cpp" />
+    <ClCompile Include="Wraith Engine\src\RenderPointCommand.cpp" />
+    <ClCompile Include="Wraith Engine\src\RenderPointCommandPool.cpp" />
+    <ClCompile Include="Wraith Engine\src\Scene.cpp" />
+    <ClCompile Include="Wraith Engine\src\SceneChangeCommand.cpp" />
+    <ClCompile Include="Wraith Engine\src\SceneChangeNullCommand.cpp" />
+    <ClCompile Include="Wraith Engine\src\SceneManager.cpp" />
+    <ClCompile Include="Wraith Engine\src\SceneManagerCommand.cpp" />
+    <ClCompile Include="Wraith Engine\src\SceneRegistrationBroker.cpp" />
+    <ClCompile Include="Wraith Engine\src\SceneRegistrationCommand.cpp" />
+    <ClCompile Include="Wraith Engine\src\ScreenLog.cpp" />
+    <ClCompile Include="Wraith Engine\src\ScreenLogAttorney.cpp" />
+    <ClCompile Include="Wraith Engine\src\ShaderManager.cpp" />
+    <ClCompile Include="Wraith Engine\src\SingleKeyEventManager.cpp" />
+    <ClCompile Include="Wraith Engine\src\Sprite.cpp" />
+    <ClCompile Include="Wraith Engine\src\SpriteAttorney.cpp" />
+    <ClCompile Include="Wraith Engine\src\SpriteFont.cpp" />
+    <ClCompile Include="Wraith Engine\src\SpriteFontManager.cpp" />
+    <ClCompile Include="Wraith Engine\src\SpriteFontManagerAttorney.cpp" />
+    <ClCompile Include="Wraith Engine\src\SpriteModifierStrategy.cpp" />
+    <ClCompile Include="Wraith Engine\src\SpriteNullModifierStrategy.cpp" />
+    <ClCompile Include="Wraith Engine\src\SpriteStrategyCollection.cpp" />
+    <ClCompile Include="Wraith Engine\src\SpriteString.cpp" />
+    <ClCompile Include="Wraith Engine\src\SpriteWorldModifierStrategy.cpp" />
+    <ClCompile Include="Wraith Engine\src\TerrainManager.cpp" />
+    <ClCompile Include="Wraith Engine\src\TerrainObject.cpp" />
+    <ClCompile Include="Wraith Engine\src\TerrainObjectManager.cpp" />
+    <ClCompile Include="Wraith Engine\src\TerrainRectangleArea.cpp" />
+    <ClCompile Include="Wraith Engine\src\TRAIterator.cpp" />
+    <ClCompile Include="Wraith Engine\src\TextureManager.cpp" />
+    <ClCompile Include="Wraith Engine\src\TimeManager.cpp" />
+    <ClCompile Include="Wraith Engine\src\Triangle.cpp" />
+    <ClCompile Include="Wraith Engine\src\Updatable.cpp" />
+    <ClCompile Include="Wraith Engine\src\UpdatableManager.cpp" />
+    <ClCompile Include="Wraith Engine\src\UpdateDeregistrationCommand.cpp" />
+    <ClCompile Include="Wraith Engine\src\UpdateRegistrationCommand.cpp" />
+    <ClCompile Include="Wraith Engine\src\Visualizer.cpp" />
+    <ClCompile Include="Wraith Engine\src\VisualizerAttorney.cpp" />
+    <ClCompile Include="Wraith Engine\src\Wraith.cpp" />
+    <ClCompile Include="Wraith Resources\GameEnd.cpp" />
+    <ClCompile Include="Wraith Resources\GameInitialize.cpp" />
+    <ClCompile Include="Wraith Resources\LoadResources.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AssetManagers.cd" />
+    <None Include="Diagrams\Layout.cd" />
+    <None Include="Diagrams\OctreeSystem.cd" />
+    <None Include="GameObject.cd" />
+    <None Include="Scenes.cd" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

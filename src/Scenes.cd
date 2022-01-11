@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Scenes&#xD;&#xA;-+ Where users instaniate their Game Objects. As well as register/deregister specific Game Object services to be used in the game&#xD;&#xA;-+ This is where callbacks to each x-able are performed. The Scene delegates this responsibilty to x-able manager.">
+    <Position X="4.202" Y="4.685" Height="1.271" Width="2.773" />
+  </Comment>
+  <Comment CommentText="Scene Manager:&#xD;&#xA;-+ Provides access to the current scene for registerating Game Objects&#xD;&#xA;-+ Allows users to set the next scene to switch to.&#xD;&#xA;-+ Calls on the current scenes update call.">
+    <Position X="0.5" Y="3.826" Height="1.271" Width="2.773" />
+  </Comment>
+  <Class Name="Scene">
+    <Position X="3.75" Y="1" Width="3" />
+    <Members>
+      <Method Name="~Scene" Hidden="true" />
+      <Method Name="deregister2DEntity" Hidden="true" />
+      <Method Name="draw" Hidden="true" />
+      <Method Name="executeCommands" Hidden="true" />
+      <Method Name="getCollisionManager" Hidden="true" />
+      <Method Name="getDefault2DCamera" Hidden="true" />
+      <Method Name="getDefaultCamera" Hidden="true" />
+      <Method Name="getTerrain" Hidden="true" />
+      <Method Name="initialize" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="register2DEntity" Hidden="true" />
+      <Method Name="Scene" Hidden="true" />
+      <Method Name="setCollisionSelf" Hidden="true" />
+      <Method Name="setCollisionTerrain" Hidden="true" />
+      <Method Name="setDefault2DCameraAsCurrentCamera" Hidden="true" />
+      <Method Name="setDefaultCameraAsCurrentCamera" Hidden="true" />
+      <Method Name="setTerrain" Hidden="true" />
+      <Method Name="submitCommand" Hidden="true" />
+      <Method Name="update" Hidden="true" />
+    </Members>
+    <AssociationLine Name="_alarmableManager" Type="AlarmableManager" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.75" Y="3.5" />
+        <Point X="12.875" Y="3.5" />
+        <Point X="12.875" Y="4.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_collisionManager" Type="CollisionManager" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.75" Y="3.5" />
+        <Point X="18.75" Y="3.5" />
+        <Point X="18.75" Y="4.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_drawableManager" Type="DrawableManager" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.75" Y="3.5" />
+        <Point X="10.625" Y="3.5" />
+        <Point X="10.625" Y="4.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_keyboardEventManager" Type="KeyboardEventManager" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.75" Y="3.5" />
+        <Point X="15.625" Y="3.5" />
+        <Point X="15.625" Y="4.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_sceneRegistrationBroker" Type="SceneRegistrationBroker" FixedFromPoint="true">
+      <Path>
+        <Point X="6.75" Y="1.25" />
+        <Point X="8.75" Y="1.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_updatableManager" Type="UpdatableManager" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.75" Y="3.5" />
+        <Point X="8.562" Y="3.5" />
+        <Point X="8.562" Y="4.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>SCBABAAAAAAIQA8AoAMAUKAAyAIABADAAAQgAgDEgAI=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\Scenes\Scene.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_alarmableManager" />
+      <Field Name="_collisionManager" />
+      <Field Name="_drawableManager" />
+      <Field Name="_keyboardEventManager" />
+      <Field Name="_sceneRegistrationBroker" />
+      <Field Name="_updatableManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SceneRegistrationBroker">
+    <Position X="8.75" Y="0.5" Width="2.25" />
+    <Members>
+      <Method Name="~SceneRegistrationBroker" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="SceneRegistrationBroker" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Typedef Name="SceneRegistrationBroker::StorageContainer" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Entities\Scene\SceneRegistrationBroker\SceneRegistrationBroker.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAQAAAAEAAAAAgAACAAAQ=</HashCode>
+      <FileName>Wraith Engine\src\SceneRegistrationBroker.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneRegistrationCommand">
+    <Position X="11.5" Y="1.25" Width="2.25" />
+    <Members>
+      <Method Name="~SceneRegistrationCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="SceneRegistrationCommand" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAEAAAAAAAAAAAAAAAgCAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\SceneRegistrationCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneManager">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <Members>
+      <Field Name="_currentSceneChangeState" Hidden="true" />
+      <Field Name="_pCurrentSceneCommand" Hidden="true" />
+      <Field Name="_pSceneChangeCommand" Hidden="true" />
+      <Field Name="_pSceneChangeNullCommand" Hidden="true" />
+      <Method Name="~SceneManager" Hidden="true" />
+      <Method Name="ChangeScene" Hidden="true" />
+      <Method Name="Delete" Hidden="true" />
+      <Method Name="Draw" Hidden="true" />
+      <Method Name="GetCurrentScene" Hidden="true" />
+      <Method Name="GetInstance" Hidden="true" />
+      <Method Name="InitializeStartScene" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="privChangeScene" Hidden="true" />
+      <Method Name="privDraw" Hidden="true" />
+      <Method Name="privGetCurrentScene" Hidden="true" />
+      <Method Name="privInitializeStartScene" Hidden="true" />
+      <Method Name="privSetNextScene" Hidden="true" />
+      <Method Name="privSetStartScene" Hidden="true" />
+      <Method Name="privUpdate" Hidden="true" />
+      <Field Name="pSceneManagerInstance" Hidden="true" />
+      <Method Name="SceneManager" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Enum Name="SceneManager::SceneChangeState" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\SceneManager\SceneManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AoQFAACAQABAAkAgIAAAAAAABEEIAAkAQAogAAAEAgQ=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\Scenes\SceneManager.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_pCurrentScene" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AlarmableManager">
+    <Position X="11.75" Y="4.25" Width="2.25" />
+    <Members>
+      <Method Name="~AlarmableManager" Hidden="true" />
+      <Method Name="AlarmableManager" Hidden="true" />
+      <Method Name="debugPrintTriggerAlarmsBanner" Hidden="true" />
+      <Method Name="getTriggerTime" Hidden="true" />
+      <Field Name="MAX_NUMBER_OF_ALARMS" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="triggerAndRemoveAlarm" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="AlarmableManager::Time" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\AlarmableManager\AlarmableManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="AlarmableManager::AlarmEvent" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\AlarmableManager\AlarmableManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="AlarmableManager::TimeLine" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\AlarmableManager\AlarmableManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="AlarmableManager::TimeLineReference" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\AlarmableManager\AlarmableManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAQACAAgAAAIAAAEQAACgQAAAABA=</HashCode>
+      <FileName>Wraith Engine\src\AlarmableManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionManager">
+    <Position X="17.25" Y="4.25" Width="3" />
+    <Members>
+      <Method Name="~CollisionManager" Hidden="true" />
+      <Method Name="checkAndAdjustForIndex" Hidden="true" />
+      <Method Name="CollisionManager" Hidden="true" />
+      <Method Name="deinitializeCollisionGroups" Hidden="true" />
+      <Method Name="deinitializeCollisionTestCommands" Hidden="true" />
+      <Method Name="getCollidableGroup" Hidden="true" />
+      <Method Name="getCollisionTypeID" Hidden="true" />
+      <Field Name="ID_UNDEFINED" Hidden="true" />
+      <Method Name="isValidIndex" Hidden="true" />
+      <Field Name="MAX_GROUP_SIZE" Hidden="true" />
+      <Field Name="NextCollisionIDNumber" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="resizeToFit" Hidden="true" />
+      <Method Name="setGroupForTypeID" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="CollisionManager::CollisionTypeID" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\CollisionManager\CollisionManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="CollisionManager::GroupCollection" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\CollisionManager\CollisionManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="CollisionManager::StorageList" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\CollisionManager\CollisionManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AABEBCgAAgAAQAAAAACAKAAAAAAAAgCAAAEwAgCAAAE=</HashCode>
+      <FileName>Wraith Engine\src\CollisionManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrawableManager">
+    <Position X="9.75" Y="4.25" Width="1.75" />
+    <Members>
+      <Method Name="~DrawableManager" Hidden="true" />
+      <Method Name="DrawableManager" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="DrawableManager::StorageList" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\DrawableManager\DrawableManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="DrawableManager::StorageListReference" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\DrawableManager\DrawableManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAKAAkAAAQAAADAAAAAAAAAAAAwAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\DrawableManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KeyboardEventManager">
+    <Position X="14.25" Y="4.25" Width="2.75" />
+    <Members>
+      <Method Name="~KeyboardEventManager" Hidden="true" />
+      <Method Name="deleteAllSingleKeyEventManagers" Hidden="true" />
+      <Method Name="isIteratorValid" Hidden="true" />
+      <Method Name="KeyboardEventManager" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="tryToFind" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="KeyboardEventManager::KeyEventMap" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\KeyboardEventManager\KeyboardEventManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="KeyboardEventManager::KeyEventPair" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\KeyboardEventManager\KeyboardEventManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="KeyboardEventManager::StorageMapReference" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\KeyboardEventManager\KeyboardEventManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAACACAAAAAAAAAIAABIAAACEAAAgAAAAAAQ=</HashCode>
+      <FileName>Wraith Engine\src\KeyboardEventManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UpdatableManager">
+    <Position X="7.75" Y="4.25" Width="1.75" />
+    <Members>
+      <Method Name="~UpdatableManager" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="UpdatableManager" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="UpdatableManager::StorageList" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\UpdatableManager\UpdatableManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="UpdatableManager::StorageListReference" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\UpdatableManager\UpdatableManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAKAAAAAAAAEACAAgAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\UpdatableManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

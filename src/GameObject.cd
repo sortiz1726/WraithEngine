@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Game Object&#xD;&#xA;-+ Contains all services that the user will need such as update, draw, alarm, input, and collision callbacks&#xD;&#xA;-+ Inherits from seperate classes that are responsible for registratiing/deregistratintto the current thru commands. As well as providing appropriate callbacks for users to override for their own usage.">
+    <Position X="5.252" Y="0.5" Height="1.94" Width="3.035" />
+  </Comment>
+  <Comment CommentText="Scene Registration Commands&#xD;&#xA;-+ All x-able class that Game Object inherits from delays registration call via a command specific to each x-able class&#xD;&#xA;-+ Commands are submitted to the curent scene to be executed at the approriate time.">
+    <Position X="22.309" Y="0.928" Height="1.158" Width="3.035" />
+  </Comment>
+  <Class Name="GameObject">
+    <Position X="5.75" Y="6.5" Width="1.75" />
+    <Members>
+      <Field Name="_currentRegistrationState" Hidden="true" />
+      <Field Name="_pGameObjectEntryCommand" Hidden="true" />
+      <Field Name="_pGameObjectExitCommand" Hidden="true" />
+      <Method Name="~GameObject" Hidden="true" />
+      <Method Name="connectToScene" Hidden="true" />
+      <Method Name="disconnectFromScene" Hidden="true" />
+      <Method Name="GameObject" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>gBAEAAAAgAAAAAAAAAAAAEABBAAAAAAAAACgAAYAAAA=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\GameObject\GameObject.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Updatable">
+    <Position X="0.5" Y="3.75" Width="2.25" />
+    <Members>
+      <Field Name="_currentRegistrationState" Hidden="true" />
+      <Field Name="_deleteReference" Hidden="true" />
+      <Field Name="_pUpdateDeregistrationCommand" Hidden="true" />
+      <Field Name="_pUpdateRegistrationCommand" Hidden="true" />
+      <Method Name="~Updatable" Hidden="true" />
+      <Field Name="DEBUG_TITLE_MESSAGE" Hidden="true" />
+      <Method Name="DebugPrint" Hidden="true" />
+      <Method Name="deregisterFromScene" Hidden="true" />
+      <Method Name="getDeleteReference" Hidden="true" />
+      <Method Name="isRegisteredForUpdate" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="registerToScene" Hidden="true" />
+      <Method Name="setDeleteReference" Hidden="true" />
+      <Method Name="Updatable" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>gAEAQAAAgkAIAAAAAAAAAAAACAAIAQAEABAgAEAFAAI=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\GameObject\Updatable.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Drawable">
+    <Position X="3" Y="3.5" Width="2.25" />
+    <Members>
+      <Field Name="_currentRegistrationState" Hidden="true" />
+      <Field Name="_currentRegistrationState2D" Hidden="true" />
+      <Field Name="_deleteReference" Hidden="true" />
+      <Field Name="_deleteReference2D" Hidden="true" />
+      <Field Name="_pDraw2DDeregistrationCommand" Hidden="true" />
+      <Field Name="_pDraw2DRegistrationCommand" Hidden="true" />
+      <Field Name="_pDrawDeregistrationCommand" Hidden="true" />
+      <Field Name="_pDrawRegistrationCommand" Hidden="true" />
+      <Method Name="~Drawable" Hidden="true" />
+      <Field Name="DEBUG_TITLE_MESSAGE" Hidden="true" />
+      <Method Name="DebugPrint" Hidden="true" />
+      <Method Name="deregister2DFromScene" Hidden="true" />
+      <Method Name="deregisterFromScene" Hidden="true" />
+      <Method Name="draw" Hidden="true" />
+      <Method Name="draw2D" Hidden="true" />
+      <Method Name="Drawable" Hidden="true" />
+      <Method Name="getDeleteReference" Hidden="true" />
+      <Method Name="getDeleteReference2D" Hidden="true" />
+      <Method Name="isRegisteredForDraw" Hidden="true" />
+      <Method Name="isRegisteredForDraw2D" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="register2DToScene" Hidden="true" />
+      <Method Name="registerToScene" Hidden="true" />
+      <Method Name="setDeleteReference" Hidden="true" />
+      <Method Name="setDeleteReference2D" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAgQEAgMEIgAAAICKEBAIAGgAIAAAAgAAgAEhBAgI=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\GameObject\Drawable.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Alarmable">
+    <Position X="5.5" Y="3" Width="2.25" />
+    <Members>
+      <Field Name="_registrationData" Hidden="true" />
+      <Method Name="~Alarmable" Hidden="true" />
+      <Method Name="Alarmable" Hidden="true" />
+      <Field Name="DEBUG_TITLE_MESSAGE" Hidden="true" />
+      <Method Name="DebugPrint" Hidden="true" />
+      <Method Name="deinitializeRegistrationData" Hidden="true" />
+      <Method Name="deregisterAlarm" Hidden="true" />
+      <Method Name="getDeleteReference" Hidden="true" />
+      <Method Name="getRegistrationData" Hidden="true" />
+      <Method Name="getRegistrationDataReference" Hidden="true" />
+      <Method Name="getTimeLeftForAlarm" Hidden="true" />
+      <Method Name="incrementAlarmID" Hidden="true" />
+      <Method Name="initializeRegistrationData" Hidden="true" />
+      <Method Name="isRegisteredForAlarm" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="registerAlarm" Hidden="true" />
+      <Method Name="setDeleteReference" Hidden="true" />
+      <Method Name="triggerAlarm" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Struct Name="Alarmable::RegistrationData" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Entities\GameObject\Properties\Alarmable\Alarmable.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAACEAAAMAUEAQAAIAAACAACCAAAEAQEAAggIABABI=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\GameObject\Alarmable.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Inputable">
+    <Position X="8" Y="3.25" Width="2" />
+    <Members>
+      <Field Name="_registeredInputKeys" Hidden="true" />
+      <Method Name="~Inputable" Hidden="true" />
+      <Method Name="createRegistrationData" Hidden="true" />
+      <Field Name="DEBUG_TITLE_MESSAGE" Hidden="true" />
+      <Method Name="DebugPrint" Hidden="true" />
+      <Method Name="deinitializeRegistrationData" Hidden="true" />
+      <Method Name="deregisterKey" Hidden="true" />
+      <Method Name="getKeyboardDeleteReference" Hidden="true" />
+      <Method Name="getRegistrationData" Hidden="true" />
+      <Method Name="getRegistrationDataReference" Hidden="true" />
+      <Method Name="getSingleKeyDeleteReference" Hidden="true" />
+      <Method Name="Inputable" Hidden="true" />
+      <Method Name="isIteratorValid" Hidden="true" />
+      <Method Name="isRegisterForKeyWithEvent" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="registerKey" Hidden="true" />
+      <Method Name="setKeyboardDeleteReference" Hidden="true" />
+      <Method Name="setSingleKeyDeleteReference" Hidden="true" />
+      <Method Name="tryToFind" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Struct Name="Inputable::RegistrationData" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Entities\GameObject\Properties\Inputable\Inputable.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+      <Typedef Name="Inputable::KeyEventPair" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Entities\GameObject\Properties\Inputable\Inputable.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="Inputable::InputDataMap" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Entities\GameObject\Properties\Inputable\Inputable.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="Inputable::MapPair" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Entities\GameObject\Properties\Inputable\Inputable.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ECQAABYAAMAAgAAAAAAAEAIAAAAABAAAAFAgkEAFAFQ=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\GameObject\Inputable.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Collidable">
+    <Position X="10.25" Y="2.75" Width="2.5" />
+    <Members>
+      <Field Name="_currentRegistrationState" Hidden="true" />
+      <Field Name="_deleteReference" Hidden="true" />
+      <Field Name="_myCollisionTypeID" Hidden="true" />
+      <Field Name="_pBSphere" Hidden="true" />
+      <Field Name="_pColliderModel" Hidden="true" />
+      <Field Name="_pCollisionDeregisterCommand" Hidden="true" />
+      <Field Name="_pCollisionRegisterCommand" Hidden="true" />
+      <Field Name="_pCollisionVolume" Hidden="true" />
+      <Method Name="~Collidable" Hidden="true" />
+      <Method Name="Collidable" Hidden="true" />
+      <Method Name="deregisterFromScene" Hidden="true" />
+      <Method Name="getBSphere" Hidden="true" />
+      <Method Name="getCollisionVolume" Hidden="true" />
+      <Method Name="isRegisteredForCollisions" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="registerToScene" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Enum Name="Collidable::VolumeType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\include\WraithEngine\GameObject\Collidable.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Collidable::VolumeHierarchyType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\include\WraithEngine\GameObject\Collidable.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>gAAICAAAgMAIAAgAIQAACCAgAgAIQACAACAgAEQAAIA=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\GameObject\Collidable.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameObjectEntryCommand">
+    <Position X="21" Y="9.5" Width="2.25" />
+    <Members>
+      <Method Name="~GameObjectEntryCommand" Hidden="true" />
+      <Method Name="GameObjectEntryCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAEAAAAAAAAQAAAAAAgAAAAAAQ=</HashCode>
+      <FileName>Wraith Engine\src\GameObjectEntryCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameObjectExitCommand">
+    <Position X="24.5" Y="9.5" Width="2" />
+    <Members>
+      <Method Name="~GameObjectExitCommand" Hidden="true" />
+      <Method Name="GameObjectExitCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAARAAAIAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\GameObjectExitCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlarmDeregistrationCommand">
+    <Position X="24.5" Y="7" Width="2.25" />
+    <Members>
+      <Method Name="~AlarmDeregistrationCommand" Hidden="true" />
+      <Method Name="AlarmDeregistrationCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAIAAEAAAAAAIAAAAAAAAwAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\AlarmDeregistrationCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlarmRegistrationCommand">
+    <Position X="18" Y="7" Width="2.25" />
+    <Members>
+      <Method Name="~AlarmRegistrationCommand" Hidden="true" />
+      <Method Name="AlarmRegistrationCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="setTimeDelay" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAIAAAAgAAAwBgAAAQA=</HashCode>
+      <FileName>Wraith Engine\src\AlarmRegistrationCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionDeregisterCommand">
+    <Position X="21" Y="7.25" Width="2.25" />
+    <Members>
+      <Method Name="~CollisionDeregisterCommand" Hidden="true" />
+      <Method Name="CollisionDeregisterCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAEAAAAEAAAAAABAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\CollisionDeregisterCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionRegisterCommand">
+    <Position X="30" Y="7" Width="2.25" />
+    <Members>
+      <Method Name="~CollisionRegisterCommand" Hidden="true" />
+      <Method Name="CollisionRegisterCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAEAAAAAAAAAAAAAAAgAABEAAA=</HashCode>
+      <FileName>Wraith Engine\src\CollisionRegisterCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Draw2DDeregistrationCommand">
+    <Position X="20.75" Y="4.5" Width="2.5" />
+    <Members>
+      <Method Name="~Draw2DDeregistrationCommand" Hidden="true" />
+      <Method Name="Draw2DDeregistrationCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAEAAAAAAAAAEABAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\Draw2DDeregistrationCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Draw2DRegistrationCommand">
+    <Position X="30" Y="4.5" Width="2.25" />
+    <Members>
+      <Method Name="~Draw2DRegistrationCommand" Hidden="true" />
+      <Method Name="Draw2DRegistrationCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAQAAAAAAAAEAAAAAAgAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\Draw2DRegistrationCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrawDeregistrationCommand">
+    <Position X="27.25" Y="4.5" Width="2.25" />
+    <Members>
+      <Method Name="~DrawDeregistrationCommand" Hidden="true" />
+      <Method Name="DrawDeregistrationCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIQAAAAAAAgEAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\DrawDeregistrationCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrawRegistrationCommand">
+    <Position X="18" Y="4.5" Width="2.25" />
+    <Members>
+      <Method Name="~DrawRegistrationCommand" Hidden="true" />
+      <Method Name="DrawRegistrationCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAQAAAAAAAAEAAAAAAAAAAgAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\DrawRegistrationCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KeyDeregistrationCommand">
+    <Position X="27.25" Y="7" Width="2.25" />
+    <Members>
+      <Method Name="~KeyDeregistrationCommand" Hidden="true" />
+      <Method Name="KeyDeregistrationCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAICAAIAAAAAAAACEAAAAAAAAAAAAABAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\KeyDeregistrationCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KeyRegistrationCommand">
+    <Position X="15.5" Y="7" Width="2" />
+    <Members>
+      <Method Name="~KeyRegistrationCommand" Hidden="true" />
+      <Method Name="KeyRegistrationCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAIAAAAAAAACEEAAAAAAAAAQAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\KeyRegistrationCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UpdateDeregistrationCommand">
+    <Position X="24.5" Y="4.5" Width="2.5" />
+    <Members>
+      <Method Name="~UpdateDeregistrationCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="UpdateDeregistrationCommand" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAgAEAAAAAAAAAAAIAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\UpdateDeregistrationCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UpdateRegistrationCommand">
+    <Position X="15.25" Y="4.5" Width="2.25" />
+    <Members>
+      <Method Name="~UpdateRegistrationCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="UpdateRegistrationCommand" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAEAAAAAAAAAAAIAAAgAABAAAA=</HashCode>
+      <FileName>Wraith Engine\src\UpdateRegistrationCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneRegistrationCommand">
+    <Position X="22.75" Y="2.5" Width="2.25" />
+    <Members>
+      <Method Name="~SceneRegistrationCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="SceneRegistrationCommand" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAEAAAAAAAAAAAAAAAgCAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\SceneRegistrationCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

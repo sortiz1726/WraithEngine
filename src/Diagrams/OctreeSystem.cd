@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Collision Volume Octree&#xD;&#xA;-+ Composed of Octree Nodes that contain an OBB&#xD;&#xA;-+ Can intersects with single collision volumes and other Octrees&#xD;&#xA;-+ Gets Octree Root from Octree Model  Manager">
+    <Position X="9.741" Y="5.878" Height="1.253" Width="2.964" />
+  </Comment>
+  <Comment CommentText="Octree Model Manager&#xD;&#xA;-+ Holds Prebuilt Octree Model for any model&#xD;&#xA;-+ Calls on Octree builder to build new Octree Model">
+    <Position X="14.806" Y="2.092" Height="1.014" Width="2.193" />
+  </Comment>
+  <Comment CommentText="Octree Builder&#xD;&#xA;-+ Builds Octree based on Model and Depth&#xD;&#xA;-+ Uses Triangle class in OBB - Triangle Intersection (as part of of a tier collision testing)">
+    <Position X="19.111" Y="1.896" Height="1.181" Width="2.117" />
+  </Comment>
+  <Comment CommentText="Collision Manager and Collision Testing&#xD;&#xA;-+ When called to process collision, collision manager executes collsion test commands&#xD;&#xA;-+ Collision tests may now involve collision wth  Octrees.">
+    <Position X="5.25" Y="9.5" Height="0.908" Width="2.915" />
+  </Comment>
+  <Comment CommentText="Visualizer&#xD;&#xA;-+ Visualizer takes in Collision Volume Octree (as a Collision Volume) and depth&#xD;&#xA;-+ Calls on drawDebug which goes through every node and calls to render it OBB">
+    <Position X="16.942" Y="10.099" Height="1.417" Width="2.589" />
+  </Comment>
+  <Class Name="Collidable">
+    <Position X="3" Y="3.25" Width="2.5" />
+    <Members>
+      <Field Name="_currentRegistrationState" Hidden="true" />
+      <Field Name="_deleteReference" Hidden="true" />
+      <Field Name="_myCollisionTypeID" Hidden="true" />
+      <Field Name="_pBSphere" Hidden="true" />
+      <Field Name="_pColliderModel" Hidden="true" />
+      <Field Name="_pCollisionDeregisterCommand" Hidden="true" />
+      <Field Name="_pCollisionRegisterCommand" Hidden="true" />
+      <Method Name="~Collidable" Hidden="true" />
+      <Method Name="Collidable" Hidden="true" />
+      <Method Name="collisionTerrain" Hidden="true" />
+      <Method Name="deregisterFromScene" Hidden="true" />
+      <Method Name="getBSphere" Hidden="true" />
+      <Method Name="isRegisteredForCollisions" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="registerToScene" Hidden="true" />
+      <Method Name="setCollidableGroup" Hidden="true" />
+      <Method Name="submitCollisionDeregistration" Hidden="true" />
+      <Method Name="submitCollisionRegistration" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Collidable::VolumeType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\include\WraithEngine\GameObject\Collidable.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Collidable::VolumeHierarchyType">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\include\WraithEngine\GameObject\Collidable.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>gAAICAAAgMAIAAgAIQAACCAgAgAIYACAACAgAEQAAAA=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\GameObject\Collidable.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_pCollisionVolume" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CollisionVolume">
+    <Position X="7" Y="3.25" Width="2.25" />
+    <Members>
+      <Method Name="~CollisionVolume" Hidden="true" />
+      <Method Name="CollisionVolume" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAgEAAAAAAAAAAACAAAAEACAAAAAAAIAAAgEAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\CollisionVolume.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionVolumeOctree">
+    <Position X="7" Y="5.75" Width="2.25" />
+    <Members>
+      <Method Name="~CollisionVolumeOctree" Hidden="true" />
+      <Method Name="addNodes" Hidden="true" />
+      <Method Name="CollisionVolumeOctree" Hidden="true" />
+      <Method Name="drawAt" Hidden="true" />
+      <Method Name="getAllNodes" Hidden="true" />
+      <Method Name="getRoot" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAEgEACAAAgAAAAQAAIAAAACAAAIAEAoAQAgGAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\CollisionVolumeOctree.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_pRoot" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OctreeNode">
+    <Position X="15" Y="6.75" Width="1.5" />
+    <Members>
+      <Field Name="_isValid" Hidden="true" />
+      <Method Name="~OctreeNode" Hidden="true" />
+      <Method Name="copyOBBData" Hidden="true" />
+      <Method Name="getChildAt" Hidden="true" />
+      <Method Name="getChildReferenceAt" Hidden="true" />
+      <Method Name="getChildren" Hidden="true" />
+      <Method Name="getIsValid" Hidden="true" />
+      <Method Name="getOBB" Hidden="true" />
+      <Method Name="getParent" Hidden="true" />
+      <Method Name="getSize" Hidden="true" />
+      <Method Name="isLeafNode" Hidden="true" />
+      <Field Name="NUMBER_OF_CHILDREN" Hidden="true" />
+      <Method Name="OctreeNode" Hidden="true" />
+      <Method Name="offsetSize" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="setIsValid" Hidden="true" />
+      <Method Name="setParent" Hidden="true" />
+      <Method Name="setSize" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>BIQwAAQAAIAAACgAAAIAAAAigAAAAAAAQkAwAEJAAAA=</HashCode>
+      <FileName>Wraith Engine\src\OctreeNode.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OctreeModelManager">
+    <Position X="14.5" Y="3.25" Width="2.75" />
+    <Members>
+      <Method Name="~OctreeModelManager" Hidden="true" />
+      <Method Name="clearMap" Hidden="true" />
+      <Method Name="OctreeModelManager" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="OctreeModelManager::MapKey" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\src\OctreeModelManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="OctreeModelManager::OctreeModelMap" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\src\OctreeModelManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="OctreeModelManager::OctreeModelIterator" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\src\OctreeModelManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="OctreeModelManager::OctreeModelMapValue" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\src\OctreeModelManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <AssociationLine Name="pInstance" Type="OctreeModelManager">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.005" Y="0.328" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ACAAAAQAAQgAAAAABAAAIAAABAEAAAAAAAoiAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\OctreeModelManager.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_pOctreeBuilder" />
+      <Field Name="pInstance" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OctreeBuilder">
+    <Position X="19.25" Y="3.25" Width="2" />
+    <Members>
+      <Field Name="_leafNodeHolder" Hidden="true" />
+      <Method Name="~OctreeBuilder" Hidden="true" />
+      <Method Name="computeOffset" Hidden="true" />
+      <Method Name="OctreeBuilder" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="transformOffset" Hidden="true" />
+      <Method Name="validateNode" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="OctreeBuilder::OctreeNodeCollection" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\src\OctreeBuilder.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="OctreeBuilder::TriangleCollection" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\src\OctreeBuilder.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="OctreeBuilder::OctreeNodeIterator" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\src\OctreeBuilder.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAgAQAAAAAwIAAAEAAAAAAEAAQAAAAAAAAIwAAAAAQA=</HashCode>
+      <FileName>Wraith Engine\src\OctreeBuilder.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionManager">
+    <Position X="2.5" Y="10.75" Width="3" />
+    <Members>
+      <Field Name="_collidableGroups" Hidden="true" />
+      <Method Name="~CollisionManager" Hidden="true" />
+      <Method Name="checkAndAdjustForIndex" Hidden="true" />
+      <Method Name="CollisionManager" Hidden="true" />
+      <Method Name="deinitializeCollisionGroups" Hidden="true" />
+      <Method Name="deinitializeCollisionTestCommands" Hidden="true" />
+      <Method Name="getCollidableGroup" Hidden="true" />
+      <Method Name="getCollisionTypeID" Hidden="true" />
+      <Field Name="ID_UNDEFINED" Hidden="true" />
+      <Method Name="isValidIndex" Hidden="true" />
+      <Field Name="MAX_GROUP_SIZE" Hidden="true" />
+      <Field Name="NextCollisionIDNumber" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="resizeToFit" Hidden="true" />
+      <Method Name="setCollisionPair" Hidden="true" />
+      <Method Name="setCollisionSelf" Hidden="true" />
+      <Method Name="setCollisionTerrain" Hidden="true" />
+      <Method Name="setGroupForTypeID" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="CollisionManager::CollisionTypeID" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\CollisionManager\CollisionManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="CollisionManager::GroupCollection" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\CollisionManager\CollisionManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="CollisionManager::StorageList" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Gameplay Managers\CollisionManager\CollisionManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AABEBCgAAgAAQAAAAACAKAAAAAAAAgCAAAEwAgCAAAE=</HashCode>
+      <FileName>Wraith Engine\src\CollisionManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionTestPairCommand">
+    <Position X="6.5" Y="13.5" Width="2.5" />
+    <Members>
+      <Field Name="_pCollidableGroup_1" Hidden="true" />
+      <Field Name="_pCollidableGroup_2" Hidden="true" />
+      <Field Name="_pCollisionDispatch" Hidden="true" />
+      <Method Name="~CollisionTestPairCommand" Hidden="true" />
+      <Method Name="CollisionTestPairCommand" Hidden="true" />
+      <Method Name="execute" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="testCollidableAgainstCollisionGroup" Hidden="true" />
+      <Method Name="testCollidablesBSphere" Hidden="true" />
+      <Method Name="testCollisionGroups" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAQMAAAQAAEAAAAEAAEAAAQAAAAAACAAAAgAEAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\CollisionTestPairCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionTestSelfCommand">
+    <Position X="4.25" Y="13.5" Width="2" />
+    <Members>
+      <Field Name="_pCollidableGroup" Hidden="true" />
+      <Field Name="_pCollisionDispatch" Hidden="true" />
+      <Method Name="~CollisionTestSelfCommand" Hidden="true" />
+      <Method Name="CollisionTestSelfCommand" Hidden="true" />
+      <Method Name="execute" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="testCollidablesBSphere" Hidden="true" />
+      <Method Name="testCollisionGroup" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAEAAAAEAAEACIAAAAACACAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\CollisionTestSelfCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionTestTerrainCommand">
+    <Position X="9.25" Y="13.5" Width="2.25" />
+    <Members>
+      <Field Name="_pCollidableGroup" Hidden="true" />
+      <Method Name="~CollisionTestTerrainCommand" Hidden="true" />
+      <Method Name="CollisionTestTerrainCommand" Hidden="true" />
+      <Method Name="debugTestCollisionGroup" Hidden="true" />
+      <Method Name="execute" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="processCallback" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAQAECAIAAAAACABAAAAgAAAAAAA=</HashCode>
+      <FileName>Wraith Engine\src\CollisionTestTerrainCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionTestCommand">
+    <Position X="6.75" Y="11" Width="2" />
+    <Members>
+      <Method Name="~CollisionTestCommand" Hidden="true" />
+      <Method Name="CollisionTestCommand" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAEAAAAAAAAAAAAAAAgAAACAAA=</HashCode>
+      <FileName>Wraith Engine\src\CollisionTestCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Triangle">
+    <Position X="22" Y="3.25" Width="1.5" />
+    <Members>
+      <Method Name="~Triangle" Hidden="true" />
+      <Method Name="getVertex0" Hidden="true" />
+      <Method Name="getVertex1" Hidden="true" />
+      <Method Name="getVertex2" Hidden="true" />
+      <Method Name="operator*=" Hidden="true" />
+      <Method Name="operator+=" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="operator-=" Hidden="true" />
+      <Method Name="setVertex0" Hidden="true" />
+      <Method Name="setVertex1" Hidden="true" />
+      <Method Name="setVertex2" Hidden="true" />
+      <Method Name="Triangle" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AgABAAQAAAAIAAAdAAAAAwAIAACAAAAAAMAhBAAAAAA=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\Tools\Triangle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Visualizer">
+    <Position X="14" Y="10" Width="2.75" />
+    <Members>
+      <Field Name="_pCubeGraphicsObject" Hidden="true" />
+      <Field Name="_pSphereGraphicsObject" Hidden="true" />
+      <Field Name="_renderCollisonVolumeCommands" Hidden="true" />
+      <Method Name="~Visualizer" Hidden="true" />
+      <Field Name="DEFAULT_COLOR" Hidden="true" />
+      <Method Name="Delete" Hidden="true" />
+      <Method Name="GetInstance" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="privShowAABB" Hidden="true" />
+      <Method Name="privShowBSphere" Hidden="true" />
+      <Method Name="privShowCollisionVolume" Hidden="true" />
+      <Method Name="privShowLineSegment" Hidden="true" />
+      <Method Name="privShowPointAt" Hidden="true" />
+      <Method Name="privShowRay" Hidden="true" />
+      <Method Name="privVisualizeAll" Hidden="true" />
+      <Field Name="pVisualzierInstance" Hidden="true" />
+      <Method Name="renderAABB" Hidden="true" />
+      <Method Name="renderBSphere" Hidden="true" />
+      <Method Name="renderLineSegment" Hidden="true" />
+      <Method Name="renderPoint" Hidden="true" />
+      <Method Name="ShowAABB" Hidden="true" />
+      <Method Name="ShowBSphere" Hidden="true" />
+      <Method Name="ShowLineSegement" Hidden="true" />
+      <Method Name="ShowOBB" Hidden="true" />
+      <Method Name="ShowPointAt" Hidden="true" />
+      <Method Name="ShowRay" Hidden="true" />
+      <Method Name="VisualizeAll" Hidden="true" />
+      <Method Name="Visualizer" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="Visualizer::CommandList" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Tools\Visualizer\Visualizer.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ACAACAwAAIAAAAEAAACAEEigFAECAAIAgVgo0ASAAAA=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\Tools\Visualizer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

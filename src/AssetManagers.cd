@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Asset Managers&#xD;&#xA;-+ Loads assets from files read from specifided folders. Assets are assigned a key given by the users&#xD;&#xA;-+ Gets assets based on assigned key at any point of the user's code.&#xD;&#xA;-+ Unloads assets  when terminated. ">
+    <Position X="9.915" Y="3.64" Height="1.4" Width="2.66" />
+  </Comment>
+  <Class Name="ModelManager">
+    <Position X="0.5" Y="0.5" Width="3" />
+    <Members>
+      <Method Name="~ModelManager" Hidden="true" />
+      <Field Name="DEBUG_TITLE_MESSAGE" Hidden="true" />
+      <Method Name="DebugPrint" Hidden="true" />
+      <Method Name="DebugPrintf" Hidden="true" />
+      <Method Name="deleteAllModels" Hidden="true" />
+      <Method Name="GetInstance" Hidden="true" />
+      <Method Name="getModel" Hidden="true" />
+      <Method Name="hasKeyBeenAssigned" Hidden="true" />
+      <Method Name="isFilePathValid" Hidden="true" />
+      <Method Name="ModelManager" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="printFileNameErrorAndTerminate" Hidden="true" />
+      <Method Name="printKeyAssignedErrorAndTerminate" Hidden="true" />
+      <Method Name="printModelLoadedSuccessfully" Hidden="true" />
+      <Method Name="privLoadModelAndAssignKey" Hidden="true" />
+      <Method Name="privSetDefaultPath" Hidden="true" />
+      <Method Name="tryToGetModel" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Enum Name="ModelManager::DefaultModel" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Asset Managers\ModelManager\ModelManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Typedef Name="ModelManager::MapKey" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Asset Managers\ModelManager\ModelManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="ModelManager::ModelMap" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Asset Managers\ModelManager\ModelManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <AssociationLine Name="pModelManagerInstance" Type="ModelManager">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.383" Y="0.386" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ACAAAICAEMCAgRAAABAAACEABAEQOACIAAAiAEABABg=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\AssetManagers\ModelManager.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pModelManagerInstance" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ShaderManager">
+    <Position X="3.75" Y="0.5" Width="3" />
+    <Members>
+      <Method Name="~ShaderManager" Hidden="true" />
+      <Field Name="DEBUG_TITLE_MESSAGE" Hidden="true" />
+      <Method Name="DebugPrint" Hidden="true" />
+      <Method Name="deleteAllShaders" Hidden="true" />
+      <Method Name="getDefaultShaderKey" Hidden="true" />
+      <Method Name="GetInstance" Hidden="true" />
+      <Method Name="hasKeyBeenAssigned" Hidden="true" />
+      <Method Name="isFilePathValid" Hidden="true" />
+      <Method Name="loadDefaultShaders" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="printFileNameErrorAndTerminate" Hidden="true" />
+      <Method Name="printKeyAssignedErrorAndTerminate" Hidden="true" />
+      <Method Name="printShaderLoadedSuccessfully" Hidden="true" />
+      <Method Name="privGetDefaultShader" Hidden="true" />
+      <Method Name="privGetShader" Hidden="true" />
+      <Method Name="privLoadShaderAndAssignKey" Hidden="true" />
+      <Method Name="privSetDefaultPath" Hidden="true" />
+      <Method Name="ShaderManager" Hidden="true" />
+      <Method Name="tryToGetShader" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Enum Name="ShaderManager::DefaultShader" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Asset Managers\ShaderManager\ShaderManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Typedef Name="ShaderManager::MapKey" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Asset Managers\ShaderManager\ShaderManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="ShaderManager::ShaderMap" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Asset Managers\ShaderManager\ShaderManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <AssociationLine Name="pShaderManagerInstance" Type="ShaderManager">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.376" Y="0.317" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAQIAAAAFEICAFQAAAAAAiAABAEAACCgAABiAAABAFg=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\AssetManagers\ShaderManager.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pShaderManagerInstance" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TextureManager">
+    <Position X="7" Y="0.5" Width="3" />
+    <Members>
+      <Method Name="~TextureManager" Hidden="true" />
+      <Field Name="DEBUG_TITLE_MESSAGE" Hidden="true" />
+      <Method Name="DebugPrint" Hidden="true" />
+      <Method Name="deleteAllTextures" Hidden="true" />
+      <Method Name="GetInstance" Hidden="true" />
+      <Method Name="hasKeyBeenAssigned" Hidden="true" />
+      <Method Name="isFilePathValid" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="printFileNameErrorAndTerminate" Hidden="true" />
+      <Method Name="printKeyAssignedErrorAndTerminate" Hidden="true" />
+      <Method Name="printTextureLoadedSuccessfully" Hidden="true" />
+      <Method Name="privGetTexture" Hidden="true" />
+      <Method Name="privLoadTextureAndAssignKey" Hidden="true" />
+      <Method Name="privSetDefaultPath" Hidden="true" />
+      <Method Name="TextureManager" Hidden="true" />
+      <Method Name="tryToGetTexture" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="TextureManager::MapKey" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Asset Managers\TextureManager\TextureManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="TextureManager::TextureMap" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Asset Managers\TextureManager\TextureManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="TextureManager::colorValue" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Asset Managers\TextureManager\TextureManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <AssociationLine Name="pTextureManagerInstance" Type="TextureManager">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.383" Y="0.386" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>QEAAAAACEEAIABAABAAAAiAABAEAAIDAAAAiAAABABg=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\AssetManagers\TextureManager.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pTextureManagerInstance" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ImageManager">
+    <Position X="0.5" Y="4.5" Width="3" />
+    <Members>
+      <Method Name="~ImageManager" Hidden="true" />
+      <Method Name="deleteImages" Hidden="true" />
+      <Method Name="GetInstance" Hidden="true" />
+      <Method Name="hasKeyBeenAssigned" Hidden="true" />
+      <Method Name="ImageManager" Hidden="true" />
+      <Method Name="isFilePathValid" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="printFileNameErrorAndTerminate" Hidden="true" />
+      <Method Name="printImageLoadedSuccessfully" Hidden="true" />
+      <Method Name="printKeyAssignedErrorAndTerminate" Hidden="true" />
+      <Method Name="privGetImage" Hidden="true" />
+      <Method Name="privLoadImageAndAssignKey" Hidden="true" />
+      <Method Name="privSetDefaultPath" Hidden="true" />
+      <Method Name="tryToGetImage" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="ImageManager::MapKey" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Asset Managers\ImageManager\ImageManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="ImageManager::StorageMap" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Asset Managers\ImageManager\ImageManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="ImageManager::colorValue" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\Managers\Asset Managers\ImageManager\ImageManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <AssociationLine Name="pImageManagerInstance" Type="ImageManager">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.313" Y="0.483" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAEAAAABAIAAAQACAQRAEACACgAAAiAAACRBg=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\AssetManagers\ImageManager.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pImageManagerInstance" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SpriteFontManager">
+    <Position X="3.75" Y="4.5" Width="2.25" />
+    <Members>
+      <Method Name="~SpriteFontManager" Hidden="true" />
+      <Method Name="deleteSpriteFonts" Hidden="true" />
+      <Method Name="GetInstance" Hidden="true" />
+      <Method Name="hasKeyBeenAssigned" Hidden="true" />
+      <Method Name="isFilePathValid" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="printFileNameErrorAndTerminate" Hidden="true" />
+      <Method Name="printKeyAssignedErrorAndTerminate" Hidden="true" />
+      <Method Name="printSpriteFontLoadedSuccessfully" Hidden="true" />
+      <Method Name="privGetSpriteFont" Hidden="true" />
+      <Method Name="privLoadSpriteFontAndAssignKey" Hidden="true" />
+      <Method Name="privSetDefaultPath" Hidden="true" />
+      <Method Name="SpriteFontManager" Hidden="true" />
+      <Method Name="tryToGetSpriteFont" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="SpriteFontManager::MapKey" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\include\WraithEngine\AssetManagers\SpriteFontManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="SpriteFontManager::StorageMap" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\include\WraithEngine\AssetManagers\SpriteFontManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <AssociationLine Name="pSpriteFontManagerInstance" Type="SpriteFontManager">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.735" Y="0.483" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEEQEAABAFAAAAACAABAEAAQDAABAiAAAKAJg=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\AssetManagers\SpriteFontManager.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pSpriteFontManagerInstance" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TerrainObjectManager">
+    <Position X="7.25" Y="4.5" Width="1.75" />
+    <Members>
+      <Method Name="~TerrainObjectManager" Hidden="true" />
+      <Field Name="DEBUG_TITLE_MESSAGE" Hidden="true" />
+      <Method Name="DebugPrint" Hidden="true" />
+      <Method Name="DebugPrintf" Hidden="true" />
+      <Method Name="deleteAllTerrainObjects" Hidden="true" />
+      <Method Name="GetInstance" Hidden="true" />
+      <Method Name="getTerrainObject" Hidden="true" />
+      <Method Name="hasKeyBeenAssigned" Hidden="true" />
+      <Method Name="isFilePathValid" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="printFileNameErrorAndTerminate" Hidden="true" />
+      <Method Name="printKeyAssignedErrorAndTerminate" Hidden="true" />
+      <Method Name="printTerrainObjectLoadedSuccessfully" Hidden="true" />
+      <Method Name="privLoadAndAssignKey" Hidden="true" />
+      <Method Name="privSetDefaultPath" Hidden="true" />
+      <Method Name="TerrainObjectManager" Hidden="true" />
+      <Method Name="tryToGetTerrainObject" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Typedef Name="TerrainObjectManager::MapKey" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\include\WraithEngine\AssetManagers\TerrainObjectManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="TerrainObjectManager::TerrainObjectMap" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wraith Engine\include\WraithEngine\AssetManagers\TerrainObjectManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <AssociationLine Name="pTerrainObjectManagerInstance" Type="TerrainObjectManager">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.886" Y="0.483" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>QgAABAAAEEAAABABEAAAACAABgECAQCAAAgyAEABABg=</HashCode>
+      <FileName>Wraith Engine\include\WraithEngine\AssetManagers\TerrainObjectManager.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pTerrainObjectManagerInstance" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
